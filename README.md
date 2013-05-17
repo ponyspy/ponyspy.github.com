@@ -1,2 +1,2 @@
-ponyspy.github.com
+ponyspy.github.io
 ==================
