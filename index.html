@@ -1,132 +1,36 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Page Title</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-		<script type="text/javascript" src="waypoints.min.js"></script>
-		<script type="text/javascript" src="waypoints-infinite.js"></script>
-		<style>
-    .infinite-container {
-      width:480px;
-      margin-left:-20px;
-      overflow:hidden;
-      position:relative;
-    }
-
-    .infinite-container.infinite-loading:after {
-      content:"Loading...";
-      height:30px;
-      line-height:30px;
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      text-align:center;
-      background:#6a6272;
-      color:#eae2f2;
-    }
-
-    .infinite-item {
-      float:left;
-      width:100px;
-      height:100px;
-      background:#444a50;
-      margin:20px 0 20px 20px;
-    }
-    .infinite-item:nth-child(3n) {
-      background:#6a6272;
-    }
-    .infinite-item:nth-child(3n+1) {
-      background:#eae2f2;
-    }
-
-    .infinite-more-link {
-      visibility:hidden;
-    }
-		</style>
-		<script>
-			$(document).ready(function() {
-				$('.infinite-container').waypoint('infinite', {
-				  container: 'auto',
-				  items: '.infinite-item',
-				  more: '.infinite-more-link',
-				  offset: 'bottom-in-view',
-				  loadingClass: 'infinite-loading',
-				  onBeforePageLoad: $.noop,
-				  onAfterPageLoad: $.noop
-				});
-			// $('.infinite-container').waypoint('infinite');
-			});
-		</script>
-	</head>
-	<body>
-		<div>
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
-			coolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcoolcool
+<head>
+	<title>image</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-mapnavigate.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+	<div class="zoom_block">
+		<div class="zoom plus">plus</div>
+		<div class="zoom minus">minus</div>
+	</div>
+	<div class="tiles_cont">
+		<div class="wrap">
+			<img class="tile" data-src="tiles/tile-0.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-1.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-2.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-3.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-4.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-5.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-6.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-7.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-8.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-9.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-10.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-11.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-12.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-13.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-14.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
+			<img class="tile" data-src="tiles/tile-15.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
 		</div>
-		<div class='infinite-container'>
-			<div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-	    <div class="infinite-item"></div>
-		</div>
-		<a href="." class="infinite-more-link">More</a>
-	</body>
+	</div>
+</body>
 </html>
