@@ -1,36 +1,29 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>image</title>
-	<link rel="stylesheet" type="text/css" href="styles/main.css">
-	<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="scripts/jquery-mapnavigate.js"></script>
-	<script type="text/javascript" src="scripts/main.js"></script>
-</head>
-<body>
-	<div class="zoom_block">
-		<div class="zoom plus">plus</div>
-		<div class="zoom minus">minus</div>
-	</div>
-	<div class="tiles_cont">
-		<div class="wrap">
-			<img class="tile" data-src="tiles/tile-0.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-1.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-2.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-3.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-4.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-5.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-6.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-7.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-8.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-9.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-10.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-11.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-12.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-13.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-14.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-			<img class="tile" data-src="tiles/tile-15.jpg" ondrag='return false', ondragdrop='return false', ondragstart='return false'>
-		</div>
-	</div>
-</body>
+	<head>
+		<link rel="stylesheet" href="leaflet.css" />
+		<style>
+			#map {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		<script src="leaflet.js"></script>
+		<script>
+		window.onload = function() {
+			var map = L.map('map').setView([0, 0], 4);
+
+			L.tileLayer('{z}/{y}x{x}.jpg',{
+			minZoom: 1,
+			maxZoom: 4,
+			attribution: '',
+			tileSize: '100',
+			tms: false,
+			continuousWorld: true
+			}).addTo(map);
+		}
+		</script>
+	</head>
+	<body>
+		<div id="map"></div>
+	</body>
 </html>
