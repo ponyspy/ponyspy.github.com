@@ -39,7 +39,7 @@
 
 			.outer {
 				white-space: nowrap;
-				overflow-x: hidden;
+				overflow: hidden;
 				width: 1280px;
 				/*margin: 30px auto;*/
 				position: absolute;
@@ -63,7 +63,7 @@
 
 			.object {
 				width: 240px;
-				height: 240px;
+				height: 180px;
 				background-color: grey;
 				float: left;
 				margin-right: 20px;
@@ -78,6 +78,11 @@
 					display: inline-block;
 			}
 
+			.style {
+				overflow: auto;
+				height: 100%;
+			}
+
 			.age:nth-child(odd) {
 					/*background-color: red;*/
 			}
@@ -86,14 +91,15 @@
 		<script>
 			$(document).ready(function() {
 				$('.header_age').click(function(event) {
-					var $outer = $('.outer');
 					var age_index = $(this).index();
-					var age_offset_top = $('.age').eq(age_index).offset().top;
-					var outer_scroll_top = $outer.scrollTop();
-					var outer_offset_top = $outer.offset().top;
+					var style_index = $(this).closest('.header_style_block').index();
+					var $style = $('.style').eq(style_index);
+					var age_offset_top = $style.children('.age').eq(age_index).offset().top;
+					var style_scroll_top = $style.scrollTop();
+					var style_offset_top = $style.offset().top;
 
-					$('.outer').animate({
-							'scrollTop': age_offset_top + outer_scroll_top - outer_offset_top
+					$style.animate({
+							'scrollTop': age_offset_top + style_scroll_top - style_offset_top
 					}, 300);
 				});
 
@@ -107,13 +113,11 @@
 							'scrollLeft': style_index * 1280
 					}, 300);
 
-					$('.outer').on('scroll', function() {
-						var outer_scroll_top = $(this).scrollTop();
-						console.log(outer_offset_top + ' ' + outer_scroll_top + ' ' + $('.style').eq(style_index).children('.age').eq(1).offset().top)
+					$('.style').eq(style_index).on('scroll', function() {
 
-						$('.style').eq(style_index).children('.age').each(function() {
+						$(this).children('.age').each(function() {
 							var $this = $(this);
-							var age_offset_top = $this.offset().top
+							var age_offset_top = $this.offset().top;
 
 							age_offset_top <= outer_offset_top
 									? $('.header_style_block').eq(style_index).find('.header_age').css('color', 'black').eq($(this).index()).css('color', 'red')
@@ -185,6 +189,13 @@
 										<div class="object"></div>
 										<div class="object"></div>
 										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
 								 </div>
 							 </div>
 						</div>
@@ -214,6 +225,16 @@
 							 <div class="age">
 								 <div class="age_title">Салют</div>
 								 <div class="age_objects">
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
 										<div class="object"></div>
 										<div class="object"></div>
 										<div class="object"></div>
