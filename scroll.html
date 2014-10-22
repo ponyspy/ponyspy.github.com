@@ -1,0 +1,229 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>scroll</title>
+		<style>
+
+			.header_block {
+					width: 1280px;
+					min-height: 40px;
+					margin: 0 auto;
+					background-color: white;
+					/*outline: 1px solid red;*/
+					z-index: 999999;
+			}
+
+			.header_styles_block {
+					overflow: hidden;
+			}
+
+			.header_style_block {
+				float: left;
+				margin-right: 10px;
+			}
+
+			.header_style_title {
+				cursor: pointer;
+			}
+
+			.header_style_ages {
+				display: none;
+				position: absolute;
+			}
+
+			.header_age {
+				float: left;
+				cursor: pointer;
+				margin-right: 10px;
+			}
+
+			.outer {
+				white-space: nowrap;
+				overflow-x: hidden;
+				width: 1280px;
+				/*margin: 30px auto;*/
+				position: absolute;
+				left: 50%;
+				margin-left: -640px;
+				bottom: 0;
+				top: 80px;
+			}
+
+			.age {
+					width: 1280px;
+					overflow: hidden;
+					border-top: 1px solid black;
+					/*background-color: blue;*/
+			}
+
+			.age_title {
+				text-align: center;
+				padding-bottom: 20px
+			}
+
+			.object {
+				width: 240px;
+				height: 240px;
+				background-color: grey;
+				float: left;
+				margin-right: 20px;
+				margin-bottom: 20px;
+			}
+
+			.object:nth-child(5n) {
+				margin-right: 0px;
+			}
+
+			.inner, .style {
+					display: inline-block;
+			}
+
+			.age:nth-child(odd) {
+					/*background-color: red;*/
+			}
+		</style>
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.header_age').click(function(event) {
+					var $outer = $('.outer');
+					var age_index = $(this).index();
+					var age_offset_top = $('.age').eq(age_index).offset().top;
+					var outer_scroll_top = $outer.scrollTop();
+					var outer_offset_top = $outer.offset().top;
+
+					$('.outer').animate({
+							'scrollTop': age_offset_top + outer_scroll_top - outer_offset_top
+					}, 300);
+				});
+
+				$('.header_style_title').click(function(event) {
+					var style_index = $(this).index('.header_style_title');
+					var outer_offset_top = $('.outer').offset().top;
+
+					$('.header_style_ages').hide().eq(style_index).show();
+
+					$('.outer').animate({
+							'scrollLeft': style_index * 1280
+					}, 300);
+
+					$('.outer').on('scroll', function() {
+						var outer_scroll_top = $(this).scrollTop();
+						console.log(outer_offset_top + ' ' + outer_scroll_top + ' ' + $('.style').eq(style_index).children('.age').eq(1).offset().top)
+
+						$('.style').eq(style_index).children('.age').each(function() {
+							var $this = $(this);
+							var age_offset_top = $this.offset().top
+
+							age_offset_top <= outer_offset_top
+									? $('.header_style_block').eq(style_index).find('.header_age').css('color', 'black').eq($(this).index()).css('color', 'red')
+									: false;
+						});
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header_block">
+				<div class="header_styles_block">
+						<div class="header_style_block">
+							<div class="header_style_title">Классицизм</div>
+							<div class="header_style_ages">
+								<div class="header_age">Ранний</div>
+								<div class="header_age">Средний</div>
+								<div class="header_age">Поздний</div>
+							</div>
+						</div>
+						<div class="header_style_block">
+							<div class="header_style_title">Конструктивизм</div>
+							<div class="header_style_ages">
+								<div class="header_age">Ура</div>
+								<div class="header_age">Игра</div>
+								<div class="header_age">Салют</div>
+							</div>
+						</div>
+				</div>
+		</div>
+		<div class="outer">
+				<div class="inner">
+						<div class="style">
+							 <div class="age">
+									<div class="age_title">Ранний</div>
+								 <div class="age_objects">
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+								 </div>
+							 </div>
+							 <div class="age">
+							 <div class="age_title">Средний</div>
+							 <div class="age_objects">
+									<div class="object"></div>
+									<div class="object"></div>
+									<div class="object"></div>
+									<div class="object"></div>
+									<div class="object"></div>
+									<div class="object"></div>
+							 </div>
+							 </div>
+							 <div class="age">
+								 <div class="age_title">Поздний</div>
+								 <div class="age_objects">
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+								 </div>
+							 </div>
+						</div>
+						<div class="style">
+							 <div class="age">
+								 <div class="age_title">Ура</div>
+								 <div class="age_objects">
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+								 </div>
+							 </div>
+							 <div class="age">
+								 <div class="age_title">Игра</div>
+								 <div class="age_objects">
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+								 </div>
+								</div>
+							 <div class="age">
+								 <div class="age_title">Салют</div>
+								 <div class="age_objects">
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+										<div class="object"></div>
+								 </div>
+							 </div>
+						</div>
+				</div>
+		</div>
+	</body>
+</html>
