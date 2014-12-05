@@ -1,0 +1,21 @@
+{
+  "name": "stereoscope.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/stephanepericat/stereoscope.js",
+  "authors": [
+    "Stéphane P. Péricat <contact@shortwavapp.com>"
+  ],
+  "description": "A customizable parallax scrolling effect for es5.",
+  "main": "src/stereoscope.js",
+  "keywords": [
+    "parallax"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
