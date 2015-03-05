@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+html, body, .outer, .column {
+	height: 100%;
+}
+
+.outer {
+	margin: 0 auto;
+}
+
+.column {
+	width: 25%;
+	float: left;
+}
+
+.cub {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.cub:last-child {
+	margin-bottom: 0px;
+}
+
+.one {
+	background-color: green;
+	height: 200px;
+}
+
+.two {
+	background-color: grey;
+	height: 300px;
+}
+
+.three {
+	background-color: lightblue;
+	height: 300px;
+}
+
+.four {
+	background-color: #ffd16f;
+	height: 600px;
+}
