@@ -10,6 +10,7 @@ html, body, .outer, .column {
 
 .outer {
 	margin: 0 auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .column {
