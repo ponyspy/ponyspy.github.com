@@ -1,0 +1,43 @@
+.date_item_block {
+	margin-top: 25px;
+}
+
+.date_title {
+	font: 24pt/26pt 'Pragmatica';
+	margin-bottom: 10px;
+}
+
+.event_item_block {
+	padding-bottom: 25px;
+	border-top: 1px solid #A7A2B3;
+}
+
+.event_item_block:hover {
+	background-image: url(../images/bg1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 8s ease-out;
+}
+
+.event_item_block:hover .event_title, .event_time {
+	background-color: black;
+	color: white;
+}
+
+.event_title {
+	/*margin-top: 5px;*/
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 3px;
+
+}
+
+.event_time {
+	/*margin-top: 5px;*/
+	padding: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	display: inline-block;
+	font: 10pt/12pt 'Pragmatica'
+}

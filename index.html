@@ -1,61 +1,117 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Scholl Wheel</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		 <script type="text/javascript" src="js/jquery.js"></script>
-		 <script type="text/javascript" src="js/jquery-swing-scroll.js"></script>
-		 <script type="text/javascript" src="js/main.js"></script>
+		<meta charset="utf-8">
+		<title>Билеты</title>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/events.css">
 	</head>
 	<body>
-		<div class="outer">
-			<div class="column">
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
-				<div class="cub one"></div>
+		<div class="outer_block">
+			<div class="header_block">
+				<div class="menu_block">
+					<a href="#">Расписание</a>
+					<a href="#">Заказы</a>
+					<a href="#">Личные данные</a>
+					<a href="#">Выход</a>
+				</div>
+				<a class="logo" href="/">
+					<img src="images/design/logo.png" alt="">
+				</a>
 			</div>
-			<div class="column">
-				<div class="cub two"></div>
-				<div class="cub two"></div>
-				<div class="cub two"></div>
-				<div class="cub two"></div>
-				<div class="cub two"></div>
-				<div class="cub two"></div>
-				<div class="cub two"></div>
+			<div class="content_block">
+				<div class="navigate_block">
+					<a href="#" class="step_events _selected">ВЫБОР СОБЫТИЯ</a>
+					<a href="#" class="step_place">ВЫБОР МЕСТА</a>
+					<a href="#" class="step_pay">ОПЛАТА</a>
+				</div>
+				<div class="main_block">
+					<div class="dates_block">
+
+
+						<div class="date_item_block">
+							<div class="date_title">12 апреля / вс /</div>
+							<div class="date_events_block">
+								<div class="event_item_block">
+									<div class="event_title">МОМЕНТЫ</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">ФУНДАМЕНТАЛИСТЫ</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">360 ГРАДУСОВ</div>
+									<div class="event_time">19:00</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="date_item_block">
+							<div class="date_title">13 апреля / пн /</div>
+							<div class="date_events_block">
+								<div class="event_item_block">
+									<div class="event_title">ВЕРА ПОЛОЗКОВА. КОРОТКИЙ МЕТР</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">ЛЕВ С СЕДОЙ БОРОДОЙ</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">ПОВСТРЕЧАЛИСЬ НА ПЛОЩАДИ КАРТОННОЙ</div>
+									<div class="event_time">19:00</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="date_item_block">
+							<div class="date_title">14 апреля / вт /</div>
+							<div class="date_events_block">
+								<div class="event_item_block">
+									<div class="event_title">ИЗ ЖИЗНИ ПЛАНЕТ</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">СМЕРТЬ КАЛИБАНА</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">ИСТОРИЯ О ЗИГФРИДЕ И БРУНГИЛЬДЕ</div>
+									<div class="event_time">19:00</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="date_item_block">
+							<div class="date_title">15 апреля / ср /</div>
+							<div class="date_events_block">
+								<div class="event_item_block">
+									<div class="event_title">МОМЕНТЫ</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">ФУНДАМЕНТАЛИСТЫ</div>
+									<div class="event_time">19:00</div>
+								</div>
+								<div class="event_item_block">
+									<div class="event_title">360 ГРАДУСОВ</div>
+									<div class="event_time">19:00</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
 			</div>
-			<div class="column">
-				<div class="cub three"></div>
-				<div class="cub three"></div>
-				<div class="cub three"></div>
-				<div class="cub three"></div>
-				<div class="cub three"></div>
-				<div class="cub three"></div>
-				<div class="cub three"></div>
-				<div class="cub three"></div>
-			</div>
-			<div class="column">
-				<div class="cub four"></div>
-				<div class="cub four"></div>
-				<div class="cub four"></div>
-				<div class="cub four"></div>
-				<div class="cub four"></div>
-				<div class="cub four"></div>
-				<div class="cub four"></div>
-				<div class="cub four"></div>
+			<div class="footer_block">
+				центр им. Вс. Мейерхольда
+				<br>
+				&copy; 2015
 			</div>
 		</div>
 	</body>

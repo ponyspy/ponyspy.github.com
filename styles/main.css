@@ -1,0 +1,80 @@
+@font-face {
+	font-family: Pragmatica;
+	src: url('fonts/prg55.otf');
+}
+
+body {
+	font: 12pt/14pt 'Pragmatica';
+}
+
+.outer_block {
+	width: 1150px;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+.menu_block {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.menu_block a {
+	color: black;
+	text-decoration: none;
+}
+
+.menu_block a:hover {
+	text-decoration: underline;
+}
+
+.menu_block a:after {
+	content: '/';
+	margin-left: 5px;
+}
+
+.menu_block a:last-child:after {
+	content: '';
+}
+
+.logo {
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+}
+
+.logo img {
+	width: 100px;
+}
+
+.navigate_block {
+	overflow: hidden;
+	margin-top: 15px;
+}
+
+.navigate_block a {
+	color: black;
+	width: 250px;
+	margin-left: 100px;
+	display: block;
+	float: left;
+	font: 10pt/14pt 'Pragmatica';
+	border-top: 2px solid black;
+	text-decoration: none;
+}
+
+.navigate_block a:hover, a._selected {
+	color: #A7A2B3;
+	border-color: #A7A2B3;
+}
+
+.main_block {
+	width: 950px;
+	margin-top: 25px;
+	margin: 0 auto;
+}
+
+.footer_block {
+	font: 10pt/14pt 'Pragmatica';
+	margin-top: 10px;
+	text-align: center;
+}
