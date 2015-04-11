@@ -1,6 +1,16 @@
 @font-face {
-	font-family: Pragmatica;
-	src: url('fonts/prg55.otf');
+	font-family: 'Pragmatica';
+	src: url('../fonts/prg55.otf');
+}
+
+@font-face {
+	font-family: 'Pragmatica Medium';
+	src: url('../fonts/prg65.otf');
+}
+
+@font-face {
+	font-family: 'Pragmatica Bold';
+	src: url('../fonts/prg75.otf');
 }
 
 body {
@@ -30,6 +40,7 @@ body {
 .menu_block a:after {
 	content: '/';
 	margin-left: 5px;
+	display: inline-block;
 }
 
 .menu_block a:last-child:after {
