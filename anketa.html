@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ЛИЧНЫЕ ДАННЫЕ</title>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/anketa.css">
+		<script type="text/javascript" src="scripts/anketa.js"></script>
+	</head>
+	<body>
+		<div class="outer_block">
+			<div class="header_block">
+				<div class="menu_block">
+					<a href="events.html">Расписание</a>
+					<a href="#">Заказы</a>
+					<a href="#">Личные данные</a>
+					<a href="#">Выход</a>
+				</div>
+				<a class="logo" href="/">
+					<img src="images/design/logo.png" alt="">
+				</a>
+			</div>
+			<div class="content_block">
+				<form action="anketa.php">
+					<div class="input_title">Имя:</div>
+					<input type="text" name="fname">
+					<div class="input_title">Фамилия:</div>
+					<input type="text" name="lname">
+					<div class="input_title">Телефон:</div>
+					<input type="text" name="phone">
+					<br>
+					<div class="input_title">email:</div>
+					<input type="text" name="email">
+					<div class="input_title">Пароль:</div>
+					<input type="text" name="pass">
+					<div class="check_spam">
+						<span>Я согласен получать новости ЦИМа</span>
+						<input type="checkbox" checked>
+					</div>
+					<input type="submit" name="save" value='Сохранить'>
+				</form>
+			</div>
+			<div class="footer_block">
+				центр им. Вс. Мейерхольда
+				<br>
+				&copy; 2015
+			</div>
+		</div>
+	</body>
+</html>
