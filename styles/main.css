@@ -30,7 +30,7 @@ html, body, .columns_block, .column {
 	width: 60%;
 	float: left;
 	overflow: scroll;
-	font: 12pt/16pt 'PT Sans';
+	font: 13pt/18pt 'PT Sans';
 	color: rgb(98, 98, 98);
 	cursor: default;
 }
@@ -40,8 +40,8 @@ html, body, .columns_block, .column {
 }
 
 .text_block {
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 7%;
+	padding-right: 7%;
 }
 
 .audiojs {
@@ -64,8 +64,8 @@ html, body, .columns_block, .column {
 .header_inner {
 	padding-top: 25px;
 	padding-bottom: 25px;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 7%;
+	padding-right: 7%;
 	overflow: hidden;
 }
 
@@ -75,7 +75,7 @@ html, body, .columns_block, .column {
 }
 
 .header_title {
-	width: 60%;
+	width: 65%;
 	float: right;
 	color: rgb(145, 193, 180);
 	font: 28pt/32pt 'PT Serif';
@@ -123,7 +123,7 @@ html, body, .columns_block, .column {
 	margin: 0 auto;
 	text-align: center;
 	font: 10pt/14pt 'PT Serif';
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 .people_nav:hover .people_photo, .people_photo.selected {
