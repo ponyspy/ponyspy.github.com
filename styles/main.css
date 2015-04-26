@@ -1,91 +1,89 @@
-@font-face {
-	font-family: 'Pragmatica';
-	src: url('../fonts/prg55.otf');
-}
-
-@font-face {
-	font-family: 'Pragmatica Medium';
-	src: url('../fonts/prg65.otf');
-}
-
-@font-face {
-	font-family: 'Pragmatica Bold';
-	src: url('../fonts/prg75.otf');
-}
-
 body {
-	font: 12pt/14pt 'Pragmatica';
+	margin: 0;
+	padding: 0;
+	font: 12pt/18pt 'PT Sans';
+/*	user-select: none;
+	-webkit-user-select: none;*/
 }
 
-.outer_block {
-	width: 1150px;
+html, body, .columns_block, .column {
+	height: 100%;
+}
+
+.fullscreen {
+	position: absolute;
+	font-size: 14pt;
 	padding: 5px;
-	margin: 0 auto;
 }
 
-.menu_block {
-	text-align: center;
-	margin-bottom: 15px;
-}
-
-.menu_block a {
-	color: black;
-	text-decoration: none;
-}
-
-.menu_block a:hover {
-	text-decoration: underline;
-}
-
-.menu_block a:after {
-	content: '/';
-	margin-left: 5px;
-	display: inline-block;
-}
-
-.menu_block a:last-child:after {
-	content: '';
-}
-
-.logo {
-	width: 100px;
-	display: block;
-	margin: 0 auto;
-}
-
-.logo img {
-	width: 100px;
-}
-
-.navigate_block {
-	overflow: hidden;
-	margin-top: 15px;
-}
-
-.navigate_block a {
-	color: black;
-	width: 250px;
-	margin-left: 100px;
-	display: block;
+.nav {
+	width: 20%;
+	background-color: rgb(237, 239, 240);
 	float: left;
-	font: 10pt/14pt 'Pragmatica';
-	border-top: 2px solid black;
-	text-decoration: none;
 }
 
-.navigate_block a:hover, a._selected {
-	color: #A7A2B3;
-	border-color: #A7A2B3;
+.main {
+	width: 55%;
+	float: left;
+	overflow: scroll;
+	font-size: 14pt;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 }
 
-.main_block {
-	width: 950px;
-	margin-top: 25px;
-	margin: 0 auto;
+.audiojs {
+	width: 55%;
+	position: fixed;
+	bottom: 0;
+	background-image: none;
 }
 
-.footer_block {
-	font: 10pt/14pt 'Pragmatica';
-	margin-top: 10px;
+.audiojs .scrubber {
+	width: 75%;
+}
+
+.people_title {
+	padding-top: 20px;
+	font-size: 18pt;
 	text-align: center;
+}
+
+.people_text img {
+	width: 60%;
+	margin: 0 auto;
+	display: block;
+}
+
+.people_text .width {
+		width: 80%;
+}
+
+.people_nav {
+	margin: 25px auto;
+	margin-bottom: 25px;
+	cursor: pointer;
+	width: 130px;
+}
+
+.people_photo {
+	width: 110px;
+	height: 110px;
+	margin: 0 auto;
+	border: 3px solid rgb(237, 239, 240);
+	border-radius: 150px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.people_name {
+	width: 110px;
+	margin: 0 auto;
+	text-align: center;
+	font: 12pt/14pt 'PT Sans';
+	margin-top: 5px;
+}
+
+.people_nav:hover .people_photo, .people_photo.selected {
+	border: 3px solid red;
 }
