@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.outer_block {
+  width: 1440px;
+  overflow: hidden;
+  margin: 120px auto;
+}
+.flip_block {
+  perspective: 1000;
+  float: left;
+}
+.flip_block:hover .flipper,
+.flip_block.hover .flipper {
+  -webkit-transform: rotateY(180deg);
+}
+.flip_block,
+.front,
+.back {
+  width: 240px;
+  height: 360px;
+}
+.front,
+.back {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flipper {
+  -webkit-transition: 0.8s;
+  -webkit-transform-style: preserve-3d;
+  position: relative;
+}
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  z-index: 2;
+/* for firefox 31 */
+  -webkit-transform: rotateY(0deg);
+}
+.back {
+  -webkit-transform: rotateY(180deg);
+}
