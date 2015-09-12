@@ -11,7 +11,6 @@ body {
   perspective: 1000;
   float: left;
 }
-.flip_block:hover .flipper,
 .flip_block.hover .flipper {
   -webkit-transform: rotateY(180deg);
 }

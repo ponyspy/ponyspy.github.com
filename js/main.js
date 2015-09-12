@@ -1,10 +1,11 @@
 $(document).ready(function() {
-	$('.flip_block').on('touchstart mouseenter', function() {
-		$(this).toggleClass('hover');
-	});
+	$('.flip_block').on('touchstart mouseenter', function(event) {
+		var $this = $(this);
 
-	setInterval(function() {
-		$('.flip_block').removeClass('hover');
-	}, 4000);
+		$this.toggleClass('hover');
+		setTimeout(function() {
+			$this.removeClass('hover');
+		}, 4000);
+	});
 
 });
