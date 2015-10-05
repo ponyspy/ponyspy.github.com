@@ -1,48 +1,31 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #000;
 }
 .outer_block {
-  width: 1440px;
+  width: 100%;
   overflow: hidden;
   margin: 120px auto;
+  background-color: #000;
 }
-.flip_block {
-  perspective: 1000;
+.outer_block .flip_block {
   float: left;
+  background-color: #000;
+  width: 16.666666666666668%;
 }
-.flip_block.hover .flipper {
-  -webkit-transform: rotateY(180deg);
+.outer_block .flip_block img {
+  width: 100%;
 }
-.flip_block,
-.front,
-.back {
-  width: 240px;
-  height: 360px;
+.buttons_block .play {
+  width: 60px;
 }
-.front,
-.back {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.buttons_block button {
+  font-size: 12pt;
 }
-.flipper {
-  -webkit-transition: 0.8s;
-  -webkit-transform-style: preserve-3d;
-  position: relative;
-}
-.front,
-.back {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.front {
-  z-index: 2;
-/* for firefox 31 */
-  -webkit-transform: rotateY(0deg);
-}
-.back {
-  -webkit-transform: rotateY(180deg);
+.buttons_block .spacer {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #fff;
+  display: inline-block;
 }
