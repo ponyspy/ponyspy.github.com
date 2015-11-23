@@ -1,31 +1,78 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
 }
 .outer_block {
-  width: 100%;
-  overflow: hidden;
-  margin: 120px auto;
-  background-color: #000;
+  width: 1380px;
+  margin: 0 auto;
+  padding: 30px;
 }
-.outer_block .flip_block {
-  float: left;
-  background-color: #000;
-  width: 16.666666666666668%;
+.navigate_block {
+  position: relative;
 }
-.outer_block .flip_block img {
-  width: 100%;
+.navigate_block .nav {
+  position: absolute;
+  top: 50px;
 }
-.buttons_block .play {
-  width: 60px;
+.navigate_block .nav.next {
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #986727;
 }
-.buttons_block button {
-  font-size: 12pt;
+.navigate_block .nav.next:hover {
+  border-left: 30px solid #000;
 }
-.buttons_block .spacer {
-  margin-left: 10px;
-  margin-right: 10px;
-  color: #fff;
-  display: inline-block;
+.navigate_block .nav.prev {
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #986727;
+}
+.navigate_block .nav.prev:hover {
+  border-right: 30px solid #000;
+}
+.carousel.ordens {
+  width: 1047px;
+  height: 162px;
+  margin: 0 auto;
+}
+.carousel.persons {
+  width: 1200px;
+  height: 380px;
+  margin: 0 auto;
+}
+.drop {
+  width: 400px;
+  height: 300px;
+  background-color: #37a9fb;
+}
+.orden {
+  width: 160px;
+  height: 160px;
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  border: 1px solid #000;
+  margin-right: 15px;
+}
+.orden.ui-draggable-dragging {
+  border: none;
+}
+.person {
+  width: 245px;
+  height: 380px;
+  background-position: bottom !important;
+  background-size: 80% auto !important;
+  background-repeat: no-repeat !important;
+  transition: background-size 0.3s linear;
+}
+.person.hover,
+.person.active {
+  background-size: 100% !important;
+  transition: background-size 0.3s linear;
 }

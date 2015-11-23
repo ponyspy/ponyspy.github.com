@@ -1,27 +1,79 @@
 body
 	margin 0
 	padding 0
-	background-color black
 
 .outer_block
-	width 100%
-	overflow hidden
-	margin 120px auto
-	background-color black
-	.flip_block
-		float left
-		background-color black
-		width (@width / 6)
-		img
-			width 100%
+	// width 1860px
+	// height 1080px
+	width 1380px
+	margin 0 auto
+	// outline 1px solid red
+	padding 30px
 
-.buttons_block
-	.play
-		width 60px
-	button
-		font-size 12pt
-	.spacer
-		margin-left 10px
-		margin-right 10px
-		color white
-		display inline-block
+// .block_ordens
+// .block_persons
+// 	outline 1px solid red
+
+.navigate_block
+	position relative
+	.nav
+		position absolute
+		top 50px
+		&.next
+			right 0
+			width 0
+			height 0
+			border-top 30px solid transparent
+			border-bottom 30px solid transparent
+			border-left 30px solid #986727
+			&:hover
+				border-left 30px solid black
+		&.prev
+			left 0
+			width 0
+			height 0
+			border-top 30px solid transparent
+			border-bottom 30px solid transparent
+			border-right 30px solid #986727
+			&:hover
+				border-right 30px solid black
+
+.carousel
+	// outline 1px solid red
+	&.ordens
+		width 1047px
+		height 162px
+		margin 0 auto
+	&.persons
+		width 1200px
+		height 380px
+		margin 0 auto
+
+.drop
+	width 400px
+	height 300px
+	background-color rgb(55, 169, 251)
+
+.orden
+	width 160px
+	height 160px
+	background-position center!important
+	background-size contain!important
+	background-repeat no-repeat!important
+	border 1px solid black
+	margin-right 15px
+	&.ui-draggable-dragging
+		border none
+
+.person
+	width 245px
+	height 380px
+	background-position bottom!important
+	background-size 80% auto!important
+	background-repeat no-repeat!important
+	transition background-size .3s linear
+	// margin-right -45px
+	&.hover
+	&.active
+		background-size 100%!important
+		transition background-size .3s linear

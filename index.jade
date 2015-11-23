@@ -1,63 +1,26 @@
 doctype html
 html
 	head
-		meta(charset='utf-8')
-		title [ MANEGE | FLIP ]
+		meta(charset="utf-8")
 		link(rel='stylesheet', type='text/css', href='styl/main.css')
-		script(type='text/javascript', src='js/jquery-2.1.4.min.js')
-		//- script(type='text/javascript', src='js/jquery.easing.min.js')
-		script(type='text/javascript', src='js/jquery.cycle2.min.js')
-		script(type='text/javascript', src='js/jquery.cycle2.flip.min.js')
-		script(type='text/javascript', src='js/intercom.min.js')
-		script(type='text/javascript', src='js/screenfull.js')
-		script(type='text/javascript', src='js/main.js')
+		<script type='text/javascript' src='js/jquery-2.1.4.min.js'></script>
+		<script type='text/javascript' src="js/jquery-ui.min.js"></script>
+		<script type='text/javascript' src="js/jquery.ui.touch-punch.min.js"></script>
+		<script type='text/javascript' src="js/jquery.cycle2.min.js"></script>
+		<script type='text/javascript' src="js/jquery.cycle2.carousel.min.js"></script>
+		<script type='text/javascript' src='db/ordens.js'></script>
+		<script type='text/javascript' src='db/persons.js'></script>
+		<script type='text/javascript' src='js/main.js'></script>
 	body
-		.buttons_block
-			button.flip 1
-			button.flip 2
-			button.flip 3
-			button.flip 4
-			button.flip 5
-			button.flip 6
-			.spacer |
-			button.all all
-			.spacer |
-			button.play play
-			button.reload reload
-
 		.outer_block
-			.flip_block
-				img(src='img/logo/ru/01.svg')
-				img(src='img/desc/ru/01.svg')
-				img(src='img/logo/en/01.svg')
-				img(src='img/desc/en/01.svg')
+			.block_ordens
+				.navigate_block
+					.nav.prev
+					.nav.next
+				.carousel.ordens
 
-			.flip_block
-				img(src='img/logo/ru/02.svg')
-				img(src='img/desc/ru/02.svg')
-				img(src='img/logo/en/02.svg')
-				img(src='img/desc/en/02.svg')
-
-			.flip_block
-				img(src='img/logo/ru/03.svg')
-				img(src='img/desc/ru/03.svg')
-				img(src='img/logo/en/03.svg')
-				img(src='img/desc/en/03.svg')
-
-			.flip_block
-				img(src='img/logo/ru/04.svg')
-				img(src='img/desc/ru/04.svg')
-				img(src='img/logo/en/04.svg')
-				img(src='img/desc/en/04.svg')
-
-			.flip_block
-				img(src='img/logo/ru/05.svg')
-				img(src='img/desc/ru/05.svg')
-				img(src='img/logo/en/05.svg')
-				img(src='img/desc/en/05.svg')
-
-			.flip_block
-				img(src='img/logo/ru/06.svg')
-				img(src='img/desc/ru/06.svg')
-				img(src='img/logo/en/06.svg')
-				img(src='img/desc/en/06.svg')
+			.block_persons
+				.navigate_block
+					.nav.prev
+					.nav.next
+				.carousel.persons
