@@ -13,7 +13,10 @@ $(document).ready(function() {
 			scroll: false,
 			appendTo: 'body',
 			revert: 'invalid',
-			helper: 'clone'
+			helper: 'clone',
+			drag: function() {
+				$('.person').empty().removeClass('active');
+			}
 		});
 
 		$('.person').droppable({
@@ -41,7 +44,7 @@ $(document).ready(function() {
 					alert('Error:', '_orden_id: ' + orden_id, '_person_id: ' + person_id);
 				}
 
-				$('.person').empty().removeClass('active');
+				// $('.person').empty().removeClass('active');
 				$(this).addClass('active').append($(ui.helper).clone().css({top:'auto', left: 'auto'}));
 			}
 		});
