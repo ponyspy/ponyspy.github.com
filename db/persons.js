@@ -7,7 +7,13 @@
 
 === */
 
-var persons_db = [
+var persons_db = {};
+
+persons_db['defaults'] = {
+  reject: 'Сообщение по умолчанию если орден не совпал'
+}
+
+persons_db['list'] = [
 
   // === Person 1 ===
 

@@ -46,11 +46,6 @@ body {
   height: 380px;
   margin: 0 auto;
 }
-.drop {
-  width: 400px;
-  height: 300px;
-  background-color: #37a9fb;
-}
 .orden {
   width: 160px;
   height: 160px;
@@ -66,13 +61,19 @@ body {
 .person {
   width: 245px;
   height: 380px;
+  background-size: 100% auto !important;
   background-position: bottom !important;
-  background-size: 80% auto !important;
   background-repeat: no-repeat !important;
   transition: background-size 0.3s linear;
+  margin-right: -60px;
+}
+.person.activate {
+  background-size: 80% auto !important;
+  opacity: 0.6 !important;
 }
 .person.hover,
 .person.active {
+  opacity: 1 !important;
   background-size: 100% !important;
   transition: background-size 0.3s linear;
 }
