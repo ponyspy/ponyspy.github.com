@@ -75,6 +75,20 @@ body {
 .orden.ui-draggable-dragging {
   border: none;
 }
+.flag {
+  width: 500px;
+  height: 350px;
+  background-color: rgba(152,103,39,0.6);
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #000;
+  position: absolute;
+  left: 320px;
+  top: 40px;
+}
+.flag .flag_text {
+  position: relative;
+}
 .person {
   width: 345px;
   height: 480px;
@@ -84,7 +98,8 @@ body {
   transition: background-size 0.3s linear;
   margin-right: -60px;
 }
-.person.activate {
+.person.activate,
+.person.no_active {
   background-size: 80% auto !important;
   opacity: 0.6 !important;
 }

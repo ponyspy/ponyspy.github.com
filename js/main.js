@@ -8,6 +8,14 @@ $(document).ready(function() {
 		$('<div/>', {'class': 'person', 'person-id': person._person_id, 'style':'background: url(' + person.img + ')'}).appendTo('.carousel.persons');
 	});
 
+	$(document)
+		.on('mouseup.search', function(event) {
+			if (!/orden/.test(event.target.className)) {
+				$('.person').empty().removeClass('active no_active');
+				$('.block_persons').children('.navigate_block').show();
+			}
+		})
+
 	$(window).on('load', function() {
 		$('.orden').draggable({
 			scroll: false,
@@ -15,7 +23,8 @@ $(document).ready(function() {
 			revert: 'invalid',
 			helper: 'clone',
 			drag: function() {
-				$('.person').empty().removeClass('active');
+				$('.person').empty().removeClass('active no_active');
+				$('.block_persons').children('.navigate_block').show();
 			}
 		});
 
@@ -25,6 +34,7 @@ $(document).ready(function() {
 			drop: function(event, ui) {
 				var person_id = $(this).attr('person-id');
 				var orden_id = $(ui.helper).attr('orden-id');
+				var flag_text;
 
 				var person = persons_db.list.filter(function(person) {
 					return person._person_id == person_id;
@@ -35,17 +45,24 @@ $(document).ready(function() {
 				})[0];
 
 				if (!person_orden) {
-					console.log('Reject default:', persons_db.defaults.reject);
+					flag_text = persons_db.defaults.reject;
+					// console.log('Reject default:', persons_db.defaults.reject);
 				} else if (person_orden.success) {
-					console.log('Success:', person_orden.success);
+					flag_text = person_orden.success;
+					// console.log('Success:', person_orden.success);
 				} else if (person_orden.reject) {
-					console.log('Reject:', person_orden.reject);
+					flag_text = person_orden.reject;
+					// console.log('Reject:', person_orden.reject);
 				} else {
 					alert('Error:', '_orden_id: ' + orden_id, '_person_id: ' + person_id);
 				}
 
-				// $('.person').empty().removeClass('active');
-				$(this).addClass('active').append($(ui.helper).clone().css({top:'auto', left: 'auto'}));
+				var flag = $('<div/>', {'class':'flag'});
+				var flag_text = $('<div/>', {'class':'flag_text', 'text': flag_text});
+
+				$('.person').addClass('no_active');
+				$('.block_persons').children('.navigate_block').hide();
+				$(this).addClass('active').append($(ui.helper).clone().css({top:'auto', left: 'auto'}).append(flag.append(flag_text)));
 			}
 		});
 	});

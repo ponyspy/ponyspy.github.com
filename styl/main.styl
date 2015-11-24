@@ -71,6 +71,19 @@ body
 	&.ui-draggable-dragging
 		border none
 
+.flag
+	width 500px
+	height 350px
+	background-color rgba(152, 103, 39, 0.6)
+	color white
+	padding 10px
+	border 1px solid black
+	position absolute
+	left 320px
+	top 40px
+	.flag_text
+		position relative
+
 .person
 	width 345px
 	height 480px
@@ -80,6 +93,7 @@ body
 	transition background-size .3s linear
 	margin-right -60px
 	&.activate
+	&.no_active
 		background-size 80% auto!important
 		opacity 0.6!important
 	&.hover
