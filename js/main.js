@@ -11,7 +11,7 @@ $(document).ready(function() {
 	});
 
 	$(document).on('mouseup', function(event) {
-		if (!/orden/.test(event.target.className)) {
+		if (!/orden|next|prev/.test(event.target.className)) {
 			$('.person').children('.orden').remove().end().children('.person_name').hide().end().removeClass('active no_active');
 			$('.compare_block').hide().children('.compare_reuslts').empty();
 			$('.block_persons').children('.navigate_block').show();
@@ -101,13 +101,11 @@ $(document).ready(function() {
 	$('.prev').on('click', function() {
 		var type = $(this).parent('.navigate_block').next('.carousel').attr('class').split(' ')[1];
 		$('.' + type).cycle('prev');
-		// $('.person').removeClass('active').filter('.cycle-slide-active').next().next().addClass('active');
 	});
 
 	$('.next').on('click', function() {
 		var type = $(this).parent('.navigate_block').next('.carousel').attr('class').split(' ')[1];
 		$('.' + type).cycle('next');
-		// $('.person').removeClass('active').filter('.cycle-slide-active').next().next().addClass('active');
 	});
 
 });

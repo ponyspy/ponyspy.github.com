@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'NevaC';
+  src: url("../fonts/NevaC.otf");
+}
 html,
 body,
 .outer_block {
@@ -14,8 +18,10 @@ body {
   position: relative;
 }
 .block_ordens {
-  width: 100%;
+  width: 1270px;
   position: absolute;
+  left: 50%;
+  margin-left: -635px;
   top: 40px;
 }
 .block_persons {
@@ -30,10 +36,10 @@ body {
   display: none;
 }
 .compare_block .compare_reuslts {
-  border: 1px solid #f00;
   margin: 0 auto;
   width: 1047px;
   height: 260px;
+  font: 12pt/14pt 'NevaC';
 }
 .navigate_block {
   position: relative;
@@ -112,4 +118,5 @@ body {
   width: 395px;
   text-align: center;
   position: absolute;
+  font: 14pt/16pt 'NevaC';
 }
