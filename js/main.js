@@ -5,16 +5,18 @@ $(document).ready(function() {
 	});
 
 	persons_db.list.forEach(function(person) {
-		$('<div/>', {'class': 'person', 'person-id': person._person_id, 'style':'background: url(' + person.img + ')'}).appendTo('.carousel.persons');
+		var $person = $('<div/>', {'class': 'person', 'person-id': person._person_id, 'style':'background: url(' + person.img + ')'});
+		var $person_name = $('<div/>', {'class': 'person_name', 'text': person.name});
+		$('.carousel.persons').append($person.append($person_name));
 	});
 
-	$(document)
-		.on('mouseup.search', function(event) {
-			if (!/orden/.test(event.target.className)) {
-				$('.person').empty().removeClass('active no_active');
-				$('.block_persons').children('.navigate_block').show();
-			}
-		})
+	$(document).on('mouseup', function(event) {
+		if (!/orden/.test(event.target.className)) {
+			$('.person').children('.orden').remove().end().children('.person_name').hide().end().removeClass('active no_active');
+			$('.compare_block').hide().children('.compare_reuslts').empty();
+			$('.block_persons').children('.navigate_block').show();
+		}
+	});
 
 	$(window).on('load', function() {
 		$('.orden').draggable({
@@ -22,8 +24,9 @@ $(document).ready(function() {
 			appendTo: 'body',
 			revert: 'invalid',
 			helper: 'clone',
-			drag: function() {
-				$('.person').empty().removeClass('active no_active');
+			start: function() {
+				$('.person').children('.orden').remove().end().children('.person_name').hide().end().removeClass('active no_active');
+				$('.compare_block').hide().children('.compare_reuslts').empty();
 				$('.block_persons').children('.navigate_block').show();
 			}
 		});
@@ -31,6 +34,12 @@ $(document).ready(function() {
 		$('.person').droppable({
 			hoverClass: 'hover',
 			activeClass: 'activate',
+			over: function() {
+				$(this).children('.person_name').show();
+			},
+			out: function() {
+				$(this).children('.person_name').hide();
+			},
 			drop: function(event, ui) {
 				var person_id = $(this).attr('person-id');
 				var orden_id = $(ui.helper).attr('orden-id');
@@ -46,23 +55,19 @@ $(document).ready(function() {
 
 				if (!person_orden) {
 					flag_text = persons_db.defaults.reject;
-					// console.log('Reject default:', persons_db.defaults.reject);
 				} else if (person_orden.success) {
 					flag_text = person_orden.success;
-					// console.log('Success:', person_orden.success);
 				} else if (person_orden.reject) {
 					flag_text = person_orden.reject;
-					// console.log('Reject:', person_orden.reject);
 				} else {
 					alert('Error:', '_orden_id: ' + orden_id, '_person_id: ' + person_id);
 				}
 
-				var flag = $('<div/>', {'class':'flag'});
-				var flag_text = $('<div/>', {'class':'flag_text', 'text': flag_text});
+				$('.compare_block').show().children('.compare_reuslts').empty().append(flag_text);
 
 				$('.person').addClass('no_active');
 				$('.block_persons').children('.navigate_block').hide();
-				$(this).addClass('active').append($(ui.helper).clone().css({top:'auto', left: 'auto'}).append(flag.append(flag_text)));
+				$(this).addClass('active').append($(ui.helper).clone().css({top:'auto', left: 'auto'}));
 			}
 		});
 	});
@@ -105,7 +110,4 @@ $(document).ready(function() {
 		// $('.person').removeClass('active').filter('.cycle-slide-active').next().next().addClass('active');
 	});
 
-	$('.clear').on('click', function(event) {
-		$('.person').empty();
-	});
 });
