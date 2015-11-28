@@ -37,6 +37,7 @@ $(document).ready(function() {
 		$('.person').droppable({
 			hoverClass: 'hover',
 			activeClass: 'activate',
+			tolerance: 'fit',
 			over: function() {
 				$(this).children('.person_name').show();
 			},
