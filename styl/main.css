@@ -2,6 +2,10 @@
   font-family: 'NevaC';
   src: url("../fonts/NevaC.otf");
 }
+@font-face {
+  font-family: 'NevaCBold';
+  src: url("/fonts/NevaCBold.otf");
+}
 html,
 body,
 .outer_block {
@@ -40,10 +44,10 @@ body {
 }
 .block_ordens .navigate_block .nav.next {
   transform: scale(-1, 1);
-  right: 40px;
+  right: 60px;
 }
 .block_ordens .navigate_block .nav.prev {
-  left: 40px;
+  left: 60px;
 }
 .block_persons {
   width: 100%;
@@ -85,25 +89,42 @@ body {
 .compare_block .compare_results.sucess .flag {
   fill: #986727;
 }
-.compare_block .compare_results.sucess .flag_text {
+.compare_block .compare_results.sucess .text {
   color: #986727;
 }
-.compare_block .compare_results.reject .flag {
+.compare_block .compare_results.reject .flag path {
   fill: #666;
 }
-.compare_block .compare_results.reject .flag_text {
+.compare_block .compare_results.reject .text {
   color: #666;
 }
 .compare_block .compare_results .flag {
+  width: 335px;
+  height: 225px;
   display: block;
   float: left;
+  font: 16pt/18pt 'NevaCBold';
 }
-.compare_block .compare_results .flag_text {
+.compare_block .compare_results .flag.desc {
+  color: #986727;
+}
+.compare_block .compare_results .meta {
   float: left;
   margin-left: 20px;
-  margin-top: 32px;
   width: 690px;
   height: 195px;
+}
+.compare_block .compare_results .meta.compare .name {
+  margin-top: 30px;
+}
+.compare_block .compare_results .meta .name {
+  font: 16pt/18pt 'NevaCBold';
+}
+.compare_block .compare_results .meta .years {
+  font: 14pt/18pt 'NevaC';
+}
+.compare_block .compare_results .meta .text {
+  margin-top: 5px;
 }
 .carousel.ordens {
   width: 1047px;
@@ -118,11 +139,20 @@ body {
 .orden {
   width: 160px;
   height: 160px;
-  background-position: center !important;
-  background-size: 70% !important;
+  background-position: 50% 30% !important;
+  background-size: 65% !important;
   background-repeat: no-repeat !important;
-  border: 1px solid #000;
+  border: 1px solid #986727;
   margin-right: 15px;
+}
+.orden .orden_title {
+  width: 160px;
+  height: 40px;
+  font: 10pt/12pt 'NevaC';
+  color: #986727;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 .orden.ui-draggable-dragging {
   border: none;

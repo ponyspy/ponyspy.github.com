@@ -3,10 +3,10 @@
 	src: url('../fonts/NevaC.otf');
 }
 
-// @font-face {
-// 	font-family: 'GillSans';
-// 	src: url('/fonts/GillSansC.otf');
-// }
+@font-face {
+	font-family: 'NevaCBold';
+	src: url('/fonts/NevaCBold.otf');
+}
 
 // @font-face {
 // 	font-family: 'GillSansLight';
@@ -49,9 +49,9 @@ body
 					fill black
 			&.next
 				transform scale(-1, 1)
-				right 40px
+				right 60px
 			&.prev
-				left 40px
+				left 60px
 
 .block_persons
 	width 100%
@@ -87,23 +87,34 @@ body
 		&.sucess
 			.flag
 				fill #986727
-			.flag_text
+			.text
 				color #986727
 		&.reject
-			.flag
+			.flag path
 				fill #666666
-			.flag_text
+			.text
 				color #666666
 		.flag
+			width 335px
+			height 225px
 			display block
 			float left
-		.flag_text
+			font 16pt/18pt 'NevaCBold'
+			&.desc
+				color #986727
+		.meta
 			float left
 			margin-left 20px
-			margin-top 32px
 			width 690px
 			height 195px
-			// outline 1px solid red
+			&.compare .name
+				margin-top 30px
+			.name
+				font 16pt/18pt 'NevaCBold'
+			.years
+				font 14pt/18pt 'NevaC'
+			.text
+				margin-top 5px
 
 .carousel
 	// outline 1px solid red
@@ -119,11 +130,20 @@ body
 .orden
 	width 160px
 	height 160px
-	background-position center!important
-	background-size 70%!important
+	background-position 50% 30%!important
+	background-size 65%!important
 	background-repeat no-repeat!important
-	border 1px solid black
+	border 1px solid #986727
 	margin-right 15px
+	.orden_title
+		width 160px
+		height 40px
+		// outline 1px solid red
+		font 10pt/12pt 'NevaC'
+		color #986727
+		text-align center
+		position absolute
+		bottom 0
 	&.ui-draggable-dragging
 		border none
 
