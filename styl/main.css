@@ -86,35 +86,21 @@ body {
   font: 12pt/14pt 'NevaC';
   overflow: hidden;
 }
-.compare_block .compare_results.sucess .flag {
-  fill: #986727;
-}
-.compare_block .compare_results.sucess .text {
-  color: #986727;
-}
-.compare_block .compare_results.reject .flag path {
-  fill: #666;
-}
-.compare_block .compare_results.reject .text {
-  color: #666;
-}
 .compare_block .compare_results .flag {
   width: 335px;
   height: 225px;
   display: block;
   float: left;
-  font: 16pt/18pt 'NevaCBold';
-}
-.compare_block .compare_results .flag.desc {
-  color: #986727;
-  padding-top: 30px;
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .compare_block .compare_results .meta {
   float: left;
   margin-left: 20px;
   width: 690px;
   height: 195px;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .compare_block .compare_results .meta .name {
   font: 16pt/18pt 'NevaCBold';
