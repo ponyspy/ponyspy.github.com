@@ -44,10 +44,10 @@ body {
 }
 .block_ordens .navigate_block .nav.next {
   transform: scale(-1, 1);
-  right: 120px;
+  right: 100px;
 }
 .block_ordens .navigate_block .nav.prev {
-  left: 120px;
+  left: 100px;
 }
 .block_persons {
   width: 100%;
@@ -112,7 +112,7 @@ body {
   margin-top: 5px;
 }
 .carousel.ordens {
-  width: 965px;
+  width: 967px;
   height: 162px;
   margin: 0 auto;
 }
@@ -127,7 +127,7 @@ body {
   background-position: 50% 25% !important;
   background-size: 65% !important;
   background-repeat: no-repeat !important;
-  border-right: 1px solid #986727;
+  border-left: 1px solid #986727;
 }
 .orden .orden_title {
   width: 160px;
