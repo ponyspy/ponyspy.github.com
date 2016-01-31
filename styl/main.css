@@ -16,6 +16,7 @@ body,
 }
 .column.left .logo {
   position: absolute;
+  cursor: pointer;
 }
 .column.left .adress {
   bottom: 0;
