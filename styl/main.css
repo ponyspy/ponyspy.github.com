@@ -36,7 +36,6 @@ body,
 }
 .column.right .column_inner {
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
   margin-right: -15px;
 }
 .column.right .column_inner .item {
