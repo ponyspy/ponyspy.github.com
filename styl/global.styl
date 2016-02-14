@@ -1,0 +1,86 @@
+.search_input::-webkit-input-placeholder {
+	color: white;
+}
+
+body
+	margin 0
+	padding 0
+	font 14pt/18pt 'Georgia'
+
+.menu_block
+	position fixed
+	top 0
+	z-index 99999
+	padding-top 10px
+	padding-bottom 5px
+	background-color rgba(13, 13, 13, 0.8)
+	color white
+	width 100%
+	.menu_inner
+		max-width 1200px
+		padding-left 40px
+		padding-right 40px
+		margin 0 auto
+	.logo
+		font 24pt/26pt 'Georgia'
+		cursor pointer
+		float left
+		&.hide
+			display none
+	.menu_search
+		display block
+		float left
+		display none
+		&.active
+			display block
+		.search_input
+			font 24pt/26pt 'Georgia'
+			margin 0
+			padding 0
+			border none
+			outline none
+			color white
+			background transparent
+			min-width 100px
+			max-width 210px
+	.menu_right
+		float right
+		margin-top 4px
+		a
+			margin-left 10px
+			img
+				height 30px
+	.menu_lectures
+		padding-top 5px
+		clear both
+		display none
+		padding-bottom 5px
+		&.active
+			display block
+
+
+
+.item_lectures
+	max-width 1200px
+	overflow hidden
+	height 200px
+	.lectures_outer
+		max-width 1200px
+		overflow hidden
+		height 200px
+		padding-bottom 20px
+		-webkit-overflow-scrolling: touch;
+		.lectures_inner
+			white-space nowrap
+			vertical-align top
+			display inline-block
+			font-size 0
+			.lecture
+				font-size 0
+				display inline-block
+				width 200px
+				height 200px
+				margin-right 40px
+				background-color grey
+				&:last-child
+					margin-right 0px

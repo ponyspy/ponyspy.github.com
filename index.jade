@@ -1,25 +1,50 @@
+mixin lectures()
+	.item_lectures
+		.lectures_outer
+			.lectures_inner
+				each lecture in new Array(8)
+					a.lecture(href='#')
+
+
 doctype html
 html
 	head
-		title [MANEGE | SIDUR MUSEUM]
+		title Школа Опойцева
 		meta(charset="utf-8")
+		meta(name='viewport', content='width=device-width, user-scalable=no')
+		link(rel='stylesheet', type='text/css', href='styl/global.css')
+		link(rel='stylesheet', type='text/css', href='styl/mobile.css')
 		link(rel='stylesheet', type='text/css', href='styl/main.css')
 		script(type='text/javascript', src='js/jquery-2.1.4.min.js')
+		script(type='text/javascript', src='js/global.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		.column.left
-			.column_inner
-				img.logo(src='img/s-web-1.svg')
-				img.adress(src='img/s-web-3.svg')
-				img.logos(src='img/s-web-6.svg')
-		.column.right
-			.column_inner.infinity
-				each item in new Array(4)
-					.item
-						img(src='img/s-web-2.svg')
-						img(src='img/s-web-4.svg')
-						img.poster(src='img/s1.jpg')
-					.item
-						img(src='img/s-web-2.svg')
-						img(src='img/s-web-5.svg')
-						img.poster(src='img/s2.jpg')
+		.menu_block
+			.menu_inner
+				.logo Школа Опойцева
+				.menu_search
+					input.search_input(type='text', placeholder='Поиск...')
+					.search_results
+				.menu_right
+					a.search(href='#'): img(src='img/icons/search.svg')
+					a(href='#'): img(src='img/icons/mail.svg')
+					//- a(href='#'): img(src='img/icons/fb.svg')
+					//- a(href='#'): img(src='img/icons/vk.svg')
+				.menu_lectures
+					+lectures()
+		.content_block
+			.content_photo: .photo_outer: .photo_inner
+			.content_body
+				.content_item
+					.item_title Лекции и Уроки
+					+lectures()
+				.content_item
+					.item_title О школе
+					.item_desc
+						include about.jade
+				.content_item
+					.item_title Разное
+					.item_others
+						each other in new Array(3)
+							.other
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed porro suscipit aliquid, sunt tempore possimus accusamus neque, enim dolore aliquam harum culpa magni commodi nostrum voluptatem ipsam ipsa officiis officia.

@@ -1,0 +1,56 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .menu_inner {
+    padding-top: 5px !important;
+    padding-bottom: 0px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .logo,
+  .search_input {
+    font: 18pt/20pt 'Georgia' !important;
+  }
+  .menu_right {
+    margin-top: 0px !important;
+  }
+  .content_item {
+    padding-top: 20px !important;
+  }
+  .item_title {
+    font: 18pt/20pt 'Georgia' !important;
+    margin-bottom: 20px !important;
+  }
+  .photo_outer {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .photo_inner {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .content_body {
+    top: 200px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .item_lectures {
+    height: 150px !important;
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+  }
+  .lectures_outer {
+    overflow-x: scroll !important;
+    height: 150px !important;
+  }
+  .lecture {
+    width: 150px !important;
+    height: 150px !important;
+    margin-right: 0px !important;
+    margin-left: 20px !important;
+  }
+  .lecture:first-child {
+    margin-left: 10px !important;
+  }
+  .lecture:last-child {
+    margin-right: 10px !important;
+  }
+}

@@ -1,40 +1,48 @@
-body
-	margin 0
-	padding 0
-
-html, body, .content_block, .column, .column_inner
-	height 100%
-
-.column
-	&.left
-		width 93px
+.content_block
+	.content_photo
+		top 0
 		position fixed
-		z-index 9999
-		.logo
-			position absolute
-			cursor pointer
-		.adress
-			bottom 0
-			position absolute
-		.logos
-			position absolute
-			top 365px
-			width 100px
-	&.right
-		right 0
-		left 93px
-		position absolute
-		z-index 0
-		overflow hidden
-		.column_inner
-			overflow scroll
-			// -webkit-overflow-scrolling: touch;
-			margin-right -15px
-			.item
-				padding-top 5px
-				width 100%
-				min-height 400px
+		width 100%
+		height 500px
+		.photo_outer
+			position relative
+			padding-left 40px
+			padding-right 40px
+			margin 0 auto
+			.photo_inner
 				position relative
-				.poster
-					display block
-					margin-left 7px
+				max-width 1200px
+				height 500px
+				margin 0 auto
+				background-image url('../img/iam.jpg')
+				background-position top
+				background-size 100%
+				background-repeat no-repeat
+	.content_body
+		max-width 1200px
+		padding-left 40px
+		padding-right 40px
+		margin 0 auto
+		position relative
+		top 500px
+		background-color white
+		.content_item
+			min-height 200px
+			padding-top 40px
+			.item_title
+				font 24pt/26pt 'Georgia'
+				margin-bottom 40px
+			.item_desc
+				max-width 1024px
+				 -webkit-hyphens: auto;
+				img
+					margin-top 50px
+					margin-bottom 50px
+					width 90%
+			.item_others
+				max-width 1024px
+				.other
+					font-size 14pt
+					min-height 160px
+					background-color grey
+					margin-bottom 30px
