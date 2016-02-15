@@ -37,14 +37,34 @@
   font: 24pt/26pt 'Georgia';
   margin-bottom: 40px;
 }
+.content_block .content_body .content_item .item_title .desc_sep {
+  color: #808080;
+}
+.content_block .content_body .content_item .item_title .desc_select {
+  color: #808080;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.content_block .content_body .content_item .item_title .desc_select.active,
+.content_block .content_body .content_item .item_title .desc_select:hover {
+  transition: color 0.2s ease-in-out;
+  color: #c33825;
+}
 .content_block .content_body .content_item .item_desc {
-  max-width: 1024px;
+  display: none;
   -webkit-hyphens: auto;
+}
+.content_block .content_body .content_item .item_desc p,
+.content_block .content_body .content_item .item_desc ul {
+  max-width: 1024px;
+}
+.content_block .content_body .content_item .item_desc.active {
+  display: block;
 }
 .content_block .content_body .content_item .item_desc img {
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 90%;
+  width: 100%;
 }
 .content_block .content_body .content_item .item_others {
   max-width: 1024px;
@@ -54,4 +74,32 @@
   min-height: 160px;
   background-color: #808080;
   margin-bottom: 30px;
+}
+.books_separator {
+  font: 16pt/18pt 'Georgia';
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.book_item {
+  -webkit-hyphens: none;
+  margin-bottom: 10px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.book_item:hover {
+  transition: color 0.2s ease-in-out;
+  color: #c33825;
+}
+.book_item .book_pref {
+  margin-right: 10px;
+}
+.book_item .book_name {
+  font: 14pt/22pt 'Georgia';
+  margin-right: 5px;
+}
+.book_item .book_post {
+  font-style: italic;
+  display: inline-block;
 }

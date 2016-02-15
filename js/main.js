@@ -12,9 +12,15 @@ $(document).ready(function() {
 				? $('.photo_inner').css('background-size', 100 + scroll_persent + '%')
 				: false;
 
-
-			$(window).scrollTop() == $(document).height() - $(window).height()
-				? $('.other:first').clone().insertAfter('.other:last')
+			$(window).scrollTop() + $(window).height() + 600 >= $(document).height()
+				? $('.other').slice(0, 6).clone().insertAfter('.other:last')
 				: false;
+		});
+
+		$('.desc_select').on('click', function() {
+			var index = $(this).index('.desc_select');
+
+			$('.desc_select').removeClass('active').filter(this).addClass('active');
+			$('.item_desc').removeClass('active').eq(index).addClass('active');
 		});
 });

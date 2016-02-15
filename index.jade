@@ -39,12 +39,17 @@ html
 					.item_title Лекции и Уроки
 					+lectures()
 				.content_item
-					.item_title О школе
-					.item_desc
+					.item_title
+						span.desc_select.active О школе
+						span.desc_sep= ' / '
+						span.desc_select Книги
+					.item_desc.active
 						include about.jade
+					.item_desc
+						include books.jade
 				.content_item
 					.item_title Разное
 					.item_others
-						each other in new Array(3)
+						each other in new Array(6)
 							.other
 								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed porro suscipit aliquid, sunt tempore possimus accusamus neque, enim dolore aliquam harum culpa magni commodi nostrum voluptatem ipsam ipsa officiis officia.
