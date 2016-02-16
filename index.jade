@@ -2,8 +2,10 @@ mixin lectures()
 	.item_lectures
 		.lectures_outer
 			.lectures_inner
-				each lecture in new Array(8)
+				each lecture, i in ['школьная математика', 'высшая математика', 'физика', 'короткие задачи', 'длинные задачи', 'задачи средней длины', 'очень длинные задачи']
 					a.lecture(href='#')
+						.lecture_numb: .numb_inner= i+1
+						.lecture_title= lecture
 
 
 doctype html
@@ -33,7 +35,7 @@ html
 				.menu_lectures
 					+lectures()
 		.content_block
-			.content_photo: .photo_outer: .photo_inner
+			.content_photo: .photo_inner
 			.content_body
 				.content_item
 					.item_title Лекции и Уроки

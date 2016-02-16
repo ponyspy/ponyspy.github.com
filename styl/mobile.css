@@ -19,33 +19,33 @@
     font: 18pt/20pt 'Georgia' !important;
     margin-bottom: 20px !important;
   }
-  .photo_outer {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
   .photo_inner {
-    width: 100% !important;
-    height: 200px !important;
+    height: 300px !important;
   }
   .content_body {
-    top: 200px !important;
+    top: 300px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
   .item_lectures {
-    height: 150px !important;
+    height: 245px !important;
     margin-left: -10px !important;
     margin-right: -10px !important;
   }
   .lectures_outer {
     overflow-x: scroll !important;
-    height: 150px !important;
+    height: 245px !important;
   }
   .lecture {
-    width: 150px !important;
-    height: 150px !important;
+    width: 180px !important;
+    height: 200px !important;
     margin-right: 0px !important;
-    margin-left: 20px !important;
+    margin-left: 30px !important;
+  }
+  .lecture_numb {
+    width: 180px !important;
+    height: 180px !important;
+    font: 240pt/110pt 'Georgia' !important;
   }
   .lecture:first-child {
     margin-left: 10px !important;

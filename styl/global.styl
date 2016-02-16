@@ -1,3 +1,18 @@
+@font-face {
+	font-family: 'Georgia';
+	src: url('../fonts/Georgia.ttf');
+}
+
+@font-face {
+	font-family: 'GillSans';
+	src: url('../fonts/GillSansC.otf');
+}
+
+@font-face {
+	font-family: 'GillSans Light';
+	src: url('../fonts/GillSansLightC.otf');
+}
+
 .search_input::-webkit-input-placeholder {
 	color: white;
 }
@@ -67,11 +82,11 @@ body
 .item_lectures
 	max-width 1200px
 	overflow hidden
-	height 200px
+	height 265px
 	.lectures_outer
 		max-width 1200px
 		overflow hidden
-		height 200px
+		height 250px
 		padding-bottom 20px
 		-webkit-overflow-scrolling: touch;
 		.lectures_inner
@@ -80,11 +95,30 @@ body
 			display inline-block
 			font-size 0
 			.lecture
+				vertical-align top
 				font-size 0
 				display inline-block
 				width 200px
-				height 200px
-				margin-right 40px
-				background-color grey
+				height 250px
+				margin-right 70px
+				text-decoration none
+				.lecture_numb
+					background-color grey
+					overflow hidden
+					width 200px
+					height 200px
+					font 264pt/126pt 'Georgia'
+					color black
+					.numb_inner
+						margin-left -22px
+				.lecture_title
+					color #939598
+					white-space normal
+					margin-top 10px
+					font 20pt/22pt 'GillSans Light'
+					transition color .2s ease-in-out
+				&:hover .lecture_title
+					transition color .2s ease-in-out
+					color #c33825
 				&:last-child
 					margin-right 0px

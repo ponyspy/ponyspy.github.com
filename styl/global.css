@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Georgia';
+  src: url("../fonts/Georgia.ttf");
+}
+@font-face {
+  font-family: 'GillSans';
+  src: url("../fonts/GillSansC.otf");
+}
+@font-face {
+  font-family: 'GillSans Light';
+  src: url("../fonts/GillSansLightC.otf");
+}
 .search_input::-webkit-input-placeholder {
   color: #fff;
 }
@@ -76,12 +88,12 @@ body {
 .item_lectures {
   max-width: 1200px;
   overflow: hidden;
-  height: 200px;
+  height: 265px;
 }
 .item_lectures .lectures_outer {
   max-width: 1200px;
   overflow: hidden;
-  height: 200px;
+  height: 250px;
   padding-bottom: 20px;
   -webkit-overflow-scrolling: touch;
 }
@@ -92,12 +104,35 @@ body {
   font-size: 0;
 }
 .item_lectures .lectures_outer .lectures_inner .lecture {
+  vertical-align: top;
   font-size: 0;
   display: inline-block;
   width: 200px;
-  height: 200px;
-  margin-right: 40px;
+  height: 250px;
+  margin-right: 70px;
+  text-decoration: none;
+}
+.item_lectures .lectures_outer .lectures_inner .lecture .lecture_numb {
   background-color: #808080;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  font: 264pt/126pt 'Georgia';
+  color: #000;
+}
+.item_lectures .lectures_outer .lectures_inner .lecture .lecture_numb .numb_inner {
+  margin-left: -22px;
+}
+.item_lectures .lectures_outer .lectures_inner .lecture .lecture_title {
+  color: #939598;
+  white-space: normal;
+  margin-top: 10px;
+  font: 20pt/22pt 'GillSans Light';
+  transition: color 0.2s ease-in-out;
+}
+.item_lectures .lectures_outer .lectures_inner .lecture:hover .lecture_title {
+  transition: color 0.2s ease-in-out;
+  color: #c33825;
 }
 .item_lectures .lectures_outer .lectures_inner .lecture:last-child {
   margin-right: 0px;
