@@ -1,57 +1,62 @@
-mixin lectures()
-	.item_lectures
-		.lectures_outer
-			.lectures_inner
-				each lecture, i in ['школьная математика', 'высшая математика', 'физика', 'короткие задачи', 'длинные задачи', 'задачи средней длины', 'очень длинные задачи']
-					a.lecture(href='#')
-						.lecture_numb: .numb_inner= i+1
-						.lecture_title= lecture
-
+- var words = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis qui, eos vero cumque sit officiis temporibus tenetur distinctio nulla architecto, dolorum voluptate impedit vitae perspiciatis deserunt dicta id odit consectetur.'
 
 doctype html
 html
 	head
-		title Школа Опойцева
-		meta(charset="utf-8")
-		meta(name='viewport', content='width=device-width, user-scalable=no')
-		link(rel='stylesheet', type='text/css', href='styl/global.css')
-		link(rel='stylesheet', type='text/css', href='styl/mobile.css')
-		link(rel='stylesheet', type='text/css', href='styl/main.css')
-		script(type='text/javascript', src='js/jquery-2.1.4.min.js')
-		script(type='text/javascript', src='js/global.js')
+		meta(charset='utf-8')
+		title D D : A | D
+		link(rel='stylesheet', href='styles/main.css')
+		script(type='text/javascript', src='js/jquery-2.2.3.min.js')
+		script(type='text/javascript', src='js/ramjet.js')
+		script(type='text/javascript', src='js/freewall.js')
 		script(type='text/javascript', src='js/main.js')
 	body
 		.menu_block
-			.menu_inner
-				.logo Школа Опойцева
-				.menu_search
-					input.search_input(type='text', placeholder='Поиск...')
-					.search_results
-				.menu_right
-					a.search(href='#'): img(src='img/icons/search.svg')
-					a(href='#'): img(src='img/icons/mail.svg')
-					//- a(href='#'): img(src='img/icons/fb.svg')
-					//- a(href='#'): img(src='img/icons/vk.svg')
-				.menu_lectures
-					+lectures()
+			.logo
+				.section D
+					span evelopment
+				.section D
+					span epartment
+				.spacer :
+				.section A
+					span rchitecture
+				.spacer |
+				.section D
+					span esign
+			.menu_right
+				a(href='#') Works
+				a(href='#') About
+				a(href='#') Search
 		.content_block
-			.content_photo: .photo_inner
+			.content_image_main(style='background-image: url(img/3.jpg);')
+				.main_desc Красивый проект
 			.content_body
-				.content_item
-					.item_title Лекции и Уроки
-					+lectures()
-				.content_item
-					.item_title
-						span.desc_select.active О школе
-						span.desc_sep= ' / '
-						span.desc_select Книги
-					.item_desc.active
-						include about.jade
-					.item_desc
-						include books.jade
-				.content_item
-					.item_title Разное
-					.item_others
-						each other in new Array(6)
-							.other
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed porro suscipit aliquid, sunt tempore possimus accusamus neque, enim dolore aliquam harum culpa magni commodi nostrum voluptatem ipsam ipsa officiis officia.
+				.text_block
+					!= words.split(' ').map(function(word) { return '<span>' + word + '</span>' }).join(' ')
+				.drop_list_block
+					.drop_item
+						.drop_title PLACE
+						.drop_desc lalala lalal lalalal
+						.drop_down  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde vitae iure, maiores explicabo perferendis debitis facilis quos ipsum placeat rem repellendus atque sequi blanditiis tenetur recusandae, vero qui quisquam quasi.
+					.drop_item
+						.drop_title STATUS
+						.drop_desc lalala lalal lalalal
+						.drop_down  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi nihil sed, aliquam eum atque est maiores ad ullam voluptatibus! Velit quis aspernatur amet consectetur qui cum quam atque quo delectus.
+					.drop_item.map
+						.drop_title LOCATION
+						.drop_desc lalala lalal lalalal
+						.drop_down  map map map
+				.images_block: .images_inner
+					.brick(style='background-image: url(img/1.jpg);')
+					.brick.double(style='background-image: url(img/2.jpg);')
+					.brick(style='background-image: url(img/3.jpg);')
+					.brick.double(style='background-image: url(img/4.jpg);')
+					.brick(style='background-image: url(img/5.jpg);')
+					.brick(style='background-image: url(img/6.jpg);')
+					.brick(style='background-image: url(img/7.jpg);')
+				.chain_projects_block: .projects_inner
+					.project(style='background-image: url(img/3.jpg);')
+						.project(style='background-image: url(img/4.jpg);')
+					.project(style='background-image: url(img/5.jpg);')
+					.project(style='background-image: url(img/6.jpg);')
+					.project(style='background-image: url(img/7.jpg);')

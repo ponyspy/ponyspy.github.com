@@ -1,0 +1,165 @@
+body
+	margin 0
+	padding 0
+
+.menu_block
+	max-width 980px
+	margin 0 auto
+	padding-top 20px
+	padding-left 20px
+	padding-right 20px
+	position fixed
+	z-index 9999999
+	color black
+	.menu_right
+		font 22pt/24pt 'Helvetica'
+		a
+			color black
+			text-decoration none
+			display block
+			&:hover
+				text-decoration underline
+	.logo
+		.section, .spacer
+			font 32pt/34pt 'Helvetica'
+			display inline-block
+
+		.section
+			span
+				display inline-block
+				max-width 0px
+				overflow hidden
+				transition max-width .5s ease
+			&:hover span
+				transition max-width .5s ease
+				max-width 500px
+
+		.section, .section span, .spacer
+			cursor default
+
+		.section:hover, .section:hover span
+			text-decoration underline
+
+
+.content_block
+	// padding 20px
+	// padding-top 100px
+
+
+
+.content_image_main
+	width 100%
+	height 100%
+	position absolute
+	background-position center
+	background-size cover
+	background-repeat no-repeat
+	.main_desc
+		width 360px
+		height 60px
+		font 32pt/34pt 'Helvetica'
+		color white
+		position fixed
+		margin auto
+		top 0
+		left 0
+		right 0
+		bottom 0
+
+.content_body
+	position absolute
+	background-color white
+	// padding 20px
+	box-sizing border-box
+	width 100%
+	top 100%
+
+.text_block
+	max-width 940px
+	margin 0 auto
+	padding 20px
+	font 18pt/20pt 'Helvetica'
+	span
+		text-decoration underline
+
+.drop_list_block
+	max-width 620px
+	margin 0 auto
+	padding 20px
+	.drop_item
+		border-top 1px solid black
+		overflow hidden
+		padding 5px
+		width 100%
+		font 12pt/14pt 'Helvetica'
+		cursor pointer
+		position relative
+		&:last-child
+			border-bottom 1px solid black
+		&.map
+			.drop_down
+				margin 0
+				max-width none
+				width 100%
+				height 300px
+				position absolute
+				top 0
+				left 0
+				background-color red
+		&.open .drop_down
+			display block
+			position relative
+		.drop_title
+			min-width 120px
+			display block
+			float left
+		.drop_desc
+			max-width 220px
+			float left
+			margin-left 40px
+		.drop_down
+			display none
+			margin-top 30px
+			clear both
+			max-width 520px
+			margin-left 160px
+		&:after
+			display block
+			position absolute
+			top 6px
+			right 5px
+			content '▼'
+			font-size 8pt
+
+.images_block
+	max-width 980px
+	margin 0 auto
+	padding 20px
+	box-sizing border-box
+	.images_inner
+		width 100%
+
+.brick
+	background-position center
+	background-size cover
+	background-repeat no-repeat
+	width 300px
+	height 230px
+	&.double
+		width 600px
+		height 530px
+
+.chain_projects_block
+	width 100%
+	background-color black
+	padding 20px
+	box-sizing border-box
+	.projects_inner
+		max-width 940px
+		margin 0 auto
+		.project
+			width 300px
+			height 230px
+			background-position center
+			background-size cover
+			background-repeat no-repeat
