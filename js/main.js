@@ -1,49 +1,14 @@
 $(document).ready(function() {
-	var photos = new Freewall('.images_inner');
-	var projects = new Freewall('.projects_inner');
-
-	photos.reset({
-		selector: '.brick',
-		animate: false,
-		// keepOrder: true,
-		// fixSize: false,
-		draggable: true,
-		cellW: 300,
-		cellH: 200,
-		gutterX: 20,
-		gutterY: 20,
-		onResize: function() {
-			photos.fitWidth();
-		}
+	$('.images_inner').masonry({
+	  itemSelector: '.brick',
+	  columnWidth: 180,
+	  gutter: 20
 	});
 
-	projects.reset({
-		selector: '.project',
-		animate: false,
-		// keepOrder: true,
-		// fixSize: false,
-		draggable: true,
-		cellW: 300,
-		cellH: 200,
-		gutterX: 20,
-		gutterY: 20,
-		onResize: function() {
-			projects.fitWidth();
-		}
-	});
-
-	photos.fitWidth();
-	projects.fitWidth();
-
-
-
-
-	$(window).trigger('resize');
-
-	$('.content_image_main').on('click', function() {
-		$('body').animate({
-			'scrollTop': $('.content_body').offset().top
-		}, 400);
+	$('.projects_inner').masonry({
+	  itemSelector: '.project',
+	  columnWidth: 180,
+	  gutter: 20
 	});
 
 	$('.drop_item').on('click', function() {

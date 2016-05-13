@@ -3,16 +3,19 @@ body
 	padding 0
 
 .menu_block
-	max-width 980px
-	margin 0 auto
+	// max-width 980px
+	// margin 0 auto
 	padding-top 20px
 	padding-left 20px
 	padding-right 20px
-	position fixed
-	z-index 9999999
+	overflow hidden
+	// position fixed
+	// z-index 9999999
 	color black
-	.menu_right
-		font 22pt/24pt 'Helvetica'
+	.menu_left
+		float left
+		margin-right 10px
+		font 14pt/16pt 'Helvetica'
 		a
 			color black
 			text-decoration none
@@ -21,7 +24,7 @@ body
 				text-decoration underline
 	.logo
 		.section, .spacer
-			font 32pt/34pt 'Helvetica'
+			font 58pt/48pt 'Helvetica'
 			display inline-block
 
 		.section
@@ -42,40 +45,24 @@ body
 
 
 .content_block
-	// padding 20px
-	// padding-top 100px
+	max-width 1240px
+	min-width 960px
+	margin 0 auto
+	overflow hidden
+	.content_column
+		width 50%
+		float left
+		&.right
+			// background-color green
 
 
 
-.content_image_main
-	width 100%
-	height 100%
-	position absolute
-	background-position center
-	background-size cover
-	background-repeat no-repeat
-	.main_desc
-		width 360px
-		height 60px
-		font 32pt/34pt 'Helvetica'
-		color white
-		position fixed
-		margin auto
-		top 0
-		left 0
-		right 0
-		bottom 0
-
-.content_body
-	position absolute
-	background-color white
-	// padding 20px
-	box-sizing border-box
-	width 100%
-	top 100%
+.title_block
+	padding 20px
+	font 18pt/20pt 'Helvetica'
+	font 58pt/68pt 'Helvetica'
 
 .text_block
-	max-width 940px
 	margin 0 auto
 	padding 20px
 	font 18pt/20pt 'Helvetica'
@@ -132,8 +119,8 @@ body
 			font-size 8pt
 
 .images_block
-	max-width 980px
-	margin 0 auto
+	// max-width 980px
+	// margin 0 auto
 	padding 20px
 	box-sizing border-box
 	.images_inner
@@ -143,11 +130,12 @@ body
 	background-position center
 	background-size cover
 	background-repeat no-repeat
-	width 300px
-	height 230px
+	width 180px
+	height 140px
+	margin-bottom 20px
 	&.double
-		width 600px
-		height 530px
+		width 380px
+		height 380px
 
 .chain_projects_block
 	width 100%
@@ -158,8 +146,9 @@ body
 		max-width 940px
 		margin 0 auto
 		.project
-			width 300px
-			height 230px
+			width 180px
+			height 140px
+			margin-bottom 20px
 			background-position center
 			background-size cover
 			background-repeat no-repeat

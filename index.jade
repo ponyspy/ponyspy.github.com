@@ -8,29 +8,29 @@ html
 		link(rel='stylesheet', href='styles/main.css')
 		script(type='text/javascript', src='js/jquery-2.2.3.min.js')
 		script(type='text/javascript', src='js/ramjet.js')
-		script(type='text/javascript', src='js/freewall.js')
+		//- script(type='text/javascript', src='js/freewall.js')
+		script(type='text/javascript', src='js/masonry.pkgd.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		.menu_block
-			.logo
-				.section D
-					span evelopment
-				.section D
-					span epartment
-				.spacer :
-				.section A
-					span rchitecture
-				.spacer |
-				.section D
-					span esign
-			.menu_right
-				a(href='#') Works
-				a(href='#') About
-				a(href='#') Search
 		.content_block
-			.content_image_main(style='background-image: url(img/3.jpg);')
-				.main_desc Красивый проект
-			.content_body
+			.content_column.left
+				.menu_block
+					.menu_left
+						a(href='#') Works
+						a(href='#') About
+						a(href='#') Search
+					.logo
+						.section D
+							span evelopment
+						.section D
+							span epartment
+						.spacer :
+						.section A
+							span rchitecture
+						.spacer |
+						.section D
+							span esign
+				.title_block Очень длинный и очень красивый проект
 				.text_block
 					!= words.split(' ').map(function(word) { return '<span>' + word + '</span>' }).join(' ')
 				.drop_list_block
@@ -46,6 +46,7 @@ html
 						.drop_title LOCATION
 						.drop_desc lalala lalal lalalal
 						.drop_down  map map map
+			.content_column.right
 				.images_block: .images_inner
 					.brick(style='background-image: url(img/1.jpg);')
 					.brick.double(style='background-image: url(img/2.jpg);')
