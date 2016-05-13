@@ -45,9 +45,9 @@ body
 
 
 .content_block
-	max-width 1240px
-	min-width 960px
-	margin 0 auto
+	// max-width 1240px
+	// min-width 960px
+	// margin 0 auto
 	overflow hidden
 	.content_column
 		width 50%
@@ -59,8 +59,7 @@ body
 
 .title_block
 	padding 20px
-	font 18pt/20pt 'Helvetica'
-	font 58pt/68pt 'Helvetica'
+	font 6vw/7vw 'Helvetica'
 
 .text_block
 	margin 0 auto
@@ -121,20 +120,28 @@ body
 .images_block
 	padding 20px 20px 0 20px
 	box-sizing border-box
+	position relative
+	// background-color green
+	.sizer
+		width 30%
 	.brick
 		background-position center
 		background-size cover
 		background-repeat no-repeat
-		width 180px
-		height 140px
+		width 15%
+		padding 15%
+		box-sizing border-box
+		position relative
 		margin-bottom 40px
+		float left
 		.numb
 			font 12pt/14pt 'Helvetica'
 			position absolute
 			bottom -25px
+			left 0
 		&.double
-			width 380px
-			height 380px
+			width 30%
+			padding 30%
 			.numb
 				font 42pt/44pt 'Helvetica'
 				bottom -30px

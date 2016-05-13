@@ -49,9 +49,6 @@ body {
   text-decoration: underline;
 }
 .content_block {
-  max-width: 1240px;
-  min-width: 960px;
-  margin: 0 auto;
   overflow: hidden;
 }
 .content_block .content_column {
@@ -60,8 +57,7 @@ body {
 }
 .title_block {
   padding: 20px;
-  font: 18pt/20pt 'Helvetica';
-  font: 58pt/68pt 'Helvetica';
+  font: 6vw/7vw 'Helvetica';
 }
 .text_block {
   margin: 0 auto;
@@ -130,23 +126,31 @@ body {
 .images_block {
   padding: 20px 20px 0 20px;
   box-sizing: border-box;
+  position: relative;
+}
+.images_block .sizer {
+  width: 30%;
 }
 .images_block .brick {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 180px;
-  height: 140px;
+  width: 15%;
+  padding: 15%;
+  box-sizing: border-box;
+  position: relative;
   margin-bottom: 40px;
+  float: left;
 }
 .images_block .brick .numb {
   font: 12pt/14pt 'Helvetica';
   position: absolute;
   bottom: -25px;
+  left: 0;
 }
 .images_block .brick.double {
-  width: 380px;
-  height: 380px;
+  width: 30%;
+  padding: 30%;
 }
 .images_block .brick.double .numb {
   font: 42pt/44pt 'Helvetica';

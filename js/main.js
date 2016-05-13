@@ -1,7 +1,9 @@
 $(document).ready(function() {
 	$('.images_block').masonry({
 	  itemSelector: '.brick',
-	  columnWidth: 180,
+	  columnWidth: '.sizer',
+	  // percentPosition: true,
+	  transitionDuration: '0.2s',
 	  gutter: 20
 	});
 
