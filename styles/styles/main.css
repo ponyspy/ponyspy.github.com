@@ -128,37 +128,35 @@ body {
   font-size: 8pt;
 }
 .images_block {
-  padding: 20px 20px 0 20px;
+  padding: 20px;
   box-sizing: border-box;
 }
-.images_block .brick {
+.images_block .images_inner {
+  width: 100%;
+}
+.brick {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 180px;
   height: 140px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-.images_block .brick .numb {
-  font: 12pt/14pt 'Helvetica';
-  position: absolute;
-  bottom: -25px;
-}
-.images_block .brick.double {
+.brick.double {
   width: 380px;
   height: 380px;
 }
-.images_block .brick.double .numb {
-  font: 42pt/44pt 'Helvetica';
-  bottom: -30px;
-}
-.projects_block {
+.chain_projects_block {
   width: 100%;
   background-color: #000;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
   box-sizing: border-box;
 }
-.projects_block .project {
+.chain_projects_block .projects_inner {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.chain_projects_block .projects_inner .project {
   width: 180px;
   height: 140px;
   margin-bottom: 20px;
