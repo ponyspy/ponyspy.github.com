@@ -118,33 +118,20 @@ body
 			font-size 8pt
 
 .images_block
-	padding 20px 20px 0 20px
-	box-sizing border-box
-	position relative
-	// background-color green
-	.sizer
-		width 30%
-	.brick
-		background-position center
-		background-size cover
-		background-repeat no-repeat
-		width 15%
-		padding 15%
-		box-sizing border-box
-		position relative
-		margin-bottom 40px
-		float left
-		.numb
-			font 12pt/14pt 'Helvetica'
-			position absolute
-			bottom -25px
-			left 0
-		&.double
-			width 30%
-			padding 30%
-			.numb
-				font 42pt/44pt 'Helvetica'
-				bottom -30px
+	max-width 980px
+	margin 0 auto
+	.images_inner
+		width 100%
+
+.brick
+	background-position center
+	background-size cover
+	background-repeat no-repeat
+	width 300px
+	height 230px
+	&.double
+		width 600px
+		height 530px
 
 .projects_block
 	width 100%

@@ -1,17 +1,23 @@
 $(document).ready(function() {
-	$('.images_block').masonry({
-	  itemSelector: '.brick',
-	  columnWidth: '.sizer',
-	  // percentPosition: true,
-	  transitionDuration: '0.2s',
-	  gutter: 20
+	var wall = new Freewall('.images_inner');
+
+	wall.reset({
+		selector: '.brick',
+		animate: false,
+		// keepOrder: true,
+		// fixSize: false,
+		draggable: true,
+		cellW: 300,
+		cellH: 200,
+		gutterX: 20,
+		gutterY: 20,
+		onResize: function() {
+			wall.fitWidth();
+		}
 	});
 
-	$('.projects_block').masonry({
-	  itemSelector: '.project',
-	  columnWidth: 180,
-	  gutter: 20
-	});
+	wall.fitWidth();
+	$(window).trigger('resize');
 
 	$('.drop_item').on('click', function() {
 		$(this).toggleClass('open');

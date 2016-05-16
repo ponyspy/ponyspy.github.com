@@ -8,8 +8,8 @@ html
 		link(rel='stylesheet', href='styles/main.css')
 		script(type='text/javascript', src='js/jquery-2.2.3.min.js')
 		script(type='text/javascript', src='js/ramjet.js')
-		//- script(type='text/javascript', src='js/freewall.js')
-		script(type='text/javascript', src='js/masonry.pkgd.min.js')
+		script(type='text/javascript', src='js/freewall.js')
+		//- script(type='text/javascript', src='js/masonry.pkgd.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
 		.content_block
@@ -47,16 +47,15 @@ html
 						.drop_desc lalala lalal lalalal
 						.drop_down  map map map
 			.content_column.right
-				.images_block
-					.sizer
-					.brick(style='background-image: url(img/1.jpg);'): .numb 21
-					.brick.double(style='background-image: url(img/2.jpg);'): .numb 24
-					.brick(style='background-image: url(img/3.jpg);'): .numb 62
-					.brick.double(style='background-image: url(img/4.jpg);'): .numb 59
-					.brick(style='background-image: url(img/5.jpg);'): .numb 87
-					.brick(style='background-image: url(img/6.jpg);'): .numb 27
-					.brick(style='background-image: url(img/7.jpg);'): .numb 12
-				.projects_block
+				.images_block: .images_inner
+					.brick(style='background-image: url(img/1.jpg);')
+					.brick.double(style='background-image: url(img/2.jpg);')
+					.brick(style='background-image: url(img/3.jpg);')
+					.brick.double(style='background-image: url(img/4.jpg);')
+					.brick(style='background-image: url(img/5.jpg);')
+					.brick(style='background-image: url(img/6.jpg);')
+					.brick(style='background-image: url(img/7.jpg);')
+				//- .projects_block
 					.project(style='background-image: url(img/3.jpg);')
 					.project(style='background-image: url(img/4.jpg);')
 					.project(style='background-image: url(img/5.jpg);')

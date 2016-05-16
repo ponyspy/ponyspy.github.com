@@ -124,37 +124,22 @@ body {
   font-size: 8pt;
 }
 .images_block {
-  padding: 20px 20px 0 20px;
-  box-sizing: border-box;
-  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
 }
-.images_block .sizer {
-  width: 30%;
+.images_block .images_inner {
+  width: 100%;
 }
-.images_block .brick {
+.brick {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 15%;
-  padding: 15%;
-  box-sizing: border-box;
-  position: relative;
-  margin-bottom: 40px;
-  float: left;
+  width: 300px;
+  height: 230px;
 }
-.images_block .brick .numb {
-  font: 12pt/14pt 'Helvetica';
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-}
-.images_block .brick.double {
-  width: 30%;
-  padding: 30%;
-}
-.images_block .brick.double .numb {
-  font: 42pt/44pt 'Helvetica';
-  bottom: -30px;
+.brick.double {
+  width: 600px;
+  height: 530px;
 }
 .projects_block {
   width: 100%;
