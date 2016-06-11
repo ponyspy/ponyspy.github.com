@@ -1,23 +1,15 @@
 $(document).ready(function() {
-	var wall = new Freewall('.images_inner');
-
-	wall.reset({
-		selector: '.brick',
-		animate: false,
-		// keepOrder: true,
-		// fixSize: false,
-		draggable: true,
-		cellW: 300,
-		cellH: 200,
-		gutterX: 20,
-		gutterY: 20,
-		onResize: function() {
-			wall.fitWidth();
-		}
+	$('.images_block').masonry({
+	  itemSelector: '.brick',
+	  columnWidth: 180,
+	  gutter: 20
 	});
 
-	wall.fitWidth();
-	$(window).trigger('resize');
+	$('.projects_block').masonry({
+	  itemSelector: '.project',
+	  columnWidth: 180,
+	  gutter: 20
+	});
 
 	$('.drop_item').on('click', function() {
 		$(this).toggleClass('open');

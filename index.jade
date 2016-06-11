@@ -4,60 +4,77 @@ doctype html
 html
 	head
 		meta(charset='utf-8')
-		title D D : A | D
+		title d d : a | d
 		link(rel='stylesheet', href='styles/main.css')
 		script(type='text/javascript', src='js/jquery-2.2.3.min.js')
 		script(type='text/javascript', src='js/ramjet.js')
-		script(type='text/javascript', src='js/freewall.js')
+		//- script(type='text/javascript', src='js/freewall.js')
 		//- script(type='text/javascript', src='js/masonry.pkgd.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		.content_block
-			.content_column.left
-				.menu_block
-					.menu_left
-						a(href='#') Works
-						a(href='#') About
-						a(href='#') Search
-					.logo
-						.section D
-							span evelopment
-						.section D
-							span epartment
-						.spacer :
-						.section A
-							span rchitecture
-						.spacer |
-						.section D
-							span esign
-				.title_block Очень длинный и очень красивый проект
-				.text_block
-					!= words.split(' ').map(function(word) { return '<span>' + word + '</span>' }).join(' ')
-				.drop_list_block
-					.drop_item
-						.drop_title PLACE
-						.drop_desc lalala lalal lalalal
-						.drop_down  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde vitae iure, maiores explicabo perferendis debitis facilis quos ipsum placeat rem repellendus atque sequi blanditiis tenetur recusandae, vero qui quisquam quasi.
-					.drop_item
-						.drop_title STATUS
-						.drop_desc lalala lalal lalalal
-						.drop_down  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi nihil sed, aliquam eum atque est maiores ad ullam voluptatibus! Velit quis aspernatur amet consectetur qui cum quam atque quo delectus.
-					.drop_item.map
-						.drop_title LOCATION
-						.drop_desc lalala lalal lalalal
-						.drop_down  map map map
-			.content_column.right
-				.images_block: .images_inner
-					.brick(style='background-image: url(img/1.jpg);')
-					.brick.double(style='background-image: url(img/2.jpg);')
-					.brick(style='background-image: url(img/3.jpg);')
-					.brick.double(style='background-image: url(img/4.jpg);')
-					.brick(style='background-image: url(img/5.jpg);')
-					.brick(style='background-image: url(img/6.jpg);')
-					.brick(style='background-image: url(img/7.jpg);')
-				//- .projects_block
-					.project(style='background-image: url(img/3.jpg);')
-					.project(style='background-image: url(img/4.jpg);')
-					.project(style='background-image: url(img/5.jpg);')
-					.project(style='background-image: url(img/6.jpg);')
-					.project(style='background-image: url(img/7.jpg);')
+		.maket_block
+			.menu_block
+				a.logo(href='#') dd : a|d
+				.menu_right
+					a(href='#') projects
+					a(href='#') about
+					a(href='#') contacts
+			.menu_s_block
+				.item.left
+					.title Worker and Kolkhoz woman. Personal case
+					.arrow <
+				.item.center Worker and Kolkhoz woman. Personal case
+				.item.right
+					.title Worker and Kolkhoz woman. Personal case
+					.arrow >
+			.content_block
+				.stats_block
+						.item
+							.title Проект
+							.value Worker and Kolkhoz woman. Personal case
+						.item
+							.title Стадия
+							.value Реализация
+						.item
+							.title Дата
+							.value 15.12.2015
+						.item
+							.title Организатор
+							.value Объединение Манеж
+						.item
+							.title Направление
+							.value Историко-документальный проект
+						.item
+							.title Площадка
+							.value Выставочный Центр Рабочий и Колхозница
+						.item
+							.title Адрес
+							.value Москва, Проспект мира ул., 123Б
+						.item
+							.title Пространство
+							.value 1800 м.кв
+						.item
+							.title Экспонаты
+							.value > 500 шт
+						.item
+							.title Контент
+							.value Штучки
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
+				img(src='img/6.jpg')
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
+				img(src='img/5.jpg')
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut id dolor quas aliquam cupiditate perferendis necessitatibus doloremque ex. Fugit cupiditate recusandae ducimus provident temporibus at a ratione voluptas explicabo.
+				img(src='img/4.jpg')
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut id dolor quas aliquam cupiditate perferendis necessitatibus doloremque ex. Fugit cupiditate recusandae ducimus provident temporibus at a ratione voluptas explicabo.
+				img(src='img/2.jpg')
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut id dolor quas aliquam cupiditate perferendis necessitatibus doloremque ex. Fugit cupiditate recusandae ducimus provident temporibus at a ratione voluptas explicabo.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
+			.footer_block
+				.title Other projects:
+				a.item(href='#') Worker and Kolkhoz woman. Personal case
+				a.item(href='#') Worker and Kolkhoz woman. Personal case
+				a.item(href='#') Worker and Kolkhoz woman. Personal case
+				a.item(href='#') Worker and Kolkhoz woman. Personal case
+				a.item(href='#') Worker and Kolkhoz woman. Personal case
