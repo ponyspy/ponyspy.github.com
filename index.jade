@@ -1,81 +1,25 @@
-- var words = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis qui, eos vero cumque sit officiis temporibus tenetur distinctio nulla architecto, dolorum voluptate impedit vitae perspiciatis deserunt dicta id odit consectetur.'
+mixin slide(num)
+	- num = num + 1
+	.swiper-slide
+		.swiper-container.swiper-container-v: .swiper-wrapper
+			.swiper-slide(style='background-image: url(img/ru/' + ('0' + num).slice(-2) + '.jpg' + ')')
+			.swiper-slide(style='background-image: url(img/en/' + ('0' + num).slice(-2) + '.jpg' + ')')
 
 doctype html
 html
 	head
-		meta(name='viewport', content='width=device-width, user-scalable=no')
+		title S I D U R | S W I P E R
 		meta(charset='utf-8')
-		title d d : a | d
-		link(rel='stylesheet', href='styles/main.css')
-		script(type='text/javascript', src='js/jquery-2.2.3.min.js')
-		script(type='text/javascript', src='js/ramjet.js')
-		//- script(type='text/javascript', src='js/freewall.js')
-		//- script(type='text/javascript', src='js/masonry.pkgd.min.js')
+		link(rel='stylesheet', type='text/css', href='css/swiper.min.css')
+		link(rel='stylesheet', type='text/css', href='css/main.css')
+		script(type='text/javascript', src='js/jquery-2.2.4.min.js')
+		script(type='text/javascript', src='js/swiper.jquery.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		.maket_block
-			.menu_block
-				a.logo(href='#') dd : a|d
-				.menu_right
-					a(href='#') projects
-					a(href='#') about
-					a(href='#') contacts
-			.menu_s_block
-				.item.left
-					.title Worker and Kolkhoz woman. Personal case
-					.arrow <
-				.item.center Worker and Kolkhoz woman. Personal case
-				.item.right
-					.title Worker and Kolkhoz woman. Personal case
-					.arrow >
-			.content_block
-				.stats_block
-						.item
-							.title Проект
-							.value Worker and Kolkhoz woman. Personal case
-						.item
-							.title Стадия
-							.value Реализация
-						.item
-							.title Дата
-							.value 15.12.2015
-						.item
-							.title Организатор
-							.value Объединение Манеж
-						.item
-							.title Направление
-							.value Историко-документальный проект
-						.item
-							.title Площадка
-							.value Выставочный Центр Рабочий и Колхозница
-						.item
-							.title Адрес
-							.value Москва, Проспект мира ул., 123Б
-						.item
-							.title Пространство
-							.value 1800 м.кв
-						.item
-							.title Экспонаты
-							.value > 500 шт
-						.item
-							.title Контент
-							.value Штучки
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
-				img(src='img/6.jpg')
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
-				img(src='img/5.jpg')
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut id dolor quas aliquam cupiditate perferendis necessitatibus doloremque ex. Fugit cupiditate recusandae ducimus provident temporibus at a ratione voluptas explicabo.
-				img(src='img/4.jpg')
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut id dolor quas aliquam cupiditate perferendis necessitatibus doloremque ex. Fugit cupiditate recusandae ducimus provident temporibus at a ratione voluptas explicabo.
-				img(src='img/2.jpg')
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut id dolor quas aliquam cupiditate perferendis necessitatibus doloremque ex. Fugit cupiditate recusandae ducimus provident temporibus at a ratione voluptas explicabo.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque numquam ipsam libero corporis, fugit cum! Sit obcaecati, alias, numquam iure cupiditate impedit neque est ipsum porro, ex dolores perspiciatis dignissimos.
-			.footer_block
-				.title Other projects:
-				a.item(href='#') Worker and Kolkhoz woman. Personal case
-				a.item(href='#') Worker and Kolkhoz woman. Personal case
-				a.item(href='#') Worker and Kolkhoz woman. Personal case
-				a.item(href='#') Worker and Kolkhoz woman. Personal case
-				a.item(href='#') Worker and Kolkhoz woman. Personal case
+		.swiper-container.swiper-container-h: .swiper-wrapper
+
+			each slide, i in new Array(4)
+				+slide(i)
+
+		.swiper-button-prev
+		.swiper-button-next
