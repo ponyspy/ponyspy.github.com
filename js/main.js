@@ -31,14 +31,16 @@ $(function() {
 		}, 400);
 	});
 
-	// $('.banner_event').on('click', function() {
-	// 	$('.banner_block').animate({
-	// 		'scrollTop': $('.banner_block').scrollTop() + $('.banner_block').height()
-	// 	}, 400, function() {
-	// 		var $event = $('.banner_event').first();
-	// 		$('.banner_block').append($event);
-	// 	});
-	// });
+	$('.banner_event').on('click', function() {
+		var $banner_block = $('.banner_block');
+
+		$banner_block.stop().animate({
+			'scrollTop': $banner_block.scrollTop() + $banner_block.height()
+		}, 400, function() {
+			$('.banner_event:first').insertAfter('.banner_event:last');
+			$banner_block.scrollTop($banner_block.scrollTop() - $banner_block.height());
+		});
+	});
 
 
 	$(document).on('scroll', function() {

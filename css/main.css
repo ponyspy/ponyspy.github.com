@@ -4,7 +4,7 @@
   position: fixed;
   top: 45px;
   z-index: 0;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 .banner_block .banner_dotes {
   position: absolute;
