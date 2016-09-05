@@ -1,25 +1,49 @@
-mixin slide(num)
-	- num = num + 1
-	.swiper-slide
-		.swiper-container.swiper-container-v: .swiper-wrapper
-			.swiper-slide(style='background-image: url(img/ru/' + ('0' + num).slice(-2) + '.jpg' + ')')
-			.swiper-slide(style='background-image: url(img/en/' + ('0' + num).slice(-2) + '.jpg' + ')')
+extends layout.jade
 
-doctype html
-html
-	head
-		title S I D U R | S W I P E R
-		meta(charset='utf-8')
-		link(rel='stylesheet', type='text/css', href='css/swiper.min.css')
-		link(rel='stylesheet', type='text/css', href='css/main.css')
-		script(type='text/javascript', src='js/jquery-2.2.4.min.js')
-		script(type='text/javascript', src='js/swiper.jquery.min.js')
-		script(type='text/javascript', src='js/main.js')
-	body
-		.swiper-container.swiper-container-h: .swiper-wrapper
+block content_styles
+	link(rel='stylesheet', type='text/css', href='css/main.css')
 
-			each slide, i in new Array(4)
-				+slide(i)
+block content_scripts
+	script(type='text/javascript', src='js/main.js')
 
-		.swiper-button-prev
-		.swiper-button-next
+
+block content
+	- var randomSlice = function(arr) {var shuffle = arr.sort(function shuffle() {return .5 - Math.random(); }); var limit = Math.floor(Math.random() * arr.length); return shuffle.slice(0, limit); }
+	.banner_block
+		.banner_dotes ● ○ ○ ○ ○
+		.banner_event(style='background-image: url(img/1.jpg);')
+			a.banner_title(href='event.html') Война и мир Вадима Сидура
+		.banner_event(style='background-image: url(img/2.jpg);')
+			a.banner_title(href='event.html') выставка «русские святые»
+
+	.areas_block
+		.areas_scroll: .areas_scroll_outer: .areas_scroll_inner
+			each item, i in ['Центральный манеж', 'Гостиный двор', 'Домик Чехова', 'Музей Вадима Сидура', 'Рабочий и Колхозница', 'Новый манеж', 'Музей-мастерская Налбандяна']
+				.scroll_item(style='background-image: url(img/areas/' + i + '.jpg);')
+					.item_title= item
+		each area in ['Центральный манеж', 'Гостиный двор', 'Домик Чехова', 'Рабочий и Колхозница', 'Музей Вадима Сидура', 'Новый манеж', 'Музей-мастерская Налбандяна']
+			.area_item
+				- var arr_news = randomSlice(['27 августа бесплатный вход на выставку «Выставка одного фильма: София».', 'Билет на концерты проекта «В небе над Москвой» дает право посещения постоянной музейной экспозиции в выставочном центре «Рабочий и колхозница» и выставки «Выставка одного фильма: София».', 'В связи с проведение выставки «Война и Мир Вадима Сидура» c 8 июля по 8 ноября (включительно) постоянная экспозиция музея Вадима Сидура не работает.'])
+				- var arr_events = randomSlice(['выставка «русские святые»', 'Концерт современной гитарной музыки с комментариями искусствоведа Людмилы Георгиевской', 'Музыкально-поэтическое представление «Зачарованные звучари»', 'фестиваль «золотая черепаха»', 'жизнь глазами фронтовиков', 'выставка одного фильма: софия', 'last summer jazz'])
+
+				.area_title: .area_title_inner
+					.title_item.name= area
+					if (arr_news.length > 0)
+						.title_item.news Новости
+
+				.area_content: .area_content_inner
+					.area_events
+						each event in arr_events
+							.event_item
+								.event_meta
+									span.event_type выставка
+									span.event_categorys
+								a.event_title(href='event.html')= event
+								.event_description
+									.event_date 16 июля — 21 августа
+
+					.area_news
+						each news in arr_news
+							.news_item
+								.news_date 16 июля — 21 августа
+								.news_title= news
