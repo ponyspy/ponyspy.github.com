@@ -32,13 +32,19 @@ $(function() {
 	});
 
 	$('.banner_event').on('click', function() {
-		var $banner_block = $('.banner_block');
+		var $banner_events = $('.banner_events');
 
-		$banner_block.stop().animate({
-			'scrollTop': $banner_block.scrollTop() + $banner_block.height()
+		$banner_events.stop().animate({
+			'scrollTop': $banner_events.scrollTop() + $banner_events.height()
 		}, 400, function() {
 			$('.banner_event:first').insertAfter('.banner_event:last');
-			$banner_block.scrollTop($banner_block.scrollTop() - $banner_block.height());
+			$banner_events.scrollTop($banner_events.scrollTop() - $banner_events.height());
+
+			if ($('.banner_dot.active').index() == $('.banner_dot').size() - 1) {
+				$('.banner_dot').removeClass('active').eq(0).addClass('active');
+			} else {
+				$('.banner_dot.active').removeClass('active').next().addClass('active');
+			}
 		});
 	});
 

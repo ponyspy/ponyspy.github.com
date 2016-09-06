@@ -10,11 +10,14 @@ block content_scripts
 block content
 	- var randomSlice = function(arr) {var shuffle = arr.sort(function shuffle() {return .5 - Math.random(); }); var limit = Math.floor(Math.random() * arr.length); return shuffle.slice(0, limit); }
 	.banner_block
-		.banner_dotes ● ○ ○ ○ ○
-		.banner_event(style='background-image: url(img/1.jpg);')
-			a.banner_title(href='event.html') Война и мир Вадима Сидура
-		.banner_event(style='background-image: url(img/2.jpg);')
-			a.banner_title(href='event.html') выставка «русские святые»
+		- var arr_b_events = ['Война и мир Вадима Сидура', 'выставка «русские святые»', 'выставка одного фильма: софия']
+		.banner_dotes
+			each b_event, i in arr_b_events
+				.banner_dot(class=(i == 0) ? 'active' : '')
+		.banner_events
+			each b_event, i in arr_b_events
+				.banner_event(style='background-image: url(img/' + (i+1) + '.jpg);')
+					a.banner_title(href='event.html')= b_event
 
 	.areas_block
 		.areas_scroll: .areas_scroll_outer: .areas_scroll_inner

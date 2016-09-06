@@ -4,7 +4,7 @@
 	position fixed
 	top 45px
 	z-index 0
-	overflow hidden
+	user-select none
 	.banner_dotes
 		position absolute
 		display inline-block
@@ -13,28 +13,41 @@
 		font-size 26px
 		color white
 		z-index 99
-	.banner_event
+		.banner_dot
+			cursor pointer
+			display inline-block
+			&:hover:after
+			&.active:after
+				content '●'
+			&:after
+				content '○'
+	.banner_events
+		position relative
 		width 100%
 		height 400px
-		position relative
-		background-size cover
-		background-position top
-		background-attachment fixed
-		.banner_title
-			top 40px
-			left 20px
-			position absolute
-			display inline-block
-			max-width 380px
-			background-color black
-			color white
-			text-decoration none
-			padding 10px
-			font 30pt/32pt 'Pragmatica'
-			font-weight bold
-			&:hover
-				background-color white
-				color black
+		overflow hidden
+		.banner_event
+			width 100%
+			height 400px
+			position relative
+			background-size cover
+			background-position top
+			background-attachment fixed
+			.banner_title
+				top 40px
+				left 20px
+				position absolute
+				display inline-block
+				max-width 380px
+				background-color black
+				color white
+				text-decoration none
+				padding 10px
+				font 30pt/32pt 'Pragmatica'
+				font-weight bold
+				&:hover
+					background-color white
+					color black
 
 .areas_block
 	position relative
