@@ -8,7 +8,7 @@ html, body
 .menu_block
 	width 100%
 	background-color black
-	height 45px
+	height 55px
 	color white
 	position fixed
 	z-index 99999999
@@ -19,9 +19,9 @@ html, body
 		padding-left 20px
 		padding-right 20px
 		.menu
+			padding-top 20px
 			font 10pt/12pt 'Pragmatica'
 			a
-				padding-top 15px
 				margin-left 20px
 				&:hover
 					border-bottom 1px dotted white
@@ -35,15 +35,21 @@ html, body
 			display block
 			float left
 		.logo
-			margin-top 9px
 			float left
 			display inline-block
-			img
-				width 80px
+			&.dep
+				margin-top 10px
+				margin-left -125px
+				img
+					height 35px
+			&.main
+				margin-top 15px
+				img
+					height 25px
 
 .content_block
 	position relative
-	top 45px
+	top 55px
 	background-color lightgrey
 
 .footer_block

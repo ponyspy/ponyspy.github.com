@@ -2,7 +2,7 @@
 	width 100%
 	height 400px
 	position fixed
-	top 45px
+	top 55px
 	z-index 0
 	user-select none
 	.banner_dotes
@@ -34,19 +34,19 @@
 			background-position top
 			background-attachment fixed
 			.banner_title
-				top 40px
+				bottom 40px
 				left 20px
 				position absolute
 				display inline-block
 				max-width 380px
-				background-color black
+				// background-color black
+				// padding 10px
 				color white
 				text-decoration none
-				padding 10px
 				font 30pt/32pt 'Pragmatica'
 				font-weight bold
 				&:hover
-					background-color white
+					// background-color white
 					color black
 
 .areas_block
@@ -160,6 +160,18 @@
 				padding-right 20px
 				box-sizing border-box
 				// background-color maroon
+				.event_meta
+					// font-weight bold
+					.event_type
+						display inline-block
+					.event_categorys
+						display inline-block
+						.category
+							display inline-block
+							margin-left 9px
+							&:before
+								content '●'
+								margin-right 10px
 				.event_title
 					font 34pt/36pt 'Pragmatica'
 					display block

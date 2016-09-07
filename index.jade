@@ -9,6 +9,7 @@ block content_scripts
 
 block content
 	- var randomSlice = function(arr) {var shuffle = arr.sort(function shuffle() {return .5 - Math.random(); }); var limit = Math.floor(Math.random() * arr.length); return shuffle.slice(0, limit); }
+	- var randomElem = function(arr) { return arr.sort(function() {return .5 - Math.random(); })[0]; }
 	.banner_block
 		- var arr_b_events = ['Война и мир Вадима Сидура', 'выставка «русские святые»', 'выставка одного фильма: софия']
 		.banner_dotes
@@ -21,13 +22,15 @@ block content
 
 	.areas_block
 		.areas_scroll: .areas_scroll_outer: .areas_scroll_inner
-			each item, i in ['Центральный манеж', 'Гостиный двор', 'Домик Чехова', 'Музей Вадима Сидура', 'Рабочий и Колхозница', 'Новый манеж', 'Музей-мастерская Налбандяна']
+			each item, i in ['Центральный манеж', 'Гостиный двор', 'Новый манеж', 'Домик Чехова', 'Музей Вадима Сидура', 'Рабочий и Колхозница', 'Музей-мастерская Налбандяна']
 				.scroll_item(style='background-image: url(img/areas/' + i + '.jpg);')
 					.item_title= item
 		each area in ['Центральный манеж', 'Гостиный двор', 'Домик Чехова', 'Рабочий и Колхозница', 'Музей Вадима Сидура', 'Новый манеж', 'Музей-мастерская Налбандяна']
 			.area_item
 				- var arr_news = randomSlice(['27 августа бесплатный вход на выставку «Выставка одного фильма: София».', 'Билет на концерты проекта «В небе над Москвой» дает право посещения постоянной музейной экспозиции в выставочном центре «Рабочий и колхозница» и выставки «Выставка одного фильма: София».', 'В связи с проведение выставки «Война и Мир Вадима Сидура» c 8 июля по 8 ноября (включительно) постоянная экспозиция музея Вадима Сидура не работает.'])
 				- var arr_events = randomSlice(['выставка «русские святые»', 'Концерт современной гитарной музыки с комментариями искусствоведа Людмилы Георгиевской', 'Музыкально-поэтическое представление «Зачарованные звучари»', 'фестиваль «золотая черепаха»', 'жизнь глазами фронтовиков', 'выставка одного фильма: софия', 'last summer jazz'])
+				- var arr_categorys = randomSlice(['электрочетверг', 'категория', 'супер спецпроект'])
+				- var type = randomElem(['выставка', 'кинопоказ', 'спектакль'])
 
 				.area_title: .area_title_inner
 					.title_item.name= area
@@ -39,8 +42,10 @@ block content
 						each event in arr_events
 							.event_item
 								.event_meta
-									span.event_type выставка
-									span.event_categorys
+									.event_type= type
+									.event_categorys
+										each category in arr_categorys
+											.category= category
 								a.event_title(href='event.html')= event
 								.event_description
 									.event_date 16 июля — 21 августа

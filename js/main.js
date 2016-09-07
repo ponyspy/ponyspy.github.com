@@ -16,7 +16,7 @@ $(function() {
 	}).trigger('resize');
 
 
-	$('.logo').on('click', function() {
+	$('.logo.main').on('click', function() {
 		$('body').animate({
 			'scrollTop': 0
 		}, 400);
@@ -34,7 +34,7 @@ $(function() {
 	$('.banner_event').on('click', function() {
 		var $banner_events = $('.banner_events');
 
-		$banner_events.stop().animate({
+		$banner_events.stop(false, true).animate({
 			'scrollTop': $banner_events.scrollTop() + $banner_events.height()
 		}, 400, function() {
 			$('.banner_event:first').insertAfter('.banner_event:last');
@@ -46,6 +46,28 @@ $(function() {
 				$('.banner_dot.active').removeClass('active').next().addClass('active');
 			}
 		});
+	});
+
+	$('.banner_dot').on('click', function() {
+		var index = $(this).index();
+		var last_index = $('.banner_dot.active').index();
+		var $banner_events = $('.banner_events');
+
+		if (last_index < index) {
+			$banner_events.eq(index).insertAfter('.banner_events:first');
+			$banner_events.stop(false, true).animate({
+				'scrollTop': $banner_events.scrollTop() + $banner_events.height()
+			}, 400, function() {
+				$('.banner_dot').removeClass('active').eq(index).addClass('active');
+			});
+		} else if (last_index > index) {
+			$banner_events.eq(index).insertBefore('.banner_events:first');
+			$banner_events.stop(false, true).animate({
+				'scrollTop': $banner_events.scrollTop() - $banner_events.height()
+			}, 400, function() {
+				$('.banner_dot').removeClass('active').eq(index).addClass('active');
+			});
+		} else return false;
 	});
 
 

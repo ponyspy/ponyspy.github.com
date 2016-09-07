@@ -11,13 +11,14 @@ html
 		block content_scripts
 	body
 		.menu_block: .menu_inner
-			a.logo(href='index.html'): img(src='img/logo/ru_w.svg')
+			a.logo.main(href='index.html'): img(src='img/logo/ru_w.svg')
+			a.logo.dep(href='#'): img(src='img/logo/dep_red.svg')
 			.menu.left
 				a(href='#') ОБЪЕДИНЕНИЕ
 				a(href='#') ПЛОЩАДКИ
 				a(href='#') СОБЫТИЯ
 				a(href='#') СПЕЦПРОЕКТЫ
-				a(href='#') ПОДБОРКИ
+				//- a(href='#') ПОДБОРКИ
 				a(href='#') КОНТАКТЫ
 			.menu.right
 				a(href='#') ВХОД

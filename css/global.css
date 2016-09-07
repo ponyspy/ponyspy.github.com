@@ -7,7 +7,7 @@ body {
 .menu_block {
   width: 100%;
   background-color: #000;
-  height: 45px;
+  height: 55px;
   color: #fff;
   position: fixed;
   z-index: 99999999;
@@ -20,10 +20,10 @@ body {
   padding-right: 20px;
 }
 .menu_block .menu_inner .menu {
+  padding-top: 20px;
   font: 10pt/12pt 'Pragmatica';
 }
 .menu_block .menu_inner .menu a {
-  padding-top: 15px;
   margin-left: 20px;
 }
 .menu_block .menu_inner .menu a:hover {
@@ -42,16 +42,25 @@ body {
   float: left;
 }
 .menu_block .menu_inner .logo {
-  margin-top: 9px;
   float: left;
   display: inline-block;
 }
-.menu_block .menu_inner .logo img {
-  width: 80px;
+.menu_block .menu_inner .logo.dep {
+  margin-top: 10px;
+  margin-left: -125px;
+}
+.menu_block .menu_inner .logo.dep img {
+  height: 35px;
+}
+.menu_block .menu_inner .logo.main {
+  margin-top: 15px;
+}
+.menu_block .menu_inner .logo.main img {
+  height: 25px;
 }
 .content_block {
   position: relative;
-  top: 45px;
+  top: 55px;
   background-color: #d3d3d3;
 }
 .footer_block {
