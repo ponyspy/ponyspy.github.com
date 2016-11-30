@@ -1,125 +1,79 @@
+var current = 1;
+var db = [
+	{
+		path: 'img/1.jpg',
+		desc: '2016 / pokushal / privet wassia! privet wassia! privet wassia!'
+	},
+	{
+		path: 'img/2.png',
+		desc: '2015 / pospal / dlinno dlinno dlinno'
+	},
+	{
+		path: 'img/3.png',
+		desc: '2014 / ugadal / medlenno medlenno medlenno'
+	},
+	{
+		path: 'img/4.gif',
+		desc: '2013 / vstal / mashina / chi'
+	},
+	{
+		path: 'img/5.jpg',
+		desc: '2012 / cel / kokoko lalala'
+	}
+];
+
 $(function() {
 
 
-	// Swiper Block
-
-
-	var swiperH = new Swiper('.swiper-container-h', {
-		pagination: '.swiper-pagination-h',
-		paginationClickable: true,
-		slidesPerView: 'auto',
-		// autoHeight: true,
-		initialSlide: 1,
-		centeredSlides: true,
-		spaceBetween: 5,
-		direction: 'horizontal',
-		keyboardControl: true,
-		nextButton: '.swiper-button-next',
-		prevButton: '.swiper-button-prev'
+	$('.cv').on('click', function(e) {
+		window.open('cv.html', '', 'width=360,height=500,left=200,top=200');
 	});
 
-
-	// Main Block
-
-
-	$('.menu-drop').children('.menu-item').on('click', function(event) {
-		var position = $(this).attr('class').split(' ')[1];
-
-		$('body').animate({
-			'scrollTop': $('.content-item').filter('.' + position).offset().top
-		}, 400);
+	$('img').on('mousedown', function(e) {
+		return false;
 	});
 
+	$('body').on('click', function(e) {
+		$('.clone').remove();
 
-	$('.content-title, .head-name').on('click', function(event) {
-		var $this = $(this);
+		if (e.target.className == 'image') {
+			$('img').attr('src', db[current].path);
+			$('.marquee').children('span').text(db[current].desc);
 
-		if ($this.hasClass('head-name')) {
-			var index = $this.index('.head-name');
-			swiperH[0].slideTo(index, 400);
+			current == db.length - 1
+				? current = 0
+				: current += 1;
 		}
 
-		$('body').animate({
-			'scrollTop': $this.closest('.content-item').offset().top
-		}, 400);
-	});
+		var $body = $(this);
+		var $block = $('.block');
 
+		var body_width = $body.width();
+		var body_height = $body.height();
 
-	$(document).on('mousemove', '.preview-body', function(event) {
-		var $this = $(this);
-		var percentY = (event.pageY - $this.offset().top) / $this.height() * 1.1 - 0.10;
+		var block_width = $block.width();
+		var block_height = $block.height();
 
-		$this.scrollTop($this.children('.preview-body-inner').height() * percentY);
-	});
+		// var x = e.pageX - block_width / 2;
+		// var y = e.pageY - block_height / 2;
+		var x = e.pageX;
+		var y = e.pageY;
 
+		$block.css({ 'left': x, 'top': y });
 
-	$(document).on('mousemove', '.preview-inner', function(event) {
-		var $this = $(this);
-		var percentY = (event.pageY - $this.offset().top) / $this.height() * 1.1 - 0.30;
-		var percentX = (event.pageX - $this.offset().left) / $this.width() * 1.1 - 0.30;
+		var block_offset_right = $block.offset().left + block_width;
+		var block_offset_bottom = $block.offset().top + block_height;
 
-		$this.scrollTop($this.children('img').height() * percentY);
-		$this.scrollLeft($this.children('img').width() * percentX);
-	});
+		if (block_offset_right > body_width || block_offset_bottom > body_height) {
 
+			var x_clone = block_offset_right > body_width ? -body_width - block_width + block_offset_right : x;
+			var y_clone = block_offset_bottom > body_height ? -body_height - block_height + block_offset_bottom : y;
 
-	$(document).on('click', '.preview-image', function(event) {
-		var path = $(this).attr('path');
-		var $image = $('<img>', { 'src': path, 'onmousedown': 'return false' });
+			var $clone = $block.clone().addClass('clone');
 
-		$('.content-preview-image').addClass('active').children('.preview-inner').append($image).scrollTop(0).scrollLeft(10000);
-		$('.content-preview-column').removeClass('open');
-
-		$('body').animate({'scrollTop': $('.content-item.plan').offset().top }, 400);
-
-		swiperH[1].update(true);
-	});
-
-
-	$(document).on('click', '.content-preview-image', function(event) {
-		$(this).removeClass('active').children('.preview-inner').empty();
-	});
-
-
-	$(document).on('click', '.preview-body-inner', function(event) {
-		$('.content-preview-column').toggleClass('open');
-		$('.content-preview-image').removeClass('active');
-
-		$('body').animate({'scrollTop': $('.content-item.plan').offset().top }, 400);
-
-		swiperH[1].update(true);
-	});
-
-
-	$(document).on('mouseup touchend', function(event) {
-		if ($(event.target).closest('.content-preview-column, .content-preview-image, .content-title').length || event.target.className.baseVal == 'leaflet-clickable') return;
-
-		$('.content-preview-image').removeClass('active');
-		$('.content-preview-column').removeClass('active open');
-
-		event.stopPropagation();
-	});
-
-
-	$(window).on('resize', function(event) {
-		var height = $('.content-item.plan').height();
-
-		$('.content-preview-image').height(height - 80);
-		$('.preview-body').height(height - 280);
-	}).trigger('resize');
-
-
-	var $content_video = $('.content-item.video');
-	var $player = $content_video.children('video');
-	var $menu = $('.menu-items');
-	$(document).on('scroll', function(event) {
-		if ($(this).scrollTop() >= $content_video.height()) {
-			if (!$player.hasClass('hidden')) $player.trigger('pause').addClass('hidden');
-			$menu.addClass('fill');
-		} else {
-			if ($player.hasClass('hidden')) $player.removeClass('hidden').trigger('play');
-			$menu.removeClass('fill');
+			$clone.css({'left': x_clone, 'top': y_clone }).appendTo('body');
 		}
+
 	});
 
 
