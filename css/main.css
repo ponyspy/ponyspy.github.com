@@ -5,10 +5,9 @@ body {
   height: 100%;
 }
 .content-block {
-  max-width: 1280px;
-  margin: 0 auto;
-  position: relative;
+  width: 100%;
   height: 100%;
+  position: relative;
 }
 .block {
   top: 20px;
@@ -32,7 +31,7 @@ body {
 }
 .marquee {
   white-space: nowrap;
-  width: 60%;
+  width: 100%;
   position: absoulte;
   overflow: hidden;
   color: #000;
