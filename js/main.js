@@ -31,8 +31,8 @@ $(function() {
 		window.open('cv.html', '', 'width=360,height=500,left=200,top=200');
 	});
 
-	$('body').on('click', function(e) {
-		$('<div>', {'class': 'dot'}).css({'left': e.pageX - 10, 'top': e.pageY - 10}).appendTo('body');
+	$('img').mousedown(function(){
+		return false;
 	});
 
 	$('img').on('click', function() {

@@ -1,49 +1,61 @@
+@media (max-width: 800px) {
+  .block {
+    width: 100% !important;
+    display: block !important;
+  }
+  .block.right {
+    float: left !important;
+  }
+  .block img {
+    width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+}
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
-.dot {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: #000;
-}
 .content-block {
   overflow: hidden;
 }
 .content-block .block {
   margin-top: 20px;
-  max-width: 600px;
+  display: table;
+  width: 1%;
   box-sizing: border-box;
 }
 .content-block .block.left {
   float: left;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .content-block .block.right {
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   float: right;
 }
-.content-block .block img {
-  width: 100%;
+.content-block .block .image {
+  height: auto;
+  overflow: hidden;
+}
+.content-block .block .image img {
   max-width: 600px;
+  max-height: 600px;
   display: block;
 }
 .content-block .block .marquee {
   white-space: nowrap;
-  width: 100%;
-  position: absoulte;
+  max-width: 600px;
   overflow: hidden;
-  color: #000;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 .content-block .block .marquee span {
+  width: 100%;
+  position: relative;
   display: inline-block;
   padding-left: 100%;
   -webkit-animation: scroll 10s infinite linear;
