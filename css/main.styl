@@ -12,62 +12,61 @@ html, body
 	padding 0
 	height 100%
 
-.content-block
-	width 100%
-	// max-width 1280px
-	// margin 0 auto
-	height 100%
-	position relative
-	// background-color grey
-	// overflow hidden
+.dot
+	position absolute
+	width 20px
+	height 20px
+	border-radius 100%
+	background-color black
 
-.block
-	top 20px
-	// width 50%
-	position absoulte
-	box-sizing border-box
-	&.left
+.content-block
+	overflow hidden
+	.block
+		margin-top 20px
+		max-width 600px
+		box-sizing border-box
+		&.left
+			float left
+			margin-left 20px
+			margin-right 20px
+		&.right
+			margin-left 20px
+			margin-right 20px
+			float right
+		img
+			width 100%
+			max-width 600px
+			display block
+		.marquee
+			white-space nowrap
+			width 100%
+			position absoulte
+			overflow hidden
+			color black
+			margin-top 5px
+			margin-bottom 5px
+			span
+				display inline-block
+				padding-left 100%
+				animation scroll 10s infinite linear
+
+.footer-block
+	width 100%
+	position fixed
+	bottom 20px
+	overflow hidden
+	.left
 		float left
 		margin-left 20px
-		margin-right 20px
-		// left 0
-		// padding-right 100px
-		// padding-left 20px
-	&.right
-		// left 50%
-		// right 0
-		margin-left 20px
-		margin-right 20px
+		.counter
+			cursor default
+	.right
 		float right
-		// padding-left 100px
-		// padding-right 20px
-	img
-		width 100%
-		max-width 600px
-		display block
-
-.marquee
-	white-space nowrap
-	width 100%
-	position absoulte
-	overflow hidden
-	color black
-	margin-top 5px
-	margin-bottom 5px
-	span
-		display inline-block
-		padding-left 100%
-		animation scroll 10s infinite linear
-
-.footer
-	position absolute
-	bottom 20px
-	right 20px
-	a
-	span
-		cursor pointer
-		margin-left 8px
-		text-decoration none
-		color black
-		&:hover
-			text-decoration underline
+		margin-right 20px
+		.cv
+			cursor pointer
+			margin-left 8px
+			text-decoration none
+			color black
+			&:hover
+				text-decoration underline
