@@ -1,25 +1,31 @@
 doctype html
 html
 	head
-		title wassia kondrashov
+		title Bird&Carrot
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		link(rel='stylesheet', type='text/css', href='css/swiper.min.css')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
 		script(type='text/javascript', src='js/jquery-2.2.4.min.js')
+		script(type='text/javascript', src='js/swiper.jquery.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
 		.content-block
-			.block.left
-				.marquee: span 2016 / покушал / привет вася! привет вася! привет вася!
-				.image: img(src='img/1.jpg')
-			.block.right
-				.marquee: span 2016 / pokushal / privet wassia! privet wassia! privet wassia!
-				.image: img(src='img/1.jpg')
-		.footer-block
-			.left
-				.counter
-					span.current 1
-					span /
-					span.count 6
-			.right
-				.cv cv
+			.logo: span= 'Bird&Carrot'
+			.columns-block
+				span Bird&Carrot Studio is a London-based company which specialises in producing theatre, music and contemporary art events in the UK and internationally. It was founded and is run by Artistic Director Alexandrina Markvo.
+				span B&C develops collaborative projects with world famous and emerging Russian artists, and supports their freedom of artistic expression. Our primary focus is to ensure that the most interesting and explorative Russian artists continue to  ourish even if sometimes there is no platform for them in contemporary Russia. It is important for us that these key, prominent Russian  gures contribute to perceptions of Russia as a country with a rich and diverse culture containing multiple talent.
+				span B&C creates a forum for debate and intelligent discussion. We invite the world’s sharpest minds and most exciting orators, from the performing arts to academia, to hold talks for the general public.
+				span We work in collaboration with leading venues and cultural institutions such as the Royal Geographical Society, Nimax group, Dash Arts, Pushkin house, Tabernacle Theatre and others.
+			.title-block
+				.left: span Brodsky / Baryshnikov
+				.center: span UK Premiere | May 3–6, 2017 Apollo Theatre
+				.right: a(href='#') BOOK ONLINE
+			.swiper-container.swiper-container-h: .swiper-wrapper
+				.swiper-slide(style='background-image: url(img/1.jpg)') 1
+				.swiper-slide(style='background-image: url(img/2.jpg)') 2
+				.swiper-slide(style='background-image: url(img/3.jpg)') 3
+			.description-block
+				div Brodsky / Baryshnikov is a one-man show based on the poems of Nobel laureate Joseph Brodsky, performed by Mikhail Baryshnikov. Conceived and directed by Alvis Hermanis, noted Latvian director of The New Riga Theatre, Brodsky / Baryshnikov is an emotional journey deep into the poet’s visceral and complex compositions. Performed in Russian, Brodsky’s mother tongue, Baryshnikov recites a selection of his long-time friend’s poignant and eloquent works. His subtle physicality transports the audience into Hermanis’ reverent imagining of Brodsky’s interior world.
+			.description-block-small
+				div Bird&Carrot Studio is a London-based company which specialises in producing theatre, music and contemporary art events in the UK and internationally. It was founded and is run by Artistic Director Alexandrina Markvo.

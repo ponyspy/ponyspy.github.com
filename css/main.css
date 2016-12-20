@@ -1,118 +1,114 @@
-@media (max-width: 800px) {
-  .block {
-    width: 100% !important;
+@media (max-width: 640px) {
+  .content-block {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .columns-block {
+    display: none !important;
+  }
+  .logo {
+    padding-bottom: 0px !important;
+  }
+  .title-block {
+    padding-top: 20px !important;
     display: block !important;
+    margin-bottom: 20px !important;
   }
-  .block.right {
-    float: left !important;
+  .title-block div {
+    text-align: center !important;
   }
-  .block img {
-    width: 100% !important;
-    max-width: none !important;
-    max-height: none !important;
+  .title-block .right {
+    margin-top: 20px !important;
   }
-  .block .marquee {
-    max-width: none !important;
-    width: 100% !important;
+  .swiper-container,
+  .swiper-slide {
+    height: 320px !important;
   }
-  .block .marquee span {
-    width: auto !important;
+  .description-block-small {
+    display: block !important;
   }
 }
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica';
 }
 .content-block {
+  max-width: 1240px;
+  margin: 40px auto;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.content-block .logo {
+  text-align: center;
+  padding-bottom: 40px;
+  font-weight: bold;
+  font-size: 16pt;
+  line-height: 18pt;
+}
+.content-block .columns-block {
+  -webkit-columns: 3 auto;
+     -moz-columns: 3 auto;
+          columns: 3 auto;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+}
+.content-block .title-block {
+  border-top: 1px solid #d3d3d3;
   margin-top: 20px;
+  padding-top: 40px;
   margin-bottom: 40px;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
 }
-.content-block .block {
-  margin-bottom: 20px;
-  display: table;
-  width: 1%;
-  box-sizing: border-box;
-}
-.content-block .block.left {
-  float: left;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.content-block .block.right {
-  padding-left: 20px;
-  padding-right: 20px;
-  float: right;
-}
-.content-block .block .image {
-  height: auto;
-  overflow: hidden;
-}
-.content-block .block .image img {
-  max-width: 600px;
-  max-height: 600px;
-  display: block;
-}
-.content-block .block .marquee {
-  white-space: nowrap;
-  max-width: 600px;
-  height: auto;
-  position: absoulte;
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-.content-block .block .marquee span {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  padding-left: 100%;
-  -webkit-animation: scroll 15s infinite linear;
-          animation: scroll 15s infinite linear;
-}
-.footer-block {
-  width: 100%;
-  position: fixed;
-  bottom: 20px;
-  overflow: hidden;
-}
-.footer-block .left {
-  float: left;
-  margin-left: 20px;
-}
-.footer-block .left .counter {
-  cursor: default;
-}
-.footer-block .right {
-  float: right;
-  margin-right: 20px;
-}
-.footer-block .right .cv {
-  cursor: pointer;
-  margin-left: 8px;
-  text-decoration: none;
+.content-block .title-block a {
   color: #000;
+  text-decoration: none;
 }
-.footer-block .right .cv:hover {
+.content-block .title-block a:hover {
   text-decoration: underline;
 }
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
+.content-block .title-block div {
+  -ms-flex-preferred-size: 240px;
+      flex-basis: 240px;
 }
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
+.content-block .title-block .center {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+.content-block .title-block .center span {
+  display: inline-block;
+  max-width: 240px;
+}
+.content-block .title-block .right {
+  text-align: right;
+}
+.content-block .description-block {
+  margin-top: 20px;
+}
+.content-block .description-block-small {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #d3d3d3;
+  font-size: 10pt;
+  line-height: 12pt;
+}
+.swiper-container {
+  width: 100%;
+  height: 680px;
+}
+.swiper-container .swiper-slide {
+  width: 100%;
+  height: 680px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
