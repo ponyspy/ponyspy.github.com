@@ -1,4 +1,8 @@
 $(function() {
+	var back_interval = setInterval(function() {
+		window.location.href = '../index.html';
+	}, 1000 * 60 * 4);
+
 	var swiperH = new Swiper('.swiper-container-h', {
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
@@ -15,5 +19,12 @@ $(function() {
 		keyboardControl: true,
 		loop: true,
 		runCallbacksOnInit: false,
+		onSlideChangeStart: function(swiper) {
+			clearInterval(back_interval);
+
+			back_interval = setInterval(function() {
+				window.location.href = '../index.html';
+			}, 1000 * 60 * 4);
+		}
 	});
 });
