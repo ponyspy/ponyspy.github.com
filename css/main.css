@@ -1,147 +1,126 @@
 @font-face {
-  font-family: 'BrutalType Medium';
-  src: url("../fonts/BrutalTypeMedium.otf");
+  font-family: 'Helvetica';
+  src: url("../fonts/Helvetica.otf");
+}
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url("../fonts/Helvetica-Bold.otf");
 }
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #eabd70;
 }
 a {
   color: #000;
+  text-decoration: none;
 }
-.content-block {
-  width: 1280px;
-  height: 1024px;
+a:hover {
+  text-decoration: underline;
+}
+.title-block {
+  width: 1024px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+.title-block .logo {
+  width: 27%;
+  display: block;
+  float: left;
+}
+.title-block .title-desc {
+  float: left;
+  width: 73%;
+  font: 10pt/12pt 'Helvetica';
+  box-sizing: border-box;
+  padding-left: 60px;
+  color: #9c9d9f;
+}
+.gallery-block {
+  width: 100%;
+  background-color: #ebebec;
+  margin-top: 40px;
+}
+.gallery-block .swiper-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 1024px;
+  height: 580px;
   margin: 0 auto;
-  position: relative;
   box-sizing: border-box;
 }
-.logo {
-  display: block;
-  position: absolute;
-}
-.logo.main {
-  bottom: 40px;
-  left: 40px;
-}
-.logo.s1 {
-  right: 40px;
-  bottom: 40px;
-}
-.logo.s2 {
-  top: 40px;
-  left: 40px;
-}
-.menu {
-  display: block;
-  position: absolute;
-}
-.menu .numb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-.menu.one {
-  top: 40px;
-  left: 410px;
-}
-.menu.one .numb {
-  -webkit-animation: scale 1.4s infinite alternate;
-          animation: scale 1.4s infinite alternate;
-}
-.menu.two {
-  top: 40px;
-  right: 40px;
-}
-.menu.two .numb {
-  -webkit-animation: scale 1.6s infinite alternate;
-          animation: scale 1.6s infinite alternate;
-}
-.menu.three {
-  top: 446px;
-  left: 500px;
-}
-.menu.three .numb {
-  -webkit-animation: scale 1.8s infinite alternate;
-          animation: scale 1.8s infinite alternate;
-}
-.menu.three .round {
-  width: 98%;
-}
-.menu.four {
-  left: 40px;
-  top: 265px;
-}
-.menu.four .numb {
-  -webkit-animation: scale 2s infinite alternate;
-          animation: scale 2s infinite alternate;
-}
-.back {
-  display: block;
-  width: 180px;
-  height: 180px;
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  z-index: 9999;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../img/design/menu.svg");
-}
-.back:hover {
-  background-image: url("../img/design/menu_select.svg");
-}
-.swiper-container {
+.gallery-block .swiper-container .swiper-slide {
   width: 100%;
-  height: 800px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-}
-.swiper-container .swiper-button-prev {
-  margin-left: 40px;
-}
-.swiper-container .swiper-button-next {
-  margin-right: 40px;
-}
-.swiper-container .swiper-slide {
-  width: 100%;
-  height: 800px;
-  background-size: contain;
+  height: 580px;
+  background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
 }
-video {
+.content-block {
+  width: 1024px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 40px;
+}
+.content-block .content-desc {
+  float: left;
+  width: 75%;
+  padding-right: 60px;
+  box-sizing: border-box;
+}
+.content-block .content-desc .desc-title {
+  font: 18pt/20pt 'Helvetica';
+}
+.content-block .content-desc .desc-quote {
+  font: 10pt/20pt 'Helvetica';
+  font-style: italic;
+}
+.content-block .content-desc .desc-second {
+  font: 12pt/18pt 'Helvetica';
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.content-block .content-desc .desc-body {
+  font: 12pt/18pt 'Helvetica';
+}
+.content-block .content-booking {
+  font: 10pt/18pt 'Helvetica';
+  float: left;
+  width: 25%;
+}
+.content-block .content-booking .booking {
+  width: 65%;
+  overflow: hidden;
+}
+.content-block .content-booking .booking .title {
+  float: left;
+}
+.content-block .content-booking .booking .content {
+  float: right;
+}
+.content-block .content-booking .booking-link {
+  display: block;
+  margin-top: 10px;
+}
+.footer-block {
+  width: 1024px;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.footer-block .inner {
+  padding-top: 20px;
   width: 100%;
-  position: absolute;
-  top: 0;
-}
-@-webkit-keyframes scale {
-  0% {
-    -webkit-transform: scale(0.5, 0.5);
-            transform: scale(0.5, 0.5);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-@keyframes scale {
-  0% {
-    -webkit-transform: scale(0.5, 0.5);
-            transform: scale(0.5, 0.5);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
+  border-top: 1px solid #000;
+  text-align: center;
 }
