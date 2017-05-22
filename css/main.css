@@ -1,153 +1,48 @@
-@font-face {
-  font-family: 'Helvetica';
-  src: url("../fonts/Helvetica.otf");
-}
-@font-face {
-  font-family: 'Helvetica Bold';
-  src: url("../fonts/Helvetica-Bold.otf");
-}
-html,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
-a {
-  color: #000;
-  text-decoration: none;
+
+html, body, .outer, .column {
+	height: 100%;
 }
-a:hover {
-  text-decoration: underline;
+
+.outer {
+	margin: 0 auto;
+	-webkit-overflow-scrolling: touch;
 }
-.title-block {
-  width: 1024px;
-  margin: 0px auto;
-  overflow: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  margin-top: 40px;
+
+.column {
+	width: 25%;
+	float: left;
 }
-.title-block .logo {
-  width: 27%;
-  display: block;
-  float: left;
+
+.cub {
+	width: 100%;
+	margin-bottom: 30px;
 }
-.title-block .title-desc {
-  float: left;
-  width: 73%;
-  font: 10pt/12pt 'Helvetica';
-  box-sizing: border-box;
-  padding-left: 60px;
-  color: #9c9d9f;
+
+.cub:last-child {
+	margin-bottom: 0px;
 }
-.gallery-block {
-  width: 100%;
-  background-color: #ebebec;
-  margin-top: 40px;
+
+.one {
+	background-color: green;
+	height: 200px;
 }
-.gallery-block .swiper-container {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 1024px;
-  height: 580px;
-  margin: 0 auto;
-  box-sizing: border-box;
+
+.two {
+	background-color: grey;
+	height: 800px;
 }
-.gallery-block .swiper-container .swiper-slide {
-  width: 100%;
-  height: 580px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+
+.three {
+	background-color: lightblue;
+	height: 300px;
 }
-.content-block {
-  width: 1024px;
-  margin: 0px auto;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 40px;
-}
-.content-block .content-desc {
-  float: left;
-  width: 75%;
-  padding-right: 60px;
-  box-sizing: border-box;
-}
-.content-block .content-desc .desc-title {
-  font: 18pt/20pt 'Helvetica';
-}
-.content-block .content-desc .desc-quote {
-  font: 10pt/20pt 'Helvetica';
-  font-style: italic;
-}
-.content-block .content-desc .desc-second {
-  font: 12pt/18pt 'Helvetica';
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.content-block .content-desc .desc-body {
-  font: 12pt/18pt 'Helvetica';
-}
-.content-block .content-booking {
-  font: 10pt/18pt 'Helvetica';
-  float: left;
-  width: 25%;
-}
-.content-block .content-booking .booking {
-  width: 65%;
-  overflow: hidden;
-}
-.content-block .content-booking .booking .title {
-  float: left;
-}
-.content-block .content-booking .booking .content {
-  float: right;
-}
-.content-block .content-booking .booking-link {
-  display: block;
-  margin-top: 10px;
-}
-.footer-block {
-  width: 1024px;
-  margin: 0px auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
-}
-.footer-block .inner {
-  padding-top: 20px;
-  width: 100%;
-  border-top: 1px solid #000;
-  text-align: center;
-}
-.footer-block .inner a {
-  display: inline-block;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #d3d3d3;
-  border-radius: 6px;
-  position: relative;
-  margin-right: 5px;
-  padding-left: 5px;
-  box-sizing: border-box;
-}
-.footer-block .inner a:last-child {
-  margin-right: 0;
-}
-.footer-block .inner a img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  display: block;
-  width: 50%;
-}
-.footer-block .inner a.fb img {
-  width: 40%;
+
+.four {
+	background-color: #ffd16f;
+	height: 600px;
 }

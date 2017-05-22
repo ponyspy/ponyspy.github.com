@@ -1,17 +1,11 @@
-$(function() {
-	var swiperH = new Swiper('.swiper-container-h', {
-		slidesPerView: 1,
-		direction: 'horizontal',
-		spaceBetween: 20,
-		speed: 800,
-		autoplay: 4000,
-		// autoplayDisableOnInteraction: false,
-		// effect: 'fade',
-		// autoHeight: true,
-		// initialSlide: 1,
-		centeredSlides: true,
-		keyboardControl: true,
-		loop: true,
-		runCallbacksOnInit: false,
+$(document).ready(function() {
+	$('.outer').swingScroll({
+		factor: 3.5,
+		engine: function() {
+			if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+				return 'scroll';
+			else
+				return 'wheel';
+		}
 	});
 });
