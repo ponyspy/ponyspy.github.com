@@ -1,11 +1,13 @@
-$(document).ready(function() {
-	$('.outer').swingScroll({
-		factor: 3.5,
-		engine: function() {
-			if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
-				return 'scroll';
-			else
-				return 'wheel';
+$(function() {
+	var randomInteger = function(min, max) {
+		return Math.round(min - 0.5 + Math.random() * (max - min + 1));
+	};
+
+	var swiper = new Swiper('.swiper-container', {
+		initialSlide: randomInteger(0, $('.slide_item').length),
+		pagination: {
+			clickable: true,
+			el: '.swiper-pagination',
 		}
 	});
 });

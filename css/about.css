@@ -37,30 +37,22 @@ body {
   height: 100%;
   background-color: #000;
 }
-.announcement_block {
-  display: block;
-  text-decoration: none;
+.slider_navigate {
   position: absolute;
-  top: 240px;
+  bottom: 0px;
+  bottom: 110px;
+  font: 14pt/14pt 'PT Mono';
+  color: #fff;
   left: 40px;
-  max-width: 470px;
-  z-index: 999999999999;
-  color: #fff;
-  border-left: 4px solid transparent;
-  padding-left: 20px;
+  z-index: 9999999999999;
 }
-.announcement_block:hover {
-  border-left: 4px solid #fff;
+.slider_navigate .navigate_item {
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
 }
-.announcement_block a {
-  color: #fff;
-}
-.announcement_block .announcement_title {
-  font: 18pt/20pt 'PT Mono Bold';
-}
-.announcement_block .announcement_desc {
-  margin-top: 30px;
-  font: 12pt/14pt 'PT Mono';
+.slider_navigate .navigate_item:hover {
+  opacity: 0.7;
 }
 .slider_block {
   width: 100%;
@@ -73,6 +65,27 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #fff;
+}
+.slider_block .slide_item .slide_body {
+  margin-top: 160px;
+  margin-left: 40px;
+}
+.slider_block .slide_item .slide_body .slide_title {
+  max-width: 720px;
+  font: 24pt/26pt 'PT Mono Bold';
+}
+.slider_block .slide_item .slide_body .slide_desc {
+  max-width: 720px;
+  margin-top: 40px;
+  margin-left: 220px;
+  font: 14pt/18pt 'PT Mono';
+}
+.slider_block .swiper-button-next {
+  right: 40px;
+}
+.slider_block .swiper-button-prev {
+  left: 40px;
 }
 .slider_block .swiper-pagination {
   bottom: 110px;

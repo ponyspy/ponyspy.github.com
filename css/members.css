@@ -1,0 +1,157 @@
+.content_block {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.members_header {
+  top: 160px;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 999;
+}
+.members_header .members_header_inner {
+  margin: 0 auto;
+  max-width: 960px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.members_header.fix {
+  position: fixed;
+  top: 0;
+}
+.members_title {
+  font: 22pt/24pt 'PT Mono Bold';
+  margin-bottom: 10px;
+}
+.members_category {
+  font: 14pt/16pt 'PT Mono';
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+.members_category:after {
+  content: '';
+  z-index: 0;
+  position: relative;
+  background-image: url("../img/arrow_list.svg");
+  width: 8px;
+  height: 8px;
+  margin-left: 15px;
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  vertical-align: middle;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.members_list {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.member_item {
+  text-align: center;
+  float: left;
+  width: 16.666666667%;
+  padding-top: 16.666666667%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+.member_item.active .in {
+  border: 20px solid #fff;
+}
+.member_item .in {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  margin: auto;
+  background-color: #808080;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+.panel {
+  float: left;
+  width: 100%;
+}
+.panel .in {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+.panel .in .panel_photo {
+  width: 49%;
+  height: 380px;
+  float: left;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.panel .in .panel_body {
+  width: 51%;
+  float: left;
+  padding-left: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.panel .in .panel_body .member_head {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.panel .in .panel_body .member_head .member_name {
+  font: 26pt/28pt 'PT Mono Bold';
+  max-width: 220px;
+  float: left;
+}
+.panel .in .panel_body .member_head .member_category {
+  float: right;
+  font: 12pt/14pt 'PT Mono Bold';
+}
+.panel .in .panel_body .member_events {
+  margin-bottom: 40px;
+}
+.panel .in .panel_body .member_events .events_title {
+  font: 12pt/14pt 'PT Mono Bold';
+}
+.panel .in .panel_body .member_events .events_list .event_item {
+  margin-top: 5px;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  font: 12pt/14pt 'PT Mono';
+  margin-right: 20px;
+}
+.panel .in .panel_body .member_events .events_list .event_item:last-child {
+  margin-right: 0;
+}
+.panel .in .panel_body .member_events .events_list .event_item:hover {
+  opacity: 0.7;
+}
+.panel .in .panel_body .member_description {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  font: 14pt/22pt 'PT Serif';
+}
+.panel .in .panel_body .member_description p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
