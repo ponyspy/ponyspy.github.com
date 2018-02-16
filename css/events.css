@@ -1,39 +1,63 @@
-.timeline_block::-webkit-scrollbar {
-  display: none;
-}
 .timeline_block {
   width: 100%;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  overflow: scroll;
-  padding-left: 40px;
-  padding-right: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
   position: absolute;
   top: 160px;
   z-index: 999;
+  height: 60px;
+  overflow: hidden;
 }
 .timeline_block.fix {
   position: fixed;
   top: 0;
 }
+.timeline_block .timeline_outer {
+  width: 100%;
+  overflow: hidden;
+}
 .timeline_block .timeline_inner {
+  vertical-align: top;
   display: inline-block;
   white-space: nowrap;
+  font-size: 0;
 }
 .timeline_block .timeline_inner .month_item {
   display: inline-block;
   white-space: nowrap;
   border-right: 1px solid #000;
-  margin-right: 35px;
   padding-right: 40px;
+  padding-left: 40px;
+  position: relative;
+}
+.timeline_block .timeline_inner .month_item .month_placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+.timeline_block .timeline_inner .month_item .month_placeholder.hide {
+  display: none;
+}
+.timeline_block .timeline_inner .month_item:hover,
+.timeline_block .timeline_inner .month_item.selected {
+  background-color: #ebebec;
+}
+.timeline_block .timeline_inner .month_item.selected .day_item:hover {
+  color: #fff;
+  background-color: #000;
 }
 .timeline_block .timeline_inner .month_item:last-child {
+  border-right: none;
   margin-right: 0;
   padding-right: 0;
-  border-right: none;
+  padding-right: 40px;
 }
 .timeline_block .timeline_inner .month_item .day_item {
   display: inline-block;
@@ -45,7 +69,7 @@
   padding-left: 5px;
   padding-right: 5px;
 }
-.timeline_block .timeline_inner .month_item .day_item:hover {
+.timeline_block .timeline_inner .month_item .day_item.selected {
   color: #fff;
   background-color: #000;
 }
@@ -64,13 +88,47 @@
   max-width: 960px;
   padding-left: 40px;
   padding-right: 40px;
-  margin: 140px auto;
+  margin: 100px auto;
 }
-.events_block .event_item {
+.events_title {
+  margin-bottom: 80px;
+  font: 16pt/18pt 'PT Mono Bold';
+}
+.events_title:before {
+  content: '';
+  z-index: 0;
+  position: relative;
+  background-image: url("../img/arrow_list.svg");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 8px;
+  height: 8px;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.events_title:after {
+  content: '';
+  z-index: 0;
+  position: relative;
+  background-image: url("../img/arrow_list.svg");
+  width: 8px;
+  height: 8px;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.events_list .event_item {
   overflow: hidden;
   margin-bottom: 80px;
 }
-.events_block .event_item .event_poster {
+.events_list .event_item .event_poster {
   width: 50%;
   height: 340px;
   background-position: center;
@@ -78,7 +136,7 @@
   background-size: cover;
   float: left;
 }
-.events_block .event_item .event_body {
+.events_list .event_item .event_body {
   width: 50%;
   float: left;
   padding-left: 70px;
@@ -86,20 +144,20 @@
           box-sizing: border-box;
   font: 12pt/14pt 'PT Mono';
 }
-.events_block .event_item .event_body .event_head,
-.events_block .event_item .event_body .event_meta {
+.events_list .event_item .event_body .event_head,
+.events_list .event_item .event_body .event_meta {
   overflow: hidden;
 }
-.events_block .event_item .event_body .event_date {
+.events_list .event_item .event_body .event_date {
   float: left;
   font: 14pt/16pt 'PT Mono';
 }
-.events_block .event_item .event_body .event_ticket {
+.events_list .event_item .event_body .event_ticket {
   float: right;
   font: 14pt/16pt 'PT Mono Bold';
   cursor: pointer;
 }
-.events_block .event_item .event_body .event_ticket:after {
+.events_list .event_item .event_body .event_ticket:after {
   content: '';
   z-index: 0;
   position: relative;
@@ -115,35 +173,35 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-.events_block .event_item .event_body .event_title {
+.events_list .event_item .event_body .event_title {
   margin-top: 20px;
   margin-bottom: 40px;
   font: 22pt/24pt 'PT Mono Bold';
 }
-.events_block .event_item .event_body .event_age {
+.events_list .event_item .event_body .event_age {
   font: 12pt/14pt 'PT Mono Bold';
   float: left;
 }
-.events_block .event_item .event_body .event_age:after {
+.events_list .event_item .event_body .event_age:after {
   content: '+';
 }
-.events_block .event_item .event_body .event_members {
+.events_list .event_item .event_body .event_members {
   float: left;
   margin-left: 60px;
 }
-.events_block .event_item .event_body .event_members .members_title {
+.events_list .event_item .event_body .event_members .members_title {
   font: 12pt/14pt 'PT Mono Bold';
 }
-.events_block .event_item .event_body .event_members .item {
+.events_list .event_item .event_body .event_members .item {
   display: block;
   text-decoration: none;
   color: #000;
   margin-top: 5px;
 }
-.events_block .event_item .event_body .event_members .item:hover {
+.events_list .event_item .event_body .event_members .item:hover {
   opacity: 0.7;
 }
-.events_block .event_item .event_body .event_description {
+.events_list .event_item .event_body .event_description {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;

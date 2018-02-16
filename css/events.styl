@@ -1,35 +1,50 @@
-.timeline_block::-webkit-scrollbar {
-	display: none;
-}
-
 .timeline_block
 	width 100%
 	border-top 1px solid black
 	border-bottom 1px solid black
-	overflow scroll
-	padding-left 40px
-	padding-right 40px
 	box-sizing border-box
 	background-color white
 	position absolute
 	top 160px
 	z-index 999
+	height 60px
+	overflow hidden
 	&.fix
 		position fixed
 		top 0
+	.timeline_outer
+		width 100%
+		overflow hidden	// overflow-x scroll
 	.timeline_inner
+		vertical-align top
 		display inline-block
 		white-space nowrap
+		font-size 0
 		.month_item
 			display inline-block
 			white-space nowrap
 			border-right 1px solid black
-			margin-right 35px
 			padding-right 40px
+			padding-left 40px
+			position relative
+			.month_placeholder
+				position absolute
+				top 0; left 0; right 0; bottom 0;
+				margin auto
+				cursor pointer
+				&.hide
+					display none
+			&:hover
+			&.selected
+				background-color rgb(235, 235, 236)
+			&.selected .day_item:hover
+				color white
+				background-color black
 			&:last-child
+				border-right none
 				margin-right 0
 				padding-right 0
-				border-right none
+				padding-right 40px
 			.day_item
 				display inline-block
 				white-space nowrap
@@ -39,7 +54,7 @@
 				padding-bottom 10px
 				padding-left 5px
 				padding-right 5px
-				&:hover
+				&.selected
 					color white
 					background-color black
 				&:last-child
@@ -56,7 +71,41 @@
 	max-width 960px
 	padding-left 40px
 	padding-right 40px
-	margin 140px auto
+	margin 100px auto
+
+.events_title
+	margin-bottom 80px
+	font 16pt/18pt 'PT Mono Bold'
+	&:before
+		content ''
+		z-index 0
+		position relative
+		background-image url('../img/arrow_list.svg')
+		transform rotate(180deg)
+		width 8px
+		height 8px
+		margin-right 15px
+		display inline-block
+		vertical-align middle
+		background-position top
+		background-size contain
+		background-repeat no-repeat
+	&:after
+		content ''
+		z-index 0
+		position relative
+		background-image url('../img/arrow_list.svg')
+		width 8px
+		height 8px
+		margin-left 15px
+		display inline-block
+		vertical-align middle
+		background-position top
+		background-size contain
+		background-repeat no-repeat
+
+
+.events_list
 	.event_item
 		overflow hidden
 		margin-bottom 80px
