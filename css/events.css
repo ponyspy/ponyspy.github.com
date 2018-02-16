@@ -10,6 +10,10 @@
   z-index: 999;
   height: 60px;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .timeline_block.fix {
   position: fixed;
@@ -32,6 +36,7 @@
   padding-right: 40px;
   padding-left: 40px;
   position: relative;
+  opacity: 0.4;
 }
 .timeline_block .timeline_inner .month_item .month_placeholder {
   position: absolute;
@@ -45,8 +50,11 @@
 .timeline_block .timeline_inner .month_item .month_placeholder.hide {
   display: none;
 }
-.timeline_block .timeline_inner .month_item:hover,
+.timeline_block .timeline_inner .month_item:hover {
+  opacity: 1;
+}
 .timeline_block .timeline_inner .month_item.selected {
+  opacity: 1;
   background-color: #ebebec;
 }
 .timeline_block .timeline_inner .month_item.selected .day_item:hover {
@@ -94,35 +102,26 @@
   margin-bottom: 80px;
   font: 16pt/18pt 'PT Mono Bold';
 }
-.events_title:before {
+.events_title .current_month {
+  display: inline-block;
+}
+.events_title .select_month {
+  cursor: pointer;
   content: '';
   z-index: 0;
   position: relative;
   background-image: url("../img/arrow_list.svg");
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
   width: 8px;
   height: 8px;
-  margin-right: 15px;
   display: inline-block;
   vertical-align: middle;
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.events_title:after {
-  content: '';
-  z-index: 0;
-  position: relative;
-  background-image: url("../img/arrow_list.svg");
-  width: 8px;
-  height: 8px;
-  margin-left: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
+.events_title .select_month.prev {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .events_list .event_item {
   overflow: hidden;
