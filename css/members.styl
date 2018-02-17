@@ -1,8 +1,8 @@
 .content_block
 	max-width 960px
 	margin 0 auto
-	padding-left 35px
-	padding-right 35px
+	padding-left 40px
+	padding-right 40px
 
 .members_header
 	top 160px
@@ -15,8 +15,8 @@
 	.members_header_inner
 		margin 0 auto
 		max-width 960px
-		padding-left 35px
-		padding-right 35px
+		padding-left 40px
+		padding-right 40px
 	&.fix
 		position fixed
 		top 0
@@ -50,7 +50,6 @@
 	margin-top 100px
 	margin-bottom 60px
 	overflow hidden
-	// background-color green
 	padding 10px
 	box-sizing border-box
 	margin-left -20px
@@ -63,9 +62,18 @@
 	padding-top 16.666666667%
 	box-sizing border-box
 	position relative
-	&.active .in
-		border 20px solid white
+	&:hover
+	&.active
+		.in
+			transition 0.20s ease
+			top 40px; left 40px; right 40px; bottom 40px
 	.in
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-transform: translateZ(0) scale(1.0, 1.0);
+		transform: translateZ(0);
+
+		transition 0.20s ease
 		background-repeat no-repeat
 		background-position center
 		background-size cover

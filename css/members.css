@@ -1,8 +1,8 @@
 .content_block {
   max-width: 960px;
   margin: 0 auto;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .members_header {
   top: 160px;
@@ -16,8 +16,8 @@
 .members_header .members_header_inner {
   margin: 0 auto;
   max-width: 960px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .members_header.fix {
   position: fixed;
@@ -68,10 +68,22 @@
           box-sizing: border-box;
   position: relative;
 }
+.member_item:hover .in,
 .member_item.active .in {
-  border: 20px solid #fff;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
 }
 .member_item .in {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0) scale(1, 1);
+  transform: translateZ(0);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

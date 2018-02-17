@@ -55,7 +55,7 @@
 }
 .timeline_block .timeline_inner .month_item.selected {
   opacity: 1;
-  background-color: #ebebec;
+  background-color: #f7f7f7;
 }
 .timeline_block .timeline_inner .month_item.selected .day_item:hover {
   color: #fff;
