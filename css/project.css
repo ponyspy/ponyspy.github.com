@@ -1,0 +1,62 @@
+.content_block {
+  padding: 20px;
+  padding-top: 140px;
+}
+.project_title {
+  font-family: 'Helvetica Neue';
+  font-size: 32pt;
+  line-height: 34pt;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.project_body {
+  overflow: hidden;
+  margin-top: 60px;
+}
+.project_body .project_meta {
+  float: left;
+  width: 20%;
+  padding-right: 40px;
+  font-family: 'Helvetica Neue';
+  font-size: 12pt;
+  line-height: 16pt;
+  font-weight: bold;
+}
+.project_body .project_meta .meta_item .item_title {
+  display: inline-block;
+  text-decoration: underline;
+}
+.project_body .project_meta .meta_item .item_title:after {
+  content: ':';
+}
+.project_body .project_meta .meta_item .item_value {
+  display: inline-block;
+  text-decoration: underline;
+}
+.project_body .project_description {
+  float: left;
+  width: 80%;
+  max-width: 800px;
+  padding-left: 40px;
+  font-family: 'Helvetica Neue';
+  font-size: 14pt;
+  line-height: 16pt;
+  font-weight: bold;
+}
+.project_images {
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 1000px;
+}
+.project_images img {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.project_images img.x2 {
+  width: 50%;
+}
+.project_images img.x3 {
+  width: 33.333333333%;
+}

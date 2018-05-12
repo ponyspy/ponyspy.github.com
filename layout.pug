@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		title D D A D | M A K E T
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		link(rel='stylesheet', type='text/css', href='css/fonts.css')
+		link(rel='stylesheet', type='text/css', href='css/global.css')
+		block content_styles
+		script(type='text/javascript', src='js/libs/jquery-2.2.4.min.js')
+		script(type='text/javascript', src='js/global.js')
+		block content_scripts
+	body
+		.title_block
+			a.logo_block(href='index.html') DD:A|D
+			.menu_block
+				.menu_open
+				.menu_items
+					a(href='#') /RU
+					a(href='about.html') about
+
+		.content_block
+			block content
+
+		.footer_block

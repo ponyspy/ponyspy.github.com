@@ -1,64 +1,44 @@
-html, body
-	height 100%
-
-.title_block
-	position absolute
-	a
-		color white!important
-	.search, .logo, .menu_open
-		filter: invert(100%)
-
-.footer_block
-	position absolute
-	bottom 0
-	.footer_inner
-		border-color white
-		.quality_block a
-			border-color white
-	img
-		filter: invert(100%)
-	a
-		color white!important
+body
+	margin 0
 
 .content_block
-	position absolute
-	width 100%
-	height 100%
-	background-color black
+	padding 20px
+	padding-top 140px
 
-.announcement_block
-	display block
-	text-decoration none
-	position absolute
-	top 240px
-	left 40px
-	max-width 470px
-	z-index 999999999999
-	color white
-	border-left 4px solid transparent
-	padding-left 20px
-	&:hover
-		border-left 4px solid white
-	a
-		color white
-	.announcement_title
-		font 18pt/20pt 'PT Mono Bold'
-	.announcement_desc
-		margin-top 30px
-		font 12pt/14pt 'PT Mono'
-
-.slider_block
-	width 100%
-	height 100%
-	opacity 0.85
-	.slide_item
+.directions
+	text-align justify
+	&:after
+		content ''
+		display inline-block
 		width 100%
-		height 100%
-		background-size cover
-		background-position center
-		background-repeat no-repeat
-	.swiper-pagination
-		bottom 110px
-		left auto!important
-		right 40px!important
-		width auto
+	.d_item
+		a
+			text-decoration none
+			color black
+		display inline-block
+		font-family 'Helvetica Neue'
+		font-size 10.5vw
+		line-height 10.5vw
+		font-weight bold
+		&:hover a
+			text-decoration underline
+
+.projects
+	text-align justify
+	.p_item
+		display inline-block
+		font-family 'Helvetica Neue'
+		font-weight bold
+		font-size 14pt
+		line-height 18pt
+		a
+			text-decoration none
+			color black
+			&:before
+				content '3'
+				margin-left 20px
+				margin-right 20px
+		&:hover
+			text-decoration underline
+		&.hover a
+			color lightgrey
