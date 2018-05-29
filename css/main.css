@@ -24,30 +24,35 @@ body {
   text-decoration: none;
   color: #000;
 }
+.directions .d_item.hover a {
+  color: #d3d3d3;
+}
 .directions .d_item:hover a {
   text-decoration: underline;
 }
 .projects {
-  text-align: justify;
+  text-align: left;
 }
 .projects .p_item {
-  display: inline-block;
+  display: inline;
   font-family: 'Helvetica Neue';
   font-weight: bold;
-  font-size: 14pt;
+  font-size: 12pt;
   line-height: 18pt;
 }
 .projects .p_item a {
   text-decoration: none;
   color: #000;
+  margin-left: 10px;
 }
-.projects .p_item a:before {
-  content: '3';
-  margin-left: 20px;
-  margin-right: 20px;
+.projects .p_item a:hover {
+  border-bottom: 2px solid #000;
 }
-.projects .p_item:hover {
-  text-decoration: underline;
+.projects .p_item a .num {
+  padding-right: 10px;
+}
+.projects .p_item.select a {
+  color: #808080;
 }
 .projects .p_item.hover a {
   color: #d3d3d3;

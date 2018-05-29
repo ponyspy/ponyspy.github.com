@@ -1,49 +1,67 @@
 .content_block
 	padding 20px
-	padding-top 140px
+	padding-top 80px
+
+
+.column
+	width 50%
+	&.left
+		left 0
+		position absolute
+	&.right
+		right 0
+		position fixed
+		padding-left 20px
+		padding-right 20px
+		box-sizing border-box
+
 
 .project_title
 	font-family 'Helvetica Neue'
 	font-size 32pt
-	line-height 34pt
+	line-height 42pt
 	font-weight bold
-	text-decoration underline
+	.num
+		margin-right 60px
+	.title
+		border-bottom 4px solid black
 
-
-.project_body
+.project_meta
+	font-family 'Helvetica Neue'
+	font-size 12pt
+	line-height 18pt
+	font-weight bold
+	margin-top 40px
+	margin-bottom 40px
 	overflow hidden
-	margin-top 60px
-	.project_meta
+	.meta_item
+		width 50%
+		margin-bottom 4px
 		float left
-		width 20%
-		padding-right 40px
-		font-family 'Helvetica Neue'
-		font-size 12pt
-		line-height 16pt
-		font-weight bold
-		.meta_item
-			.item_title
-				display inline-block
-				text-decoration underline
-				&:after
-					content ':'
-			.item_value
-				display inline-block
-				text-decoration underline
-	.project_description
-		float left
-		width 80%
-		max-width 800px
-		padding-left 40px
-		font-family 'Helvetica Neue'
-		font-size 14pt
-		line-height 16pt
-		font-weight bold
+		.item_title
+			vertical-align top
+			display inline-block
+			width 30%
+			span
+				border-bottom 2px solid black
+		.item_value
+			vertical-align top
+			width 60%
+			display inline-block
+			span
+				border-bottom 2px solid black
+
+.project_description
+	font-family 'Helvetica Neue'
+	font-size 14pt
+	line-height 18pt
+	font-weight bold
 
 .project_images
 	margin 0 auto
-	margin-top 60px
+	margin-bottom 60px
 	max-width 1000px
+	overflow hidden
 	img
 		display inline-block
 		margin-right 20px
