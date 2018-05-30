@@ -36,7 +36,6 @@
 	overflow hidden
 	.meta_item
 		width 50%
-		margin-bottom 4px
 		float left
 		.item_title
 			vertical-align top
@@ -58,16 +57,25 @@
 	font-weight bold
 
 .project_images
-	margin 0 auto
 	margin-bottom 60px
-	max-width 1000px
 	overflow hidden
-	img
-		display inline-block
-		margin-right 20px
+	.image
 		margin-bottom 40px
+		font-size 0
+		position relative
 		width 100%
+		float left
+		padding-left 20px
+		padding-right 20px
+		box-sizing border-box
 		&.x2
 			width 50%
 		&.x3
 			width 33.333333333%
+	.title
+		font-family 'Helvetica Neue'
+		font-size 12pt
+		line-height 14pt
+		margin-top 20px
+	img
+		width 100%
