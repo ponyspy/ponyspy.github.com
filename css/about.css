@@ -84,6 +84,7 @@ p {
   width: 100%;
   height: 500px;
   background-color: #d3d3d3;
+  background-position: center;
 }
 .section_block.partners {
   margin-bottom: 0px;
