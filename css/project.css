@@ -28,9 +28,6 @@
 .project_title .num {
   margin-right: 60px;
 }
-.project_title .title {
-  border-bottom: 4px solid #000;
-}
 .project_meta {
   font-family: 'Helvetica Neue';
   font-size: 12pt;
@@ -49,16 +46,10 @@
   display: inline-block;
   width: 30%;
 }
-.project_meta .meta_item .item_title span {
-  border-bottom: 2px solid #000;
-}
 .project_meta .meta_item .item_value {
   vertical-align: top;
   width: 60%;
   display: inline-block;
-}
-.project_meta .meta_item .item_value span {
-  border-bottom: 2px solid #000;
 }
 .project_description {
   font-family: 'Helvetica Neue';

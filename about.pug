@@ -1,4 +1,4 @@
-extends layout.jade
+extends layout
 
 block content_styles
 	link(rel='stylesheet', type='text/css', href='css/about.css')
@@ -7,3 +7,42 @@ block content_scripts
 	script(type='text/javascript', src='js/about.js')
 
 block content
+	- var randInt = function(min, max) {return Math.round(min - 0.5 + Math.random() * (max - min + 1)); }
+	.columns_block
+		.column.left
+			.section_block.about
+				.section_title About
+				.section_content
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		.column.right
+			.section_block.contacts
+				.section_title Contacts
+				.section_content
+					each item in new Array(4)
+						.contact_item
+							.contact_title NEW PROJECTS
+							.contact_place MEA
+							.contact_name Alper Kiremitci
+							.contact_email lala@ddad.moscow
+
+	.section_block.geography
+		.section_title Projects geography
+		.section_content
+
+	.section_block.team
+		.section_title Team
+		.section_content
+			include p_db/about
+			each member in members
+				.member_item(class=randInt(0, 1) == 1 ? 'out' : '')
+					.member_name= member.name
+					.member_role= member.role
+					.member_projects
+						each project, i in new Array(randInt(3, 6))
+							a.project_num(href='#')= randInt(1, 65)
+
+	.section_block.partners
+		.section_title Partners
+		.section_content
+			each partner in new Array(60)
+				.partner_item: .logo

@@ -3,7 +3,25 @@ body {
 }
 .content_block {
   padding: 20px;
-  padding-top: 140px;
+  padding-top: 60px;
+}
+.title_projects,
+.title_directions {
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 12pt;
+  line-height: 18pt;
+}
+.title_directions {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+}
+.title_projects {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .directions {
   text-align: justify;
@@ -14,11 +32,15 @@ body {
   width: 100%;
 }
 .directions .d_item {
+  margin-right: 40px;
   display: inline-block;
   font-family: 'Helvetica Neue';
-  font-size: 10.5vw;
-  line-height: 10.5vw;
+  font-size: 120pt;
+  line-height: 120pt;
   font-weight: bold;
+}
+.directions .d_item:last-child {
+  margin-right: 0;
 }
 .directions .d_item a {
   text-decoration: none;
@@ -37,22 +59,20 @@ body {
   display: inline;
   font-family: 'Helvetica Neue';
   font-weight: bold;
-  font-size: 12pt;
-  line-height: 18pt;
+  font-size: 14pt;
+  line-height: 22pt;
+  margin-right: 15px;
 }
 .projects .p_item a {
   text-decoration: none;
   color: #000;
-  margin-left: 10px;
 }
 .projects .p_item a:hover {
   border-bottom: 2px solid #000;
 }
 .projects .p_item a .num {
-  padding-right: 10px;
-}
-.projects .p_item.select a {
-  color: #808080;
+  font-size: 12pt;
+  padding-right: 15px;
 }
 .projects .p_item.hover a {
   color: #d3d3d3;
