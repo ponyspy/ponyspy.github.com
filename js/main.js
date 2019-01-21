@@ -1,34 +1,16 @@
 $(function() {
-	if (typeof window.DeviceMotionEvent != 'undefined') {
-			// Shake sensitivity (a lower number is more)
-			var sensitivity = 30;
+	var $photo_inner = $('.photo_stream');
+	var $photo = $('.photo_item');
 
-			// Position variables
-			var x1 = 0, y1 = 0, z1 = 0, x2 = 0, y2 = 0, z2 = 0;
+	$(document)
+		.on('scroll', function() {
+			var factor = 100 + (100 * $(window).scrollTop() / ($(window).height() + $photo_inner.height()));
 
-			// Listen to motion events and update the position
-			window.addEventListener('devicemotion', function (e) {
-					x1 = e.accelerationIncludingGravity.x;
-					y1 = e.accelerationIncludingGravity.y;
-					z1 = e.accelerationIncludingGravity.z;
-			}, false);
+			if (factor >= 0) {
+				factor = factor + '%';
 
-			// Periodically check the position and fire
-			// if the change is greater than the sensitivity
-			setInterval(function () {
-					var change = Math.abs(x1-x2+y1-y2+z1-z2);
-
-					if (change > sensitivity) {
-						$('.image').addClass('show');
-							setTimeout(function() {
-								$('.image').removeClass('show');
-							}, 2000);
-					}
-
-					// Update new position
-					x2 = x1;
-					y2 = y1;
-					z2 = z1;
-			}, 150);
-	}
+				// $photo.css({'top': factor, 'bottom': factor, 'left': factor, 'right': factor});
+				$photo.css({'background-size': factor});
+			}
+		});
 });

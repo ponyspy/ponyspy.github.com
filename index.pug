@@ -1,11 +1,19 @@
 doctype html
 html
 	head
-		title S H A K E
+		title T E S T
 		meta(charset='utf-8')
-		//- meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
 		script(type='text/javascript', src='js/jquery-3.3.1.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		img.image(src='images/f1.jpg')
+		.photo_stream
+			.photo_item(style='background-image: url(img/1.jpg)')
+				.photo_player Плеер
+			.photo_item(style='background-image: url(img/2.jpg)')
+				.photo_player Плеер
+			.photo_item(style='background-image: url(img/3.jpg)')
+				.photo_player Плеер
+			.photo_item(style='background-image: url(img/4.jpg)')
+				.photo_player Плеер
