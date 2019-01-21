@@ -11,7 +11,8 @@ body,
 }
 .photo_stream .photo_item {
   margin: 0 auto;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
