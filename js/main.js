@@ -1,16 +1,22 @@
 $(function() {
-	var $photo_inner = $('.photo_stream');
-	var $photo = $('.photo_item');
-
-	$(document)
-		.on('scroll', function() {
-			var factor = 100 + (100 * $(window).scrollTop() / ($(window).height() + $photo_inner.height()));
-
-			if (factor >= 0) {
-				factor = factor + '%';
-
-				// $photo.css({'top': factor, 'bottom': factor, 'left': factor, 'right': factor});
-				$photo.css({'background-size': factor});
-			}
-		});
+	var swiper = new Swiper('.swiper-container', {
+		loop: true,
+		centeredSlides: true,
+		slidesPerView: 3,
+		preventClicks: false,
+		mousewheel: true,
+		slideToClickedSlide: true,
+		effect: 'coverflow',
+		coverflowEffect: {
+			rotate: 0,
+			slideShadows: false,
+			stretch: 0,
+			depth: 250,
+			modifier: 1,
+		},
+		initialSlide: 0,
+		keyboard: {
+			enabled: true
+		}
+	});
 });

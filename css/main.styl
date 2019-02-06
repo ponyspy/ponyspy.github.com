@@ -3,22 +3,27 @@ body
 	margin 0
 	padding 0
 
-html, body, .photo_stream, .photo_item
-	height 100%
+.slider_outer
+	position relative
+	margin-top 15%
 
-.photo_stream
-	.photo_item
-		margin 0 auto
-		max-width 800px
+.swiper-container
+	height 720px
+
+.swiper-slide
+	background-position center
+	background-size contain
+	background-repeat no-repeat
+	position relative
+	background-color white
+	&.swiper-slide-active
+		.player
+			display block
+	.player
+		display none
+		padding-left 40px
+		padding-right 40px
+		box-sizing border-box
 		width 100%
-		background-position center
-		background-repeat no-repeat
-		background-attachment fixed
-		background-size 100%
-		position relative
-		.photo_player
-			width 100%
-			height 80px
-			background-color orange
-			bottom 0px
-			position absolute
+		position absolute
+		bottom 0

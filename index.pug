@@ -5,15 +5,34 @@ html
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
+		link(rel='stylesheet', type='text/css', href='css/swiper.min.css')
 		script(type='text/javascript', src='js/jquery-3.3.1.min.js')
+		script(type='text/javascript', src='js/swiper.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		.photo_stream
-			.photo_item(style='background-image: url(img/1.jpg)')
-				.photo_player Плеер
-			.photo_item(style='background-image: url(img/2.jpg)')
-				.photo_player Плеер
-			.photo_item(style='background-image: url(img/3.jpg)')
-				.photo_player Плеер
-			.photo_item(style='background-image: url(img/4.jpg)')
-				.photo_player Плеер
+
+	mixin player()
+		<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/272551887&amp;color=000000&amp;sharing=false&amp;download=false&amp;show_artwork=false&amp;show_playcount=false&amp;liking=fals‌​e"></iframe>
+
+	.slider_outer
+		.slider_block.swiper-container: .swiper-wrapper
+			.slide_item.swiper-slide(style='background-image: url(img/1.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/2.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/3.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/4.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/5.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/6.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/7.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/8.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/9.jpg)')
+				.player: +player()
+			.slide_item.swiper-slide(style='background-image: url(img/10.jpg)')
+				.player: +player()
