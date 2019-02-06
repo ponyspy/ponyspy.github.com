@@ -3,19 +3,31 @@ body {
   margin: 0;
   padding: 0;
 }
+html,
+body,
+.slider_outer,
+.swiper-container {
+  height: 100%;
+}
 .slider_outer {
   position: relative;
-  margin-top: 15%;
 }
 .swiper-container {
-  height: 720px;
+  width: 100%;
 }
 .swiper-slide {
+  position: relative;
+}
+.swiper-slide .slide_image {
+  width: 100%;
+  padding-bottom: 100%;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
-  background-color: #fff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .swiper-slide.swiper-slide-active .player {
   display: block;
@@ -28,5 +40,5 @@ body {
           box-sizing: border-box;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -60px;
 }

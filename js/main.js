@@ -1,4 +1,6 @@
 $(function() {
+	var $players = $('iframe');
+
 	var swiper = new Swiper('.swiper-container', {
 		loop: true,
 		centeredSlides: true,
@@ -10,7 +12,7 @@ $(function() {
 		coverflowEffect: {
 			rotate: 0,
 			slideShadows: false,
-			stretch: 0,
+			stretch: 100,
 			depth: 250,
 			modifier: 1,
 		},
@@ -18,5 +20,11 @@ $(function() {
 		keyboard: {
 			enabled: true
 		}
+	});
+
+	swiper.on('slideChange', function(e) {
+		$players.each(function() {
+			SC.Widget(this).pause();
+		});
 	});
 });
