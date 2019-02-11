@@ -1,10 +1,8 @@
 $(function() {
-	var $players = $('iframe');
-
 	var swiper = new Swiper('.swiper-container', {
 		loop: true,
 		centeredSlides: true,
-		slidesPerView: 3,
+		slidesPerView: 2, // 3
 		preventClicks: false,
 		mousewheel: true,
 		slideToClickedSlide: true,
@@ -12,9 +10,15 @@ $(function() {
 		coverflowEffect: {
 			rotate: 0,
 			slideShadows: false,
-			stretch: 100,
-			depth: 250,
+			stretch: 200, // 100
+			depth: 600, // 250
 			modifier: 1,
+		},
+		breakpoints: {
+			800: {
+				slidesPerView: 1,
+				spaceBetween: 0
+			}
 		},
 		initialSlide: 0,
 		keyboard: {
@@ -23,7 +27,7 @@ $(function() {
 	});
 
 	swiper.on('slideChange', function(e) {
-		$players.each(function() {
+		$('iframe').each(function() {
 			SC.Widget(this).pause();
 		});
 	});
