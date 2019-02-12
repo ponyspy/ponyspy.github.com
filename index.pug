@@ -14,8 +14,9 @@ html
 		script(type='text/javascript', src='js/swiper.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		mixin player()
-			iframe(width='100%', height='100', scrolling='no', frameborder='no', src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/272551887&color=000000&sharing=false&download=false&show_artwork=false&show_playcount=false&liking=fals‌​e')
+		mixin player(id)
+			- var params = '&color=000000&sharing=false&download=false&show_artwork=false&show_playcount=false&liking=fals‌​e'
+			iframe(width='100%', height='100', scrolling='no', frameborder='no', src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + id + params)
 
 		.title_block: .title_inner
 			.logo Райские вазы
@@ -27,7 +28,7 @@ html
 
 		.slider_outer
 			.slider_block.swiper-container: .swiper-wrapper
-				each item, i in new Array(10)
+				each id, i in [272551887, 272551887, 272551887, 272551887, 272551887, 272551887, 272551887, 272551887, 272551887, 272551887]
 					.slide_item.swiper-slide
 						.slide_image(style='background-image: url(img/items/' + (i+1) + '.jpg)')
-							.player: +player()
+							.player: +player(id)

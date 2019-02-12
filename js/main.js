@@ -1,6 +1,7 @@
 $(function() {
 	var swiper = new Swiper('.swiper-container', {
 		loop: true,
+		loopAdditionalSlides: 2,
 		centeredSlides: true,
 		slidesPerView: 2, // 3
 		preventClicks: false,
