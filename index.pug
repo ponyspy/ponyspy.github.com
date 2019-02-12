@@ -4,6 +4,9 @@ html
 		title Райские вазы
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name='description', content='Света Цепкало «Райские вазы»')
+		meta(property='og:image' content='img/icon/fbvk.jpg')
+		link(rel='shortcut icon', href='img/icon/favicon.jpg', type='image/x-icon')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
 		link(rel='stylesheet', type='text/css', href='css/swiper.min.css')
 		script(type='text/javascript', src='https://w.soundcloud.com/player/api.js')
@@ -26,5 +29,5 @@ html
 			.slider_block.swiper-container: .swiper-wrapper
 				each item, i in new Array(10)
 					.slide_item.swiper-slide
-						.slide_image(style='background-image: url(img/' + (i+1) + '.jpg)')
+						.slide_image(style='background-image: url(img/items/' + (i+1) + '.jpg)')
 							.player: +player()
