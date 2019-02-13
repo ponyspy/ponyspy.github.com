@@ -69,6 +69,7 @@ body {
   font: 32pt/34pt 'Time New Roman';
 }
 .title_block .title_inner .social {
+  margin-top: 22px;
   float: right;
   font: 12pt/14pt 'Time New Roman';
 }
@@ -96,6 +97,9 @@ body {
     bottom: -125px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+  .social {
+    margin-top: 1px !important;
   }
   .social a {
     text-align: right !important;
