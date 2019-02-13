@@ -16,6 +16,8 @@ body {
 }
 .slider_outer .swiper-container .swiper-slide {
   position: relative;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 .slider_outer .swiper-container .swiper-slide .slide_image {
   width: 100%;
@@ -27,6 +29,10 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+.slider_outer .swiper-container .swiper-slide.swiper-slide-active {
+  -webkit-filter: none;
+          filter: none;
 }
 .slider_outer .swiper-container .swiper-slide.swiper-slide-active .player {
   display: block;
