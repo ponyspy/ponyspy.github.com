@@ -16,8 +16,8 @@ body {
 }
 .slider_outer .swiper-container .swiper-slide {
   position: relative;
-  -webkit-filter: brightness(90%);
-          filter: brightness(90%);
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
 }
 .slider_outer .swiper-container .swiper-slide .slide_image {
   width: 100%;
@@ -90,10 +90,10 @@ body {
   .slide_image {
     -webkit-transform: translateY(-60%) !important;
             transform: translateY(-60%) !important;
-    padding-bottom: calc(100% - 70px) !important;
+    padding-bottom: calc(100% - 40px) !important;
   }
   .player {
-    bottom: -130px !important;
+    bottom: -125px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
