@@ -1,9 +1,9 @@
 $(function() {
 	var swiper = new Swiper('.swiper-container', {
 		loop: true,
-		loopAdditionalSlides: 2,
+		loopAdditionalSlides: 3,
 		centeredSlides: true,
-		slidesPerView: 2, // 3
+		slidesPerView: 2.3, // 3
 		preventClicks: false,
 		mousewheel: true,
 		slideToClickedSlide: true,
@@ -11,8 +11,8 @@ $(function() {
 		coverflowEffect: {
 			rotate: 0,
 			slideShadows: false,
-			stretch: 200, // 100
-			depth: 600, // 250
+			stretch: 450, // 100
+			depth: 250, // 250
 			modifier: 1,
 		},
 		breakpoints: {
