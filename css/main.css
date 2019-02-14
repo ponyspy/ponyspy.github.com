@@ -66,7 +66,7 @@ body {
 }
 .title_block .title_inner .logo {
   float: left;
-  font: 32pt/34pt 'Time New Roman';
+  font: 35pt/35pt 'Time New Roman';
 }
 .title_block .title_inner .social {
   margin-top: 22px;
@@ -94,6 +94,7 @@ body {
     padding-right: 20px !important;
   }
   .social {
+    font: 10pt/12pt 'Time New Roman' !important;
     margin-top: 1px !important;
   }
   .social a {
