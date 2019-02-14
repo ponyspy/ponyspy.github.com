@@ -27,8 +27,8 @@ body {
   background-repeat: no-repeat;
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(calc(-50% - 25px));
+          transform: translateY(calc(-50% - 25px));
 }
 .slider_outer .swiper-container .swiper-slide.swiper-slide-active {
   -webkit-filter: none;
