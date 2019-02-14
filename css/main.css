@@ -16,12 +16,12 @@ body {
 }
 .slider_outer .swiper-container .swiper-slide {
   position: relative;
-  -webkit-filter: brightness(95%);
-          filter: brightness(95%);
+  -webkit-filter: brightness(93%);
+          filter: brightness(93%);
 }
 .slider_outer .swiper-container .swiper-slide .slide_image {
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: calc(100% - 100px);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -81,11 +81,6 @@ body {
 }
 .title_block .title_inner .social a:hover {
   text-decoration: underline;
-}
-@media screen and (min-width: 1920px) {
-  .slide_image {
-    padding-bottom: calc(100% - 200px) !important;
-  }
 }
 @media screen and (max-width: 800px) {
   .slide_image {

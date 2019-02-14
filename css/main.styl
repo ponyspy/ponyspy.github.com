@@ -15,10 +15,10 @@ body
 		height 100%
 		.swiper-slide
 			position relative
-			filter: brightness(95%)
+			filter: brightness(93%)
 			.slide_image
 				width 100%
-				padding-bottom 100%
+				padding-bottom calc(100% - 100px)
 				background-position center
 				background-size contain
 				background-repeat no-repeat
@@ -67,11 +67,6 @@ body
 				text-decoration none
 				&:hover
 					text-decoration underline
-
-
-@media screen and (min-width: 1920px)
-	.slide_image
-		padding-bottom calc(100% - 200px)!important
 
 @media screen and (max-width: 800px)
 	.slide_image
