@@ -16,6 +16,17 @@ $(function() {
 			modifier: 1,
 		},
 		breakpoints: {
+			1024: {
+				loopAdditionalSlides: 2,
+				slidesPerView: 1.8,
+				coverflowEffect: {
+					rotate: 0,
+					slideShadows: false,
+					stretch: 250,
+					depth: 300,
+					modifier: 1,
+				},
+			},
 			800: {
 				slidesPerView: 1,
 				spaceBetween: 0
