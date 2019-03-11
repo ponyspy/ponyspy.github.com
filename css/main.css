@@ -1,4 +1,7 @@
 @media screen and (max-width: 840px) {
+  .content_block {
+    margin-top: 40px !important;
+  }
   .footer_block.scroll {
     padding-top: 40px;
     position: relative;
