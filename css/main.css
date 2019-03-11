@@ -1,3 +1,9 @@
+@media screen and (max-width: 840px) {
+  .footer_block.scroll {
+    padding-top: 40px;
+    position: relative;
+  }
+}
 html,
 body {
   margin: 0;
@@ -5,10 +11,12 @@ body {
   background-color: #003da6;
 }
 .header_block {
-  position: absolute;
-  top: 20px;
   width: 100%;
   z-index: 9999;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .header_block .logo {
   display: block;
@@ -18,11 +26,11 @@ body {
   cursor: pointer;
 }
 .bg_block {
-  position: absolute;
-  top: 250px;
-  left: 250px;
-  right: 250px;
-  bottom: 250px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  right: 25%;
+  bottom: 25%;
   margin: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,19 +43,29 @@ body {
           filter: blur(15px);
 }
 .content_block {
+  color: #fff;
   display: none;
-  top: 250px;
+  top: 0;
   font: 14pt/16pt 'Arial';
   max-width: 600px;
-  margin: 250px auto;
-  color: #fff;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.content_block p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
 }
 .content_block.show {
   display: block;
 }
 .footer_block {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   text-align: center;
   width: 100%;
 }

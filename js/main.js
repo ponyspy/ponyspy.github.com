@@ -9,10 +9,12 @@ $(function() {
 	$('.logo').on('click', function(e) {
 		$('.bg_block').removeClass('blur');
 		$('.content_block').removeClass('show');
+		$('.footer_block').removeClass('scroll');
 	});
 
 	$('.bg_block').on('click', function(e) {
 		$('.bg_block').addClass('blur');
 		$('.content_block').addClass('show');
+		$('.footer_block').addClass('scroll');
 	});
 });
