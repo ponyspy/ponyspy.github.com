@@ -1,9 +1,17 @@
 $(function() {
-	$('.bg_block').tilt({
-		// perspective: 1000,
-		// maxTilt: 20,
+	var element = document.querySelector('.bg_block');
+
+	VanillaTilt.init(element, {
 		reset: true,
-		scale: 1.2
+		scale: 1.2,
+		maxTilt: 60,
+		perspective: 500,
+		glare: false,
+		gyroscopeMinAngleX: -25,
+		gyroscopeMaxAngleX:  25,
+		gyroscopeMinAngleY: -25,
+		gyroscopeMaxAngleY:  25,
+		gyroscope: true
 	});
 
 	$('.logo').on('click', function(e) {
