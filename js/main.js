@@ -14,6 +14,14 @@ $(function() {
 		gyroscope: true
 	});
 
+	$(document).on('mouseup touchend', function(e) {
+		if ($(e.target).closest('.content_block').length) return;
+
+		$('.logo.active').trigger('click');
+
+		e.stopPropagation();
+	});
+
 	$(document).on('click', '.logo.active', function(e) {
 		$('.logo').removeClass('active');
 		$('.bg_block').removeClass('blur');
