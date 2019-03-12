@@ -5,8 +5,17 @@
 
 @media screen and (max-height: 800px) {
 	.footer_block.scroll {
-		padding-top 40px
+		padding-top 80px
 		position relative
+	}
+
+	.bg_block {
+		top 5%!important
+		left 5%!important
+		right 5%!important
+		bottom 5%!important
+		max-width 300px!important
+		max-height 300px!important
 	}
 }
 
@@ -27,7 +36,14 @@ body
 		width 100%
 		max-width 500px
 		margin 0 auto
-		cursor pointer
+		transition .2s linear
+		&.active
+			filter: blur(0px)
+			cursor default
+			&:hover
+				cursor pointer
+				transition .2s linear
+				filter: blur(3px)
 
 .bg_block
 	position fixed
@@ -37,14 +53,17 @@ body
 	background-repeat no-repeat
 	background-size contain
 	cursor pointer
+	max-width 600px
+	max-height 600px
 	&.blur
 		cursor default
 		filter: blur(15px)
 
 .content_block
+	position relative
+	z-index 99999
 	color white
 	display none
-	top 0
 	font 14pt/16pt 'Arial'
 	max-width 600px
 	margin 0 auto
@@ -61,13 +80,17 @@ body
 
 .footer_block
 	position fixed
-	bottom 20px
+	bottom 55px
 	text-align center
 	width 100%
 	a
-		filter: invert(100%)
 		margin-right 25px
 		display inline-block
+		transition .2s linear
+		filter: blur(0px) invert(100%)
+		&:hover
+			transition .2s linear
+			filter: blur(1px) invert(100%)
 		img
 			width 25px
 		&:last-child

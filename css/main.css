@@ -1,7 +1,15 @@
 @media screen and (max-height: 800px) {
   .footer_block.scroll {
-    padding-top: 40px;
+    padding-top: 80px;
     position: relative;
+  }
+  .bg_block {
+    top: 5% !important;
+    left: 5% !important;
+    right: 5% !important;
+    bottom: 5% !important;
+    max-width: 300px !important;
+    max-height: 300px !important;
   }
 }
 html,
@@ -23,7 +31,20 @@ body {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.header_block .logo.active {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  cursor: default;
+}
+.header_block .logo.active:hover {
   cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 .bg_block {
   position: fixed;
@@ -36,6 +57,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+  max-width: 600px;
+  max-height: 600px;
 }
 .bg_block.blur {
   cursor: default;
@@ -43,9 +66,10 @@ body {
           filter: blur(15px);
 }
 .content_block {
+  position: relative;
+  z-index: 99999;
   color: #fff;
   display: none;
-  top: 0;
   font: 14pt/16pt 'Arial';
   max-width: 600px;
   margin: 0 auto;
@@ -65,15 +89,23 @@ body {
 }
 .footer_block {
   position: fixed;
-  bottom: 20px;
+  bottom: 55px;
   text-align: center;
   width: 100%;
 }
 .footer_block a {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
   margin-right: 25px;
   display: inline-block;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-filter: blur(0px) invert(100%);
+          filter: blur(0px) invert(100%);
+}
+.footer_block a:hover {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-filter: blur(1px) invert(100%);
+          filter: blur(1px) invert(100%);
 }
 .footer_block a img {
   width: 25px;

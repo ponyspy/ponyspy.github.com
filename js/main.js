@@ -3,9 +3,9 @@ $(function() {
 
 	VanillaTilt.init(element, {
 		reset: true,
-		scale: 1.2,
-		maxTilt: 60,
-		perspective: 500,
+		// scale: 1.2,
+		maxTilt: 80,
+		perspective: 300,
 		glare: false,
 		gyroscopeMinAngleX: -25,
 		gyroscopeMaxAngleX:  25,
@@ -14,13 +14,15 @@ $(function() {
 		gyroscope: true
 	});
 
-	$('.logo').on('click', function(e) {
+	$(document).on('click', '.logo.active', function(e) {
+		$('.logo').removeClass('active');
 		$('.bg_block').removeClass('blur');
 		$('.content_block').removeClass('show');
 		$('.footer_block').removeClass('scroll');
 	});
 
 	$('.bg_block').on('click', function(e) {
+		$('.logo').addClass('active');
 		$('.bg_block').addClass('blur');
 		$('.content_block').addClass('show');
 		$('.footer_block').addClass('scroll');
