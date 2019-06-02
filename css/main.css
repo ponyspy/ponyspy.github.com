@@ -1,115 +1,122 @@
-@media screen and (max-height: 800px) {
-  .footer_block.scroll {
-    padding-top: 80px;
-    position: relative;
-  }
-  .bg_block {
-    top: 5% !important;
-    left: 5% !important;
-    right: 5% !important;
-    bottom: 5% !important;
-    max-width: 300px !important;
-    max-height: 300px !important;
-  }
-}
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #003da6;
+  font: 12pt/14pt 'Courier';
 }
-.header_block {
+.up_block,
+.down_block {
+  position: absolute;
+  background-color: #000;
   width: 100%;
-  z-index: 9999;
-  padding-left: 20px;
-  padding-right: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  color: #fff;
+  z-index: 999;
 }
-.header_block .logo {
+.up_block a,
+.down_block a {
+  color: #fff;
+  text-decoration: none;
+}
+.up_block a:hover,
+.down_block a:hover {
+  opacity: 0.7;
+}
+.up_block {
+  top: 0;
+}
+.up_block .menu_block {
+  float: left;
+}
+.up_block .menu_block a {
+  margin-right: 25px;
+}
+.up_block .menu_block .logo {
+  margin-right: 100px;
+}
+.up_block .locale_block {
+  float: right;
+}
+.up_block .drop_block {
+  clear: both;
+}
+.up_block .drop_block .drop {
+  padding-top: 10px;
+  display: none;
+}
+.up_block .drop_block .drop a {
   display: block;
-  width: 100%;
-  max-width: 500px;
+  margin-bottom: 5px;
+}
+.up_block .drop_block .drop.show {
+  display: block;
+}
+.up_block .drop_block .drop .d_section .d_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.down_block {
+  bottom: 0;
+}
+.down_block .title_block {
+  float: left;
+}
+.down_block .copy_block {
+  float: right;
+}
+.up_inner,
+.down_inner {
+  padding: 10px;
   margin: 0 auto;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  max-width: 1280px;
+  overflow: hidden;
 }
-.header_block .logo.active {
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-  cursor: default;
-}
-.header_block .logo.active:hover {
+.main_block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #808080;
   cursor: pointer;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
 }
-.bg_block {
-  position: fixed;
-  top: 25%;
-  left: 25%;
-  right: 25%;
-  bottom: 25%;
-  margin: auto;
+.main_block .content_items {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.main_block .content_items .content_item {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  max-width: 600px;
-  max-height: 600px;
 }
-.bg_block.blur {
-  cursor: default;
-  -webkit-filter: blur(15px);
-          filter: blur(15px);
-}
-.content_block {
-  position: relative;
-  z-index: 99999;
-  color: #fff;
-  display: none;
-  font: 14pt/16pt 'Arial';
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.content_block p {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 40px;
-}
-.content_block.show {
+.main_block .content_items .content_item.active {
   display: block;
 }
-.footer_block {
-  position: fixed;
-  bottom: 55px;
-  text-align: center;
+.main_block .content_mask {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 0;
 }
-.footer_block a {
-  margin-right: 25px;
+.main_block .content_mask .mask_item {
+  width: 16.666666667%;
+  height: 100%;
   display: inline-block;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-  -webkit-filter: blur(0px) invert(100%);
-          filter: blur(0px) invert(100%);
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 39px solid transparent;
+  border-bottom: 39px solid transparent;
 }
-.footer_block a:hover {
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-  -webkit-filter: blur(1px) invert(100%);
-          filter: blur(1px) invert(100%);
+.main_block .content_mask .mask_item:hover {
+  border-color: #fff;
 }
-.footer_block a img {
-  width: 25px;
-}
-.footer_block a:last-child {
-  margin-right: 0;
+.main_block .content_line {
+  position: absolute;
+  z-index: 99;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
 }

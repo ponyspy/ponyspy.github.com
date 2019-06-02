@@ -1,26 +1,68 @@
 doctype html
 html
 	head
-		title TUNDRA UNKNOWN
+		title COLOR FINALE
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
 		script(type='text/javascript', src='js/jquery-3.3.1.min.js')
-		script(type='text/javascript', src='js/vanilla-tilt.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
-		.header_block
-			img.logo(src='img/tun_logo.svg')
+		.up_block: .up_inner
+			.menu_block
+				a.logo(href='#') Color Finale
+				a(href='#download') Download
+				a(href='#buy') Buy
+				a(href='#support') Support
+				a(href='#about') About
+			.locale_block en
+			.drop_block
+				.drop#download
+					a(href='#') Download Trial
+				.drop#buy
+					.d_section
+						.d_title * License
+						.d_content
+							a(href='#') Color Finale Basic - $99.99
+							a(href='#') Color Finale Pro - $149.99
+					.d_section
+						.d_title * Bundles
+						.d_content
+							a(href='#') Finale Pro + Ascend Presets - $199.99
+							a(href='#') Finale Pro + Film Grain - $199.99
+							a(href='#') Finale Pro + Ascend Presets + Film Grain - $249.99
+					.d_section
+						.d_title * Presets
+						.d_content
+							a(href='#') Ascend Presets - $24.99
+							a(href='#') Film Grain - $24.99
+							a(href='#') All Presets - $49.99
+					.d_section
+						.d_title * Upgrades
+						.d_content
+							a(href='#') Upgrade Basic to Pro - $49.99
+				.drop#support
+					a(href='#') Your License
+					a(href='#') Guides
+				.drop#about
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-		.bg_block(style='background-image: url(video/tun_bg.gif)')
+		.main_block
+			- var items = ['One Title', 'Super Long Title', 'Short Title', 'No Title', 'Middle Title', 'Zero Title']
 
-		.content_block
-			p Территория Unknown – место, где все новое несет открытия. Неизвестные технологии дают новые возможности и пути исследовать мир вокруг себя. Неожиданное приключение покажет, кто ты на самом деле, что ты думаешь, чувствуешь наедине с природой.
-			p Проходя через толпу незнакомцев, не опускай голову вниз. Собирай впечатления визуально, тактильно и аудиально. Пространство вокруг кажется чистым, здесь нет ничего лишнего, ты сам можешь добавлять в него образы, звуки и ощущения. Музыка, видео-арт, диджитал-инсталяции – все ждет твоего внимания, но как распорядиться временем и как интерпретировать решаешь только ты.
-			p Неизвестные символы и знаки рассказывают свои глубинные смыслы через природу. Грозы стирают дистанцию, открывая путь к внешней и внутренней свободе. Вода символизирует смелые перемены внутри себя, проходя трансформацию от жидкости без формы до прочного льда, меняясь от тихого океана к разрушительному шторму. А камень может стать надежной опорой, непреодолимым препятствием или произведением искусства в ваших руках. Ветер может путать твои волосы или раздувать паруса и вести к цели.
-			p Миссия Tundra Unknown – поддерживать новую среду, в которой независимая культура будет развиваться и находить своих агентов в актуально процессе, обмениваясь идеями и чувствами. Tundra Unknown – возможность для активной коммуникации акторов, выходящих за рамки субъектного мировоззрения. Луч света говорит с вами, а вы влияете на миллиарды атомов вокруг, электромагнитные волны отражаются от лесов, которые впитывают влагу пост-цифровой реальности.
+			.content_line
 
-		.footer_block
-			a(href='#'): img(src='img/social/facebook.svg')
-			a(href='#'): img(src='img/social/instagram.svg')
-			a(href='#'): img(src='img/social/vk.svg')
+			.content_items
+				each item, i in items
+					.content_item(style='background-image: url(img/' + (i+1) + '.jpg)')
+
+			.content_mask
+				each item, i in items
+					.mask_item(data-title=item)
+
+
+		.down_block: .down_inner
+			.title_block Content Title
+			.copy_block!= '&copy; ColorTrix ' + new Date().getFullYear()
