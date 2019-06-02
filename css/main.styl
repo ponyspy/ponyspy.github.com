@@ -1,13 +1,28 @@
-// @font-face {
-// 	font-family: 'PT Serif';
-// 	src: url('/fonts/PTF55F_W.woff');
-// }
+@font-face {
+	font-family: 'PT Serif';
+	src: url('fonts/PTF55F_W.woff');
+}
+
+@font-face {
+	font-family: 'PT Serif Bold';
+	src: url('fonts/PTF75F_W.woff');
+}
+
+@font-face {
+	font-family: 'PT Mono';
+	src: url('fonts/PTM55F_W.woff');
+}
+
+@font-face {
+	font-family: 'PT Mono Bold';
+	src: url('fonts/PTM75F_W.woff');
+}
 
 html
 body
 	margin 0
 	padding 0
-	font 12pt/14pt 'Courier'
+	font 12pt/14pt 'PT Mono'
 
 .up_block
 .down_block
@@ -32,20 +47,31 @@ body
 			margin-right 100px
 	.locale_block
 		float right
+		a
+			margin-left 8px
+			&.active
+				border-bottom 1px solid white
 	.drop_block
 		clear both
 		.drop
 			padding-top 10px
 			display none
 			a
-				display block
-				margin-bottom 5px
+				border-bottom 1px solid white
+			.desc
+				display inline
+			.d_link
+				margin-bottom 10px
+				span
+					font-size 10pt
 			&.show
 				display block
 			.d_section
 				.d_title
-					margin-top 10px
+					margin-top 20px
 					margin-bottom 10px
+					&:before
+						content '- '
 
 .down_block
 	bottom 0
@@ -96,7 +122,7 @@ body
 			box-sizing border-box
 			border-top 39px solid transparent
 			border-bottom 39px solid transparent
-			&:hover
+			&.active
 				border-color white
 	.content_line
 		position absolute

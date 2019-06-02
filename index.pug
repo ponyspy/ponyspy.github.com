@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title COLOR FINALE
+		title Color Finale - Best Color Grading Tool for Everyone
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
@@ -15,36 +15,75 @@ html
 				a(href='#buy') Buy
 				a(href='#support') Support
 				a(href='#about') About
-			.locale_block en
+			.locale_block
+				a.active(href='#') en
+				a(href='#') de
+				a(href='#') fr
 			.drop_block
 				.drop#download
-					a(href='#') Download Trial
+					p 7 days free trial:
+					.d_link
+						a(href='#') Download
+						span= ' - 22.5 Mb'
 				.drop#buy
+					p Select your paid plan:
 					.d_section
-						.d_title * License
+						.d_title License
 						.d_content
-							a(href='#') Color Finale Basic - $99.99
-							a(href='#') Color Finale Pro - $149.99
+							.d_link
+								a(href='#') Color Finale Basic
+								span= ' - $99.99'
+							.d_link
+								a(href='#') Color Finale Pro
+								span= ' - $149.99'
 					.d_section
-						.d_title * Bundles
+						.d_title Bundles
 						.d_content
-							a(href='#') Finale Pro + Ascend Presets - $199.99
-							a(href='#') Finale Pro + Film Grain - $199.99
-							a(href='#') Finale Pro + Ascend Presets + Film Grain - $249.99
+							.d_link
+								a(href='#') Color Finale Pro + Ascend Presets
+								span= ' - $199.99'
+							.d_link
+								a(href='#') Color Finale Pro + Film Grain
+								span= ' - $199.99'
+							.d_link
+								a(href='#') Color Finale Pro + All Presets
+								span= ' - $249.99'
 					.d_section
-						.d_title * Presets
+						.d_title Presets
 						.d_content
-							a(href='#') Ascend Presets - $24.99
-							a(href='#') Film Grain - $24.99
-							a(href='#') All Presets - $49.99
+							.d_link
+								a(href='#') Ascend Presets
+								span= ' - $24.99'
+							.d_link
+								a(href='#') Film Grain
+								span= ' - $24.99'
+							.d_link
+								a(href='#') All Presets
+								span= ' - $49.99'
 					.d_section
-						.d_title * Upgrades
+						.d_title Upgrades
 						.d_content
-							a(href='#') Upgrade Basic to Pro - $49.99
+							.d_link
+								a(href='#') Basic to Pro
+								span= ' - $49.99'
 				.drop#support
-					a(href='#') Your License
-					a(href='#') Guides
+					p Check this, before ask the questions:
+					.d_link
+						a(href='#') License Manager
+						span= ' - Check or retrive your license'
+					.d_link
+						a(href='#') FAQ
+						span= ' - Common Questions'
+					.d_link
+						a(href='#') Guides
+						span= ' - Complete Color Grading Guides'
+					br
+					p
+						span= 'If you still have questions? Email us: '
+						a(href='mailto:support@colorfinale.com') support@colorfinale.com
+
 				.drop#about
+					p About us:
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

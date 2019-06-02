@@ -1,8 +1,24 @@
+@font-face {
+  font-family: 'PT Serif';
+  src: url("fonts/PTF55F_W.woff");
+}
+@font-face {
+  font-family: 'PT Serif Bold';
+  src: url("fonts/PTF75F_W.woff");
+}
+@font-face {
+  font-family: 'PT Mono';
+  src: url("fonts/PTM55F_W.woff");
+}
+@font-face {
+  font-family: 'PT Mono Bold';
+  src: url("fonts/PTM75F_W.woff");
+}
 html,
 body {
   margin: 0;
   padding: 0;
-  font: 12pt/14pt 'Courier';
+  font: 12pt/14pt 'PT Mono';
 }
 .up_block,
 .down_block {
@@ -36,6 +52,12 @@ body {
 .up_block .locale_block {
   float: right;
 }
+.up_block .locale_block a {
+  margin-left: 8px;
+}
+.up_block .locale_block a.active {
+  border-bottom: 1px solid #fff;
+}
 .up_block .drop_block {
   clear: both;
 }
@@ -44,15 +66,26 @@ body {
   display: none;
 }
 .up_block .drop_block .drop a {
-  display: block;
-  margin-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+.up_block .drop_block .drop .desc {
+  display: inline;
+}
+.up_block .drop_block .drop .d_link {
+  margin-bottom: 10px;
+}
+.up_block .drop_block .drop .d_link span {
+  font-size: 10pt;
 }
 .up_block .drop_block .drop.show {
   display: block;
 }
 .up_block .drop_block .drop .d_section .d_title {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
+}
+.up_block .drop_block .drop .d_section .d_title:before {
+  content: '- ';
 }
 .down_block {
   bottom: 0;
@@ -110,7 +143,7 @@ body {
   border-top: 39px solid transparent;
   border-bottom: 39px solid transparent;
 }
-.main_block .content_mask .mask_item:hover {
+.main_block .content_mask .mask_item.active {
   border-color: #fff;
 }
 .main_block .content_line {
