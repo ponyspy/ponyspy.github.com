@@ -3,6 +3,14 @@ $(window).on('load hashchange', function(e) {
 });
 
 $(function() {
+	$(document).on('mouseup touchend', function(e) {
+		if ($(e.target).closest('.drop_block').length) return;
+
+		location.hash = '#';
+
+		e.stopPropagation();
+	});
+
 	$('.main_block').on('mousemove', function(e) {
 		$('.content_line').css('left', e.pageX - 2);
 	});
@@ -14,5 +22,5 @@ $(function() {
 		$('.title_block').text($this.attr('data-title'));
 		$('.content_item').removeClass('active').eq(index).addClass('active');
 		$('.mask_item').removeClass('active').eq(index).addClass('active');
-	})
+	});
 });
