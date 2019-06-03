@@ -170,6 +170,7 @@ body {
   height: 100vh;
   background-color: #000;
   display: none;
+  overflow: scroll;
 }
 .sections_block .section_item.show {
   display: block;
@@ -182,6 +183,7 @@ body {
           box-sizing: border-box;
   margin: 0 auto;
   max-width: 1280px;
+  padding-bottom: 80px;
 }
 .sections_block .section_item .section_title {
   font-size: 26pt;
@@ -191,6 +193,16 @@ body {
 .sections_block .section_item .section_body {
   margin-top: 40px;
   color: #fff;
+  font-size: 14pt;
+  line-height: 16pt;
+}
+.sections_block .section_item .section_body img {
+  display: block;
+  width: 100%;
+}
+.sections_block .section_item .section_body .col {
+  padding-top: 40px;
+  padding-bottom: 40px;
   -webkit-columns: 2;
           columns: 2;
 }
