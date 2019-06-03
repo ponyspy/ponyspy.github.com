@@ -22,23 +22,24 @@ html
 			.drop_block
 				.drop#main
 					p: a(href='#') Go Home
+					br
 					.d_link
-						a(href='#') One Title
+						a(href='#one') One Title
 						span= ' - Description for one title'
 					.d_link
-						a(href='#') Super Long Title
+						a(href='#two') Super Long Title
 						span= ' - Description for Super Long Title'
 					.d_link
-						a(href='#') Short Title
+						a(href='#three') Short Title
 						span= ' - Description for short title'
 					.d_link
-						a(href='#') No Title
+						a(href='#four') No Title
 						span= ' - Description for No Title'
 					.d_link
-						a(href='#') Middle Title
+						a(href='#five') Middle Title
 						span= ' - Description for Middle Title'
 					.d_link
-						a(href='#') Zero Title
+						a(href='#six') Zero Title
 						span= ' - Description for Middle Title'
 				.drop#download
 					p 7 days free trial:
@@ -96,10 +97,10 @@ html
 						span= ' - Check or retrive your license'
 					.d_link
 						a(href='#') FAQ
-						span= ' - Common Questions'
+						span= ' - Common questions'
 					.d_link
 						a(href='#') Manual
-						span= ' - Complete Color Finale Guide Book'
+						span= ' - Complete Color Finale guide book'
 					br
 					p
 						span= 'If you still have questions? Email us: '
@@ -111,8 +112,10 @@ html
 					p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+
 		.main_block
 			- var items = ['One Title', 'Super Long Title', 'Short Title', 'No Title', 'Middle Title', 'Zero Title']
+			- var sections = ['one', 'two', 'three', 'four', 'five', 'six']
 
 			.content_line
 
@@ -122,7 +125,17 @@ html
 
 			.content_mask: .mask_inner
 				each item, i in items
-					.mask_item(data-title=item)
+					a.mask_item(href='#' + sections[i], data-title=item)
+
+
+		.sections_block
+			- var sections = ['one', 'two', 'three', 'four', 'five', 'six']
+
+			each item, i in items
+				.section_item(id=sections[i]): .section_inner
+					.section_title= item
+					.section_body
+						.body_description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 		.down_block: .down_inner

@@ -1,10 +1,10 @@
 $(window).on('load hashchange', function(e) {
-	$('.drop').removeClass('show').filter(location.hash).addClass('show');
+	$('.drop, .section_item').removeClass('show').filter(location.hash).addClass('show');
 });
 
 $(function() {
 	$(document).on('mouseup touchend', function(e) {
-		if ($(e.target).closest('.drop_block').length) return;
+		if ($(e.target).closest('.up_block, .down_block, .sections_block').length) return;
 
 		location.hash = '#';
 

@@ -23,7 +23,7 @@ html
 body
 	margin 0
 	padding 0
-	font 12pt/14pt 'PT Mono'
+	font 12pt/14pt 'PT Sans'
 
 
 .up_block
@@ -60,13 +60,14 @@ body
 			padding-top 10px
 			display none
 			a
+				font 12pt/14pt 'PT Mono'
 				border-bottom 1px solid white
 			.desc
 				display inline
 			.d_link
 				margin-bottom 10px
 				span
-					font-size 10pt
+					font 10pt/14pt 'PT Mono'
 			&.show
 				display block
 			.d_section
@@ -74,7 +75,7 @@ body
 					margin-top 20px
 					margin-bottom 10px
 					&:before
-						content '- '
+						content '-- '
 
 
 .down_block
@@ -88,6 +89,9 @@ body
 .up_inner
 .down_inner
 	padding 10px
+	padding-left 40px
+	padding-right 40px
+	box-sizing border-box
 	margin 0 auto
 	max-width 1280px
 	overflow hidden
@@ -134,4 +138,32 @@ body
 		width 1px
 		height 100%
 		background-color white
+
+.sections_block
+	position absolute
+	width 100%
+	z-index 99
+	.section_item
+		position absolute
+		width 100%
+		height 100vh
+		background-color black
+		display none
+		&.show
+			display block
+		.section_inner
+			position relative
+			padding-left 40px
+			padding-right 40px
+			box-sizing border-box
+			margin 0 auto
+			max-width 1280px
+		.section_title
+			font-size 26pt
+			padding-top 120px
+			color white
+		.section_body
+			margin-top 40px
+			color white
+			columns: 2;
 
