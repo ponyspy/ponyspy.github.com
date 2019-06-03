@@ -22,5 +22,5 @@ $(function() {
 		$('.title_block').text($this.attr('data-title'));
 		$('.content_item').removeClass('active').eq(index).addClass('active');
 		$('.mask_item').removeClass('active').eq(index).addClass('active');
-	});
+	}).eq(0).trigger('mouseenter');
 });
