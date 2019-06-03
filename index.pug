@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title Color Finale - Best Color Grading Tool for Everyone
+		title Color Finale - Color Grading for Everyone
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
@@ -120,7 +120,7 @@ html
 				each item, i in items
 					.content_item(style='background-image: url(img/' + (i+1) + '.jpg)')
 
-			.content_mask
+			.content_mask: .mask_inner
 				each item, i in items
 					.mask_item(data-title=item)
 
