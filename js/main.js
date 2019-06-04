@@ -1,5 +1,5 @@
 $(window).on('load hashchange', function(e) {
-	$('.drop, .section_item').removeClass('show').filter(location.hash).addClass('show');
+	$('.drop, .section_item').removeClass('show').filter(location.hash).addClass('show').scrollTop(0);
 });
 
 $(function() {

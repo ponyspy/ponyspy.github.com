@@ -184,25 +184,44 @@ body {
   margin: 0 auto;
   max-width: 1280px;
   padding-bottom: 80px;
+  color: #fff;
 }
 .sections_block .section_item .section_title {
-  font-size: 26pt;
+  font: 22pt/24pt 'PT Sans';
   padding-top: 120px;
-  color: #fff;
+}
+.sections_block .section_item .section_s_title {
+  margin-top: 10px;
+  font: 16pt/18pt 'PT Mono';
 }
 .sections_block .section_item .section_body {
-  margin-top: 40px;
+  margin-top: 60px;
+  font: 14pt/18pt 'PT Sans';
+}
+.sections_block .section_item .section_body a {
+  font: 14pt/18pt 'PT Mono';
+  border-bottom: 1px solid #fff;
   color: #fff;
-  font-size: 14pt;
-  line-height: 16pt;
+  text-decoration: none;
+}
+.sections_block .section_item .section_body p {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .sections_block .section_item .section_body img {
   display: block;
   width: 100%;
 }
 .sections_block .section_item .section_body .col {
+  max-width: 800px;
+  margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 40px;
-  -webkit-columns: 2;
-          columns: 2;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
 }
