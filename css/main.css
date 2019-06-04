@@ -211,17 +211,21 @@ body {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.sections_block .section_item .section_body p.b_left {
+  border-left: 1px solid #fff;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.sections_block .section_item .section_body p.col_2 {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 80px;
+          column-gap: 80px;
+  -webkit-column-rule: 1px solid #fff;
+          column-rule: 1px solid #fff;
+}
 .sections_block .section_item .section_body img {
   display: block;
   width: 100%;
-}
-.sections_block .section_item .section_body .col {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  -webkit-column-count: 2;
-          column-count: 2;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
 }
