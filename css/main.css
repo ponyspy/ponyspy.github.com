@@ -64,6 +64,10 @@ body {
 .up_block .drop_block .drop {
   padding-top: 10px;
   display: none;
+  overflow: hidden;
+}
+.up_block .drop_block .drop.show {
+  display: block;
 }
 .up_block .drop_block .drop a {
   font: 12pt/14pt 'PT Mono';
@@ -72,21 +76,32 @@ body {
 .up_block .drop_block .drop .desc {
   display: inline;
 }
+.up_block .drop_block .drop .d_text {
+  max-width: 620px;
+}
+.up_block .drop_block .drop .d_col {
+  float: left;
+  margin-right: 55px;
+}
+.up_block .drop_block .drop .d_li {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.up_block .drop_block .drop .d_li:before {
+  content: '∙ ';
+}
 .up_block .drop_block .drop .d_link {
   margin-bottom: 10px;
 }
 .up_block .drop_block .drop .d_link span {
   font: 10pt/14pt 'PT Mono';
 }
-.up_block .drop_block .drop.show {
-  display: block;
-}
 .up_block .drop_block .drop .d_section .d_title {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 .up_block .drop_block .drop .d_section .d_title:before {
-  content: '-- ';
+  content: '∙ ';
 }
 .down_block {
   bottom: 0;

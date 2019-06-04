@@ -59,23 +59,34 @@ body
 		.drop
 			padding-top 10px
 			display none
+			overflow hidden
+			&.show
+				display block
 			a
 				font 12pt/14pt 'PT Mono'
 				border-bottom 1px solid white
 			.desc
 				display inline
+			.d_text
+				max-width 620px
+			.d_col
+				float left
+				margin-right 55px
+			.d_li
+				padding-bottom 5px
+				padding-top 5px
+				&:before
+					content '∙ '
 			.d_link
 				margin-bottom 10px
 				span
 					font 10pt/14pt 'PT Mono'
-			&.show
-				display block
 			.d_section
 				.d_title
 					margin-top 20px
 					margin-bottom 10px
 					&:before
-						content '-- '
+						content '∙ '
 
 
 .down_block
