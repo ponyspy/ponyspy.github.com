@@ -1,4 +1,5 @@
 $(window).on('load hashchange', function(e) {
+	$('.menu_block').children('a').removeClass('active').filter('[href="' + location.hash + '"]').addClass('active');
 	$('.drop, .section_item').removeClass('show').filter(location.hash).addClass('show').scrollTop(0);
 });
 
@@ -9,6 +10,14 @@ $(function() {
 		location.hash = '#';
 
 		e.stopPropagation();
+	});
+
+	$('.menu_block').children('a').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).attr('href') == location.hash
+			? location.hash = '#'
+			: location.hash = $(this).attr('href');
 	});
 
 	$('.main_block').on('mousemove', function(e) {

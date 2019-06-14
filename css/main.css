@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'PT Serif';
-  src: url("fonts/PTF55F_W.woff");
+  src: url("../fonts/PTF55F_W.woff");
 }
 @font-face {
   font-family: 'PT Serif Bold';
-  src: url("fonts/PTF75F_W.woff");
+  src: url("../fonts/PTF75F_W.woff");
 }
 @font-face {
   font-family: 'PT Mono';
-  src: url("fonts/PTM55F_W.woff");
+  src: url("../fonts/PTM55F_W.woff");
 }
 @font-face {
   font-family: 'PT Mono Bold';
-  src: url("fonts/PTM75F_W.woff");
+  src: url("../fonts/PTM75F_W.woff");
 }
 html,
 body {
@@ -45,6 +45,9 @@ body {
 }
 .up_block .menu_block a {
   margin-right: 25px;
+}
+.up_block .menu_block a.active {
+  border-bottom: 1px solid #fff;
 }
 .up_block .menu_block .logo {
   margin-right: 100px;
