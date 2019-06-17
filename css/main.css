@@ -176,7 +176,7 @@ body {
   height: 100%;
   display: none;
   background-size: cover;
-  background-position: center;
+  background-position: 100% 100%;
   background-repeat: no-repeat;
 }
 .main_block .content_items .content_item.active {
