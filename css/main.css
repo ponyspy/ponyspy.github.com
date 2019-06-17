@@ -113,6 +113,9 @@ body {
 .up_block .drop_block .drop .d_link span {
   font: 10pt/14pt 'PT Mono';
 }
+.up_block .drop_block .drop .d_link span:before {
+  content: ' - ';
+}
 .up_block .drop_block .drop .d_section .s_title {
   margin-top: 25px;
   margin-bottom: 10px;
