@@ -7,13 +7,21 @@ $(window).on('load hashchange', function(e) {
 });
 
 $(function() {
-	$(document).on('mouseup touchend', function(e) {
-		if ($(e.target).closest('.up_block, .down_block, .sections_block').length) return;
+	$(document)
+		.on('keyup', function(e) {
+			var num_codes = [49, 50, 51, 52, 53];
 
-		location.hash = '#';
+			if (/^[0-9]+$/.test(num_codes.indexOf(e.which))) {
+				$('.menu_block').find('a').eq(num_codes.indexOf(e.which)).trigger('click');
+			}
+		})
+		.on('mouseup touchend', function(e) {
+			if ($(e.target).closest('.up_block, .down_block, .sections_block').length) return;
 
-		e.stopPropagation();
-	});
+			location.hash = '#';
+
+			e.stopPropagation();
+		});
 
 	$('.menu_block').children('a').on('click', function(e) {
 		e.preventDefault();
