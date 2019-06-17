@@ -5,9 +5,12 @@ html
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
-		script(type='text/javascript', src='js/jquery-3.3.1.min.js')
+		script(type='text/javascript', src='js/jquery-3.4.1.min.js')
 		script(type='text/javascript', src='js/main.js')
 	body
+
+		//- Up Block
+
 		.up_block: .up_inner
 			.menu_block
 				a.logo(href='#main') Color Finale
@@ -22,156 +25,78 @@ html
 				a(href='#') fr
 
 			.drop_block
-				.drop#main
-					.d_col
-						p Key features:
-						br
-						.d_link
-							a(href='#one') One Title
-							span= ' - Description for one title'
-						.d_link
-							a(href='#two') Super Long Title
-							span= ' - Description for Super Long Title'
-						.d_link
-							a(href='#three') Short Title
-							span= ' - Description for short title'
-						.d_link
-							a(href='#four') No Title
-							span= ' - Description for No Title'
-						.d_link
-							a(href='#five') Middle Title
-							span= ' - Description for Middle Title'
-						.d_link
-							a(href='#six') Zero Title
-							span= ' - Description for Middle Title'
-					.d_col
-						p Trusted by:
-						img.logo_img.ho(src='img/logo/hbo.png')
-						img.logo_img.wo(src='img/logo/sony.png')
-						img.logo_img.ho(src='img/logo/marvel.png')
-						img.logo_img.wo(src='img/logo/nbc.png')
+				.drop(id='main')
+					include pug/drops/main.pug
+				.drop(id='download')
+					include pug/drops/download.pug
+				.drop(id='buy')
+					include pug/drops/buy.pug
+				.drop(id='support')
+					include pug/drops/support.pug
+				.drop(id='about')
+					include pug/drops/about.pug
 
-				.drop#download
-					.d_col
-						p 7 days free trial:
-						.d_link
-							a(href='#') Release
-							span= ' - '
-							span macOS 10.12.2+
-						.d_link
-							a(href='#') Beta
-							span= ' - '
-							span macOS 10.14.4+
-					.d_col
-						p What's new:
-						a(href='#'): span Changelog
-
-				.drop#buy
-					.d_col
-						p Every plan has included:
-						.d_section
-							.d_li 24/7 customer support
-							.d_li 30 days money back guarantee
-							.d_li free minor version upgrades
-					.d_col
-						p Select your paid plan:
-						.d_section
-							.d_title License
-							.d_content
-								.d_link
-									a(href='#') Color Finale Basic
-									span= ' - $99.99'
-								.d_link
-									a(href='#') Color Finale Pro
-									span= ' - $149.99'
-						.d_section
-							.d_title Bundles
-							.d_content
-								.d_link
-									a(href='#') Color Finale Pro + Ascend Presets
-									span= ' - $199.99'
-								.d_link
-									a(href='#') Color Finale Pro + Film Grain
-									span= ' - $199.99'
-								.d_link
-									a(href='#') Color Finale Pro + All Presets
-									span= ' - $249.99'
-						.d_section
-							.d_title Presets
-							.d_content
-								.d_link
-									a(href='#') Ascend Presets
-									span= ' - $24.99'
-								.d_link
-									a(href='#') Film Grain
-									span= ' - $24.99'
-								.d_link
-									a(href='#') All Presets
-									span= ' - $49.99'
-						.d_section
-							.d_title Upgrades
-							.d_content
-								.d_link
-									a(href='#') Basic to Pro
-									span= ' - $49.99'
-
-				.drop#support
-					.d_col
-						p Check this things before ask the question:
-						.d_link
-							a(href='#') License Manager
-							span= ' - Check or retrive your license'
-						.d_link
-							a(href='#') FAQ
-							span= ' - Common questions'
-						.d_link
-							a(href='#') Manual
-							span= ' - Complete Color Finale guide book'
-					.d_col
-						p Email us:
-						a(href='mailto:support@colorfinale.com') support@colorfinale.com
-
-				.drop#about
-					p About us:
-					.d_text
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+		//- Main Block
 
 		.main_block
-			- var items = ['One Title', 'Super Long Title', 'Short Title', 'No Title', 'Middle Title', 'Zero Title']
-			- var sections = ['one', 'two', 'three', 'four', 'five', 'six']
-
 			.content_line
 
 			.content_items
-				each item, i in items
-					.content_item(style='background-image: url(img/items/' + (i+1) + '.jpg)')
+				.content_item(style='background-image: url(img/items/1.jpg)')
+				.content_item(style='background-image: url(img/items/2.jpg)')
+				.content_item(style='background-image: url(img/items/3.jpg)')
+				.content_item(style='background-image: url(img/items/4.jpg)')
+				.content_item(style='background-image: url(img/items/5.jpg)')
+				.content_item(style='background-image: url(img/items/6.jpg)')
 
 			.content_mask: .mask_inner
-				each item, i in items
-					a.mask_item(href='#' + sections[i], data-title=item)
-
+				a.mask_item(href='#one')
+				a.mask_item(href='#two')
+				a.mask_item(href='#three')
+				a.mask_item(href='#four')
+				a.mask_item(href='#five')
+				a.mask_item(href='#six')
 
 		.sections_block
-			- var sections = ['one', 'two', 'three', 'four', 'five', 'six']
+			.section_item(id='one'): .section_inner
+				.section_title One Title
+				.section_s_title Good one second title
+				.section_body
+					include pug/sections/content.pug
 
-			each item, i in items
-				.section_item(id=sections[i]): .section_inner
-					.section_title= item
-					.section_s_title Good second title
-					.section_body
-						.body_description
-							.text
-							p.b_left I’ve been to the Geneva Motor Show half a dozen times, and I can confidently say that the new Mac Pro looks tailor-made for that exhibition of exotics. It’s got a huge and imposing metal grille up front and tons of speed and power on the inside. It’s built with bespoke components, performance-optimized aerodynamics, and a starting price that means most of us will only ever get to look at, never own, one. And even though we’ve never seen it before, it’s instantly recognizable as an expensive, glamorous powerhouse machine. Yes, Apple’s 2019 Mac Pro is the supercar of the computer world.
-							img(src='img/items/' + (~~(Math.random() * sections.length) + 1) + '.jpg')
-							p.col_2 Like the latest debut from Lamborghini or McLaren, this Mac Pro has an immediate visual impact, looking at once familiar and enticingly novel and different. It carries on a family lineage — from the original Mac Pro, pretending the 2013 “trash can” never happened — expressed in the pair of steel handles and the latticed front and rear. Apple’s famously meticulous attention to detail is expressed in the curves and forms of this Mac Pro chassis, and it’s the little touches that make the design intriguing and memorable. There are no corners to the aluminum sheath, for instance, which slides on and off with apparent ease.
-							img(src='img/items/' + (~~(Math.random() * sections.length) + 1) + '.jpg')
-							p.b_left Those little touches are helped by Apple’s outsize budget, of course, as few PC makers would indulge in having dual-layered, precision-cut aluminum frames just to create the hypnotic effect of the new grille. All designers aim to create iconic looks, but those become a high priority with supercars, and I’d argue they’ve long been a priority with Apple’s design chief Jony Ive, for better (the MacBook Pro and Air of yesteryear) or worse (the silly charging method for the Apple Pencil). Nobody buys a Ferrari just for the way it drives, and even if you have purely functional reasons to get this new Mac Pro, you’ll still feel more satisfied with it just because of how it looks. This is a class of glamorous performance machines where looks matter.
-							p To see the 2019 Mac Pro once is enough to remember it for a long time.
+			.section_item(id='two'): .section_inner
+				.section_title Super Long Title
+				.section_s_title Good long second title
+				.section_body
+					include pug/sections/content.pug
 
+			.section_item(id='three'): .section_inner
+				.section_title Short Title
+				.section_s_title Good short second title
+				.section_body
+					include pug/sections/content.pug
+
+			.section_item(id='four'): .section_inner
+				.section_title No Title
+				.section_s_title Good no second title
+				.section_body
+					include pug/sections/content.pug
+
+			.section_item(id='five'): .section_inner
+				.section_title Middle Title
+				.section_s_title Good middle second title
+				.section_body
+					include pug/sections/content.pug
+
+			.section_item(id='six'): .section_inner
+				.section_title Zero Title
+				.section_s_title Good zero second title
+				.section_body
+					include pug/sections/content.pug
+
+		//- Down Block
 
 		.down_block: .down_inner
 			.title_block
 			.copy_block!= '&copy; ColorTrix ' + new Date().getFullYear()
+

@@ -94,7 +94,7 @@ body {
 }
 .up_block .drop_block .drop .d_col {
   float: left;
-  margin-right: 55px;
+  margin-right: 53px;
 }
 .up_block .drop_block .drop .d_li {
   padding-bottom: 5px;
@@ -103,17 +103,21 @@ body {
 .up_block .drop_block .drop .d_li:before {
   content: '∙ ';
 }
+.up_block .drop_block .drop .d_title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .up_block .drop_block .drop .d_link {
   margin-bottom: 10px;
 }
 .up_block .drop_block .drop .d_link span {
   font: 10pt/14pt 'PT Mono';
 }
-.up_block .drop_block .drop .d_section .d_title {
-  margin-top: 20px;
+.up_block .drop_block .drop .d_section .s_title {
+  margin-top: 25px;
   margin-bottom: 10px;
 }
-.up_block .drop_block .drop .d_section .d_title:before {
+.up_block .drop_block .drop .d_section .s_title:before {
   content: '∙ ';
 }
 .down_block {
@@ -199,6 +203,7 @@ body {
   background-color: #000;
   display: none;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .sections_block .section_item.show {
   display: block;

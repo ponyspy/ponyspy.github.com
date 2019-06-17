@@ -82,19 +82,22 @@ body
 				max-width 620px
 			.d_col
 				float left
-				margin-right 55px
+				margin-right 53px
 			.d_li
 				padding-bottom 5px
 				padding-top 5px
 				&:before
 					content '∙ '
+			.d_title
+				margin-top 20px
+				margin-bottom 20px
 			.d_link
 				margin-bottom 10px
 				span
 					font 10pt/14pt 'PT Mono'
 			.d_section
-				.d_title
-					margin-top 20px
+				.s_title
+					margin-top 25px
 					margin-bottom 10px
 					&:before
 						content '∙ '
@@ -172,6 +175,7 @@ body
 		background-color black
 		display none
 		overflow scroll
+		-webkit-overflow-scrolling: touch;
 		&.show
 			display block
 		.section_inner
