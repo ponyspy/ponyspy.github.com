@@ -1,7 +1,7 @@
 $(window).on('load hashchange', function(e) {
 	var title_text = $('.section_item').filter(location.hash).find('.section_title').text();
 
-	$('.title_block').text(title_text == '' ? $('.section_item').filter($('.mask_item').filter('.active').attr('href')).find('.section_title').text() : title_text);
+	$('.title_block').text(title_text == '' ? $('.section_item').filter($('.mask_item').filter('.active').attr('data-href')).find('.section_title').text() : title_text);
 	$('.menu_block').children('a').removeClass('active').filter('[href="' + location.hash + '"]').addClass('active');
 	$('.drop, .section_item').removeClass('show').filter(location.hash).addClass('show').scrollTop(0);
 });
@@ -36,6 +36,9 @@ $(function() {
 	});
 
 	$('.mask_item')
+		.on('click', function(e) {
+			location.href = $(this).attr('data-href');
+		})
 		.on('mousemove', function(e) {
 			var $this = $(this);
 			var $content_item = $('.content_item.active');
@@ -47,7 +50,7 @@ $(function() {
 			var $this = $(this);
 			var index = $this.index();
 
-			$('.title_block').text($('.section_item').filter($this.attr('href')).find('.section_title').text());
+			$('.title_block').text($('.section_item').filter($this.attr('data-href')).find('.section_title').text());
 			$('.content_item').removeClass('active').eq(index).addClass('active');
 			$('.mask_item').removeClass('active').eq(index).addClass('active');
 		}).eq(0).trigger('mouseenter');
