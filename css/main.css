@@ -43,14 +43,27 @@ body {
 .up_block .menu_block {
   float: left;
 }
+.up_block .menu_block .logo {
+  margin-right: 120px;
+}
+.up_block .menu_block .logo.active {
+  border: none;
+}
+.up_block .menu_block .logo.active span {
+  border-bottom: 1px solid #fff;
+}
+.up_block .menu_block .logo img {
+  height: 18px;
+  position: absolute;
+}
+.up_block .menu_block .logo span {
+  margin-left: 28px;
+}
 .up_block .menu_block a {
   margin-right: 25px;
 }
 .up_block .menu_block a.active {
   border-bottom: 1px solid #fff;
-}
-.up_block .menu_block .logo {
-  margin-right: 100px;
 }
 .up_block .locale_block {
   float: right;
@@ -63,6 +76,8 @@ body {
 }
 .up_block .drop_block {
   clear: both;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .up_block .drop_block .drop {
   padding-top: 10px;
@@ -94,7 +109,7 @@ body {
 }
 .up_block .drop_block .drop .d_col {
   float: left;
-  margin-right: 53px;
+  margin-right: 70px;
 }
 .up_block .drop_block .drop .d_li {
   padding-bottom: 5px;

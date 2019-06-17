@@ -44,12 +44,21 @@ body
 	top 0
 	.menu_block
 		float left
+		.logo
+			margin-right 120px
+			&.active
+				border none
+				span
+					border-bottom 1px solid white;
+			img
+				height 18px
+				position absolute
+			span
+				margin-left 28px
 		a
 			margin-right 25px
 			&.active
 				border-bottom 1px solid white;
-		.logo
-			margin-right 100px
 	.locale_block
 		float right
 		a
@@ -58,6 +67,8 @@ body
 				border-bottom 1px solid white
 	.drop_block
 		clear both
+		padding-left 30px
+		padding-right 30px
 		.drop
 			padding-top 10px
 			display none
@@ -74,15 +85,13 @@ body
 					width 60px
 				&.wo
 					height 60px
-
-
 			.desc
 				display inline
 			.d_text
 				max-width 620px
 			.d_col
 				float left
-				margin-right 53px
+				margin-right 70px
 			.d_li
 				padding-bottom 5px
 				padding-top 5px
