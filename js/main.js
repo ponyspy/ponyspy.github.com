@@ -9,10 +9,14 @@ $(window).on('load hashchange', function(e) {
 $(function() {
 	$(document)
 		.on('keyup', function(e) {
-			var num_codes = [49, 50, 51, 52, 53];
+			var menu_index = [49, 50, 51, 52, 53].indexOf(e.which);
 
-			if (/^[0-9]+$/.test(num_codes.indexOf(e.which))) {
-				$('.menu_block').find('a').eq(num_codes.indexOf(e.which)).trigger('click');
+			if (menu_index !== -1) {
+				$('.menu_block').find('a').eq(menu_index).trigger('click');
+			}
+
+			if (e.which == 27) {
+				location.hash = '#';
 			}
 		})
 		.on('mouseup touchend', function(e) {
