@@ -107,6 +107,17 @@ body {
 .up_block .drop_block .drop .d_text {
   max-width: 620px;
 }
+.up_block .drop_block .drop .d_social {
+  margin-right: 20px;
+  text-decoration: none;
+  border: none;
+}
+.up_block .drop_block .drop .d_social img {
+  height: 20px;
+}
+.up_block .drop_block .drop .d_social img.yt {
+  height: 25px;
+}
 .up_block .drop_block .drop .d_col {
   float: left;
   margin-right: 70px;
