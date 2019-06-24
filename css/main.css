@@ -113,10 +113,11 @@ body {
   border: none;
 }
 .up_block .drop_block .drop .d_social img {
+  vertical-align: middle;
   height: 20px;
 }
-.up_block .drop_block .drop .d_social img.yt {
-  height: 25px;
+.up_block .drop_block .drop .d_social img.wo {
+  height: 18px;
 }
 .up_block .drop_block .drop .d_col {
   float: left;

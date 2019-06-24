@@ -12,7 +12,7 @@ $(function() {
 			var menu_index = [49, 50, 51, 52, 53].indexOf(e.which);
 
 			if (menu_index !== -1) {
-				$('.menu_block').find('a').eq(menu_index).trigger('click');
+				$('.menu_block').children('a').eq(menu_index).trigger('click');
 			}
 
 			if (e.which == 27) {
@@ -28,11 +28,13 @@ $(function() {
 		});
 
 	$('.menu_block').children('a').on('click', function(e) {
+		var href = $(this).attr('href');
+
 		e.preventDefault();
 
-		$(this).attr('href') == location.hash
+		href == location.hash
 			? location.hash = '#'
-			: location.hash = $(this).attr('href');
+			: location.hash = href;
 	});
 
 	$('.main_block').on('mousemove', function(e) {
@@ -45,10 +47,9 @@ $(function() {
 		})
 		.on('mousemove', function(e) {
 			var $this = $(this);
-			var $content_item = $('.content_item.active');
 			var percentage = (e.pageX - $this.offset().left) / $this.width() * 100;
 
-			$content_item.css('background-position-x', percentage + '%');
+			$('.content_item.active').css('background-position-x', percentage + '%');
 		})
 		.on('mouseenter', function(e) {
 			var $this = $(this);
