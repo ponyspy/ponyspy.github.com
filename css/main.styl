@@ -76,15 +76,20 @@ body
 		background-color rgb(238, 56, 49)
 		border-right 2px solid rgb(238, 56, 49)
 		&.one .column_header
-			font 42pt/44pt 'NeueHaas'!important
+			font 46pt/48pt 'NeueHaas'!important
 		&.two .column_header
-			font 24pt/28pt 'Swiss721Rm'!important
+			font 26pt/34pt 'Swiss721Rm'!important
 		&.three .column_header
 			display flex
-			font 14pt/16pt 'Swiss721Rm'!important
+			font 14pt/28pt 'Swiss721Rm'!important
+			.column
+				padding-right 60px
+				box-sizing border-box
+				&:last-child
+					padding-right 0
 		.column_inner
 			height 100%
-			padding-top 60px
+			padding-top 65px
 			overflow-y scroll
 			.column_header
 				color white
@@ -99,6 +104,16 @@ body
 				background-color white
 				.column_title
 					font 14pt/16pt 'Swiss721Rm'
+					display flex
+					align-items center
+					justify-content space-between
+					&:after
+						content ''
+						display inline-block
+						width 15px
+						height 15px
+						border-radius 100%
+						background-color rgb(238, 56, 49)
 				.column_desc
 					padding-top 180px
 					font 24pt/28pt 'Swiss721Rm'
