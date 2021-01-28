@@ -1,20 +1,24 @@
+var is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 $(function() {
 
-  $('.column_inner').on('mouseenter', function(e) {
-    var $this = $(this);
+  if (!is_mobile) {
+    var $columns = $('.column_inner');
 
-    $('.column_inner').off('scroll').filter(this).on('scroll', function(e) {
-      // var scroll_persentage = 100 * ($this.scrollTop() + $this.height()) / this.scrollHeight;
-      var scroll_persentage = $this.scrollTop() / (this.scrollHeight - $this.height()) * 100;
+    $columns.on('mouseenter', function(e) {
+      var $this = $(this);
 
-      console.log(scroll_persentage)
+      $columns.off('scroll').filter(this).on('scroll', function(e) {
+        var scroll_persentage = $this.scrollTop() / (this.scrollHeight - $this.outerHeight()) * 100;
 
-      $('.column_inner').not(this).each(function() {
-        // $(this).scrollTop($this.scrollTop() / 100 * scroll_persentage);
-        $(this).scrollTop(scroll_persentage * (this.scrollHeight - $(this).height()) / 100);
-      });
-    })
-  });
+        $columns.not(this).each(function() {
+          var $this = $(this);
+
+          $this.scrollTop(scroll_persentage * (this.scrollHeight - $this.outerHeight()) / 100);
+        });
+      })
+    });
+  }
 
   var swColumns = new Swiper('.swiper-columns', {
     spaceBetween: 0,
