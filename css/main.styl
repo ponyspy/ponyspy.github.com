@@ -1,243 +1,105 @@
 @font-face {
-	font-family: 'PT Serif';
-	src: url('../fonts/PTF55F_W.woff');
+  font-family: 'Swiss721Rm';
+  src: url('../fonts/Sw721Rm.ttf');
 }
 
 @font-face {
-	font-family: 'PT Serif Bold';
-	src: url('../fonts/PTF75F_W.woff');
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasUnica-Black.ttf');
 }
 
-@font-face {
-	font-family: 'PT Mono';
-	src: url('../fonts/PTM55F_W.woff');
-}
-
-@font-face {
-	font-family: 'PT Mono Bold';
-	src: url('../fonts/PTM75F_W.woff');
+@media screen and (max-width: 1200px) {
+	.column_item {
+		border none!important;
+	}
+	.column_inner {
+		overflow-y: auto!important;
+	}
+	.swiper-pagination {
+		display block!important;
+	}
 }
 
 
 html
 body
-	margin 0
-	padding 0
-	font 12pt/14pt 'PT Sans'
+  margin 0
+  padding 0
 
 
-.up_block
-.down_block
-	position absolute
-	background-color black
+.column_inner::-webkit-scrollbar {
+  display: none;
+}
+
+.column_inner {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.swiper-pagination
+	display none
+	background-color white
+	bottom 0!important
+	margin 0!important
+	padding-top 10px
+	padding-bottom 10px
+	.swiper-pagination-bullet
+		background-color rgb(238, 56, 49)
+
+
+.header_block
+	position fixed
 	width 100%
-	color white
-	z-index 999
-	a
-		color white
-		text-decoration none
-		&:hover
-			opacity .7
-
-
-.up_block
 	top 0
-	.menu_block
-		float left
-		.logo
-			margin-right 120px
-			&.active
-				border none
-				span
-					border-bottom 1px solid white;
-			img
-				height 18px
-				position absolute
-			span
-				margin-left 28px
-		a
-			margin-right 25px
-			&.active
-				border-bottom 1px solid white;
-
-	.locale_block
-		float right
-		a
-			margin-left 8px
-			&.active
-				border-bottom 1px solid white
-
-	.drop_block
-		clear both
-		padding-left 30px
-		padding-right 30px
-		.drop
-			padding-top 10px
-			display none
-			overflow hidden
-			&.show
-				display block
-			a
-				font 12pt/14pt 'PT Mono'
-				border-bottom 1px solid white
-			.logo_img
-				vertical-align middle
-				margin-right 20px
-				&.ho
-					width 60px
-				&.wo
-					height 60px
-			.desc
-				display inline
-			.d_text
-				max-width 620px
-			.d_social
-				margin-right 20px
-				text-decoration none
-				border none
-				img
-					vertical-align middle
-					height 20px
-					&.wo
-						height 18px
-			.d_col
-				float left
-				margin-right 70px
-			.d_li
-				padding-bottom 5px
-				padding-top 5px
-				&:before
-					content '∙ '
-			.d_title
-				margin-top 20px
-				margin-bottom 20px
-			.d_link
-				margin-bottom 10px
-				span
-					font 10pt/14pt 'PT Mono'
-					&:before
-						content ' - '
-			.d_section
-				.s_title
-					margin-top 25px
-					margin-bottom 10px
-					&:before
-						content '∙ '
-
-
-.down_block
-	bottom 0
-	.title_block
-		float left
-	.copy_block
-		float right
-
-
-.up_inner
-.down_inner
-	padding 10px
-	padding-left 40px
-	padding-right 40px
+	left 0
+	z-index 9999999999
+	background-color rgb(238, 56, 49)
+	border-bottom 2px solid white
+	padding 20px
 	box-sizing border-box
-	margin 0 auto
-	max-width 1280px
-	overflow hidden
+	.header_columns
+		display flex
+		.column_item
+			width 33.3333333333%
+			text-align center
+			color white
+			font 14pt/18pt 'Swiss721Rm'
 
 
-.main_block
-	position absolute
+.columns_block
 	width 100%
 	height 100%
-	left 0
-	background-color black
-	cursor pointer
-	.content_items
-		width 100%
-		height 100%
-		position absolute
-		.content_item
-			width 100%
-			height 100%
-			display none
-			background-size cover
-			background-position center
-			background-repeat no-repeat
-			&.active
-				display block
-	.content_mask
-		width 100%
-		height 100%
-		position absolute
-		display table
-		.mask_inner
-			display table-row
-		.mask_item
-			height 100%
-			display table-cell
-			box-sizing border-box
-			border-top 39px solid transparent
-			border-bottom 39px solid transparent
-			&.active
-				border-color white
-	.content_line
-		position absolute
-		z-index 99
-		width 1px
-		height 100%
-		background-color white
-
-.sections_block
 	position absolute
-	width 100%
-	z-index 99
-	.section_item
-		position absolute
-		width 100%
-		height 100vh
-		background-color black
-		display none
-		overflow scroll
-		-webkit-overflow-scrolling: touch;
-		&.show
-			display block
-		.section_inner
-			position relative
-			padding-left 40px
-			padding-right 40px
-			box-sizing border-box
-			margin 0 auto
-			max-width 1280px
-			padding-bottom 80px
-			color white
-		.section_title
-			font 22pt/24pt 'PT Sans'
-			padding-top 120px
-		.section_s_title
-			margin-top 10px
-			font 16pt/18pt 'PT Mono'
-		.section_body
-			margin-top 60px
-			font 14pt/18pt 'PT Sans'
-			a
-				font 14pt/18pt 'PT Mono'
-				border-bottom 1px solid white
+	overflow hidden
+	.column_item
+		height 100%
+		background-color rgb(238, 56, 49)
+		border-right 2px solid rgb(238, 56, 49)
+		&.one .column_header
+			font 42pt/44pt 'NeueHaas'!important
+		&.two .column_header
+			font 24pt/28pt 'Swiss721Rm'!important
+		&.three .column_header
+			display flex
+			font 14pt/16pt 'Swiss721Rm'!important
+		.column_inner
+			height 100%
+			padding-top 60px
+			overflow-y scroll
+			.column_header
 				color white
-				text-decoration none
-			p
-				max-width 780px
-				margin 0 auto
-				padding 0
-				margin-top 40px
-				margin-bottom 40px
-				&.b_left
-					border-left 1px solid white
-					padding-left 40px
-					box-sizing border-box
-				&.col_2
-					column-count 2
-					column-gap 80px
-					column-rule 1px solid white;
-			img
-				display block
-				width 100%
+				height 35vh
+				padding 20px
+				box-sizing border-box
+			.column_body
+				padding 20px
+				padding-bottom 100px
+				box-sizing border-box
+				color rgb(238, 56, 49)
+				background-color white
+				.column_title
+					font 14pt/16pt 'Swiss721Rm'
+				.column_desc
+					padding-top 180px
+					font 24pt/28pt 'Swiss721Rm'
 

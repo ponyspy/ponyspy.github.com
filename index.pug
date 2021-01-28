@@ -1,106 +1,58 @@
 doctype html
 html
 	head
-		title Color Finale - Color Grading for Everyone
+		title= 'ED TECH CLUB'
+		meta(name='description', content='ED TECH CLUB')
+		meta(property='og:image' content='http://example.com/img/og.png')
 		meta(charset='utf-8')
+		link(rel='shortcut icon' href='http://example.com/img/favicon.png' type='image/png')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		link(rel='stylesheet', type='text/css', href='css/swiper-bundle.min.css')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
 		script(type='text/javascript', src='js/jquery-3.4.1.min.js')
+		script(type='text/javascript', src='js/swiper-bundle.min.js')
 		script(type='text/javascript', src='js/main.js')
+		include _counters.pug
 	body
+		.header_block
+			.header_columns
+				.column_item one title
+				.column_item two title
+				.column_item three title
 
-		//- Up Block
+		.columns_block.swiper-columns
+			.swiper-wrapper
+				.swiper-slide.column_item.one: .column_inner
+					.column_header ED TECH CLUB
+					.column_body
+						.column_title how it works
+						.column_desc
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-		.up_block: .up_inner
-			.menu_block
-				a.logo(href='#main')
-					img(src='img/cf_logo.png')
-					span Color Finale
-				a(href='#download') Download
-				a(href='#buy') Buy
-				a(href='#support') Support
-				a(href='#about') About
+				.swiper-slide.column_item.two: .column_inner
+					.column_header Orci in est, aliquet quis pretium mirhoncus, ipsum consectetur. Orcipharetra massa laoreet fames.
+					.column_body
+						.column_title we together
+						.column_desc
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-			.locale_block
-				a.active(href='#') en
-				a(href='#') de
-				a(href='#') fr
-				a(href='#') es
-				a(href='#') it
+				.swiper-slide.column_item.three: .column_inner
+					.column_header
+						div 199 Cook St., Ste. 308 Brooklyn, NY 11206 U.S.A.
+						div +1 (929) 437-3049 services@funeral.studio
 
-			.drop_block
-				.drop(id='main')
-					include pug/drops/main.pug
-				.drop(id='download')
-					include pug/drops/download.pug
-				.drop(id='buy')
-					include pug/drops/buy.pug
-				.drop(id='support')
-					include pug/drops/support.pug
-				.drop(id='about')
-					include pug/drops/about.pug
+					.column_body
+						.column_title our support
+						.column_desc
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-		//- Main Block
-
-		.main_block
-			.content_line
-
-			.content_items
-				.content_item(style='background-image: url(img/items/1.jpg)')
-				.content_item(style='background-image: url(img/items/2.jpg)')
-				.content_item(style='background-image: url(img/items/3.jpg)')
-				.content_item(style='background-image: url(img/items/4.jpg)')
-				.content_item(style='background-image: url(img/items/5.jpg)')
-				.content_item(style='background-image: url(img/items/6.jpg)')
-
-			.content_mask: .mask_inner
-				.mask_item(data-href='#one')
-				.mask_item(data-href='#two')
-				.mask_item(data-href='#three')
-				.mask_item(data-href='#four')
-				.mask_item(data-href='#five')
-				.mask_item(data-href='#six')
-
-		.sections_block
-			.section_item(id='one'): .section_inner
-				.section_title One Title
-				.section_s_title Good one second title
-				.section_body
-					include pug/sections/content.pug
-
-			.section_item(id='two'): .section_inner
-				.section_title Super Long Title
-				.section_s_title Good long second title
-				.section_body
-					include pug/sections/content.pug
-
-			.section_item(id='three'): .section_inner
-				.section_title Short Title
-				.section_s_title Good short second title
-				.section_body
-					include pug/sections/content.pug
-
-			.section_item(id='four'): .section_inner
-				.section_title No Title
-				.section_s_title Good no second title
-				.section_body
-					include pug/sections/content.pug
-
-			.section_item(id='five'): .section_inner
-				.section_title Middle Title
-				.section_s_title Good middle second title
-				.section_body
-					include pug/sections/content.pug
-
-			.section_item(id='six'): .section_inner
-				.section_title Zero Title
-				.section_s_title Good zero second title
-				.section_body
-					include pug/sections/content.pug
-
-		//- Down Block
-
-		.down_block: .down_inner
-			.title_block
-			.copy_block!= '&copy; ColorTrix ' + new Date().getFullYear()
-
+			.swiper-pagination.swiper-pagination-black
