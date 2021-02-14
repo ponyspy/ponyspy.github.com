@@ -1,120 +1,163 @@
 @font-face {
-  font-family: 'Swiss721Rm';
-  src: url('../fonts/Sw721Rm.ttf');
+	font-family: 'ABCFavoritPro-Light';
+	src: url('../fonts/ABCFavoritPro-Light-Trial.woff2');
 }
 
-@font-face {
-  font-family: 'NeueHaas';
-  src: url('../fonts/NeueHaasUnica-Black.ttf');
+@keyframes marquee {
+	0% { left: 0; }
+	100% { left: -100%; }
 }
 
-@media screen and (max-width: 1200px) {
-	.column_item {
-		border none!important;
-	}
-	.column_inner {
-		overflow-y: auto!important;
-	}
-	.swiper-pagination {
-		display block!important;
-	}
-}
-
-
-html
 body
-  margin 0
-  padding 0
-
-
-.column_inner::-webkit-scrollbar {
-  display: none;
-}
-
-.column_inner {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.swiper-pagination
-	display none
-	background-color white
-	bottom 0!important
-	margin 0!important
-	padding-top 10px
-	padding-bottom 10px
-	.swiper-pagination-bullet
-		background-color rgb(238, 56, 49)
-
-
-.header_block
-	position fixed
-	width 100%
-	top 0
-	left 0
-	z-index 9999999999
-	background-color rgb(238, 56, 49)
-	border-bottom 2px solid white
-	padding 20px
-	box-sizing border-box
-	.header_columns
-		display flex
-		.column_item
-			width 33.3333333333%
-			text-align center
-			color white
-			font 14pt/18pt 'Swiss721Rm'
-
-
-.columns_block
-	width 100%
+html
+	margin 0
+	padding 0
 	height 100%
-	position absolute
-	overflow hidden
-	.column_item
-		height 100%
-		background-color rgb(238, 56, 49)
-		border-right 2px solid rgb(238, 56, 49)
-		&.one .column_header
-			font 46pt/48pt 'NeueHaas'!important
-		&.two .column_header
-			font 26pt/34pt 'Swiss721Rm'!important
-		&.three .column_header
+	color rgb(238, 56, 49)
+	font-family 'ABCFavoritPro-Light'
+	a
+		color rgb(238, 56, 49)
+	p
+		margin 0
+		padding 0
+		font-size 18pt
+		text-indent 60px
+
+.column_body
+	-ms-overflow-style none
+	scrollbar-width none
+	&::-webkit-scrollbar
+		display none
+
+.os-scrollbar
+	margin 4px!important
+
+.os-scrollbar-handle
+	background rgb(238, 56, 49)!important
+
+.outer_block
+	display flex
+	flex-direction column
+	height 100%
+	.header_block
+		position: relative;
+		display flex
+		flex-direction row
+		border-bottom 1px solid rgb(238, 56, 49)
+		overflow hidden
+		padding 20px
+		min-height 21px
+		.header_inner
+			white-space nowrap
+			display block
+			width 200%
+			height 30px
+			position absolute
+			overflow hidden
+			animation marquee 15s linear infinite
+			span
+				float left
+				width 50%
+				&:after
+					margin-right 140px
+					margin-left 140px
+					content ''
+					display inline-block
+					width 12px
+					height 12px
+					border-radius 100%
+					background-color rgb(238, 56, 49)
+	.content_block
+		display flex
+		flex-direction row
+		flex-grow 1
+		min-height 0
+		.main_block
+			width 50%
+			box-sizing border-box
 			display flex
-			font 14pt/28pt 'Swiss721Rm'!important
-			.column
-				padding-right 60px
-				box-sizing border-box
-				&:last-child
-					padding-right 0
-		.column_inner
-			height 100%
-			padding-top 65px
-			overflow-y scroll
-			.column_header
-				color white
-				height 35vh
+			flex-direction column
+			border-right 1px solid rgb(238, 56, 49)
+			.main_title
+				letter-spacing -0.05em
+				margin-bottom auto
 				padding 20px
-				box-sizing border-box
-			.column_body
+				font-size 7vw
+			.main_desc
 				padding 20px
-				padding-bottom 100px
-				box-sizing border-box
-				color rgb(238, 56, 49)
-				background-color white
-				.column_title
-					font 14pt/16pt 'Swiss721Rm'
+			.main_footer
+				padding 20px
+				border-top 1px solid rgb(238, 56, 49)
+
+		.sections_block
+			width 50%
+			flex-grow 1
+			min-height 0
+			display flex
+			flex-direction column
+			justify-content flex-end
+			.section_item
+				width 100%
+				border-top 1px solid rgb(238, 56, 49)
+				display flex
+				flex-direction row
+				&:first-child
+					border-top none
+				.column
+					width 50%
+					flex-grow 1
 					display flex
-					align-items center
-					justify-content space-between
-					&:after
-						content ''
-						display inline-block
-						width 15px
-						height 15px
-						border-radius 100%
-						background-color rgb(238, 56, 49)
-				.column_desc
-					padding-top 180px
-					font 24pt/28pt 'Swiss721Rm'
+					flex-direction column
+					min-height 0
+					border-right 1px solid rgb(238, 56, 49)
+					&:last-child
+						border-right none
+					&.none
+						cursor pointer
+						background: linear-gradient(to top left, rgba(238, 56, 49, 0) 0%, rgba(238, 56, 49, 0) calc(50% - 0.8px), rgba(238, 56, 49, 1) 50%, rgba(238, 56, 49, 0) calc(50% + 0.8px), rgba(238, 56, 49, 0) 100%)
+					.column_title
+						padding 20px
+						box-sizing border-box
+						display flex
+						align-items center
+						justify-content space-between
+						cursor pointer
+						span, a
+							margin-right auto
+							&.clear
+								display none
+								margin-right 55px
+							&.dl
+								display none
+								margin-right 55px
+							&.num
+								margin-right 55px
+						&:after
+							content ''
+							display inline-block
+							width 12px
+							height 12px
+							border-radius 100%
+							background-color rgb(238, 56, 49)
+					.column_body
+						padding 20px
+						box-sizing border-box
+						display none
+						&.draw
+							overflow hidden
+							canvas
+								cursor crosshair
+				&.active
+					margin-bottom auto
+					flex-grow 1
+					min-height 0
+					overflow scroll
+					.column_body
+						display block
+						flex-grow 1
+						overflow auto
+						min-height 0
+					a.dl
+					a.clear
+						display inline!important
 

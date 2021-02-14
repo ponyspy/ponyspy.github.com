@@ -1,45 +1,34 @@
-var is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
 $(function() {
 
-  if (!is_mobile) {
-    var $columns = $('.column_inner');
+	var column_scroll = OverlayScrollbars($('.column_body').not('.draw').toArray(), {
+		scrollbars : { autoHideDelay: 300, autoHide: 'scroll' }
+	});
 
-    $columns.on('mouseenter', function(e) {
-      var $this = $(this);
+	var draw_el = $('.draw')[0];
+	var pad = new Sketchpad(draw_el);
 
-      $columns.off('scroll').filter(this).on('scroll', function(e) {
-        var scroll_persentage = $this.scrollTop() / (this.scrollHeight - $this.outerHeight()) * 100;
+	pad.setLineSize(8);
+	pad.setLineColor('#ee3831');
+	setTimeout(function() {
+		pad.setCanvasSize(draw_el.offsetWidth - 40, draw_el.offsetHeight - 40);
+	}, 300);
 
-        $columns.not(this).each(function() {
-          var $this = $(this);
+	$(window).on('resize', function(e) {
+		pad.setCanvasSize(draw_el.offsetWidth - 40, draw_el.offsetHeight - 40);
+		pad.redraw();
+	}).trigger('resize');
 
-          $this.scrollTop(scroll_persentage * (this.scrollHeight - $this.outerHeight()) / 100);
-        });
-      })
-    });
-  }
+	$('.clear').on('click', function(e) {
+		pad.clear();
+	});
 
-  var swColumns = new Swiper('.swiper-columns', {
-    spaceBetween: 0,
-    simulateTouch: false,
-    keyboard: {
-      enabled: true
-    },
-    breakpoints: {
-      1200: {
-        autoHeight: false,
-        slidesPerView: 3
-      },
-      800: {
-        autoHeight: true,
-        slidesPerView: 1
-      }
-    },
-    pagination: {
-      clickable: true,
-      el: '.swiper-pagination',
-    }
-  });
+	$('.dl').on('click', function(e) {
+		this.href = pad.canvas.toDataURL('image/png');
+		this.download = 'draw';
+	});
+
+	$('.section_item').on('click', function(e) {
+		$('.section_item').removeClass('active').filter(this).addClass('active');
+	});
 
 });

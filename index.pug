@@ -1,64 +1,129 @@
 doctype html
+
 html
 	head
-		title= 'ED TECH CLUB'
-		meta(name='description', content='ED TECH CLUB')
+		title= 'edtech club'
+		meta(name='description', content='edtech club')
 		meta(property='og:image' content='http://example.com/img/og.png')
 		meta(charset='utf-8')
 		link(rel='shortcut icon' href='http://example.com/img/favicon.png' type='image/png')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='css/swiper-bundle.min.css')
+		link(rel='stylesheet', type='text/css', href='css/OverlayScrollbars.min.css')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
 		script(type='text/javascript', src='js/jquery-3.4.1.min.js')
+		script(type='text/javascript', src='js/OverlayScrollbars.min.js')
 		script(type='text/javascript', src='js/swiper-bundle.min.js')
+		script(type='text/javascript', src='js/sketchpad.js')
 		script(type='text/javascript', src='js/main.js')
 		include _counters.pug
 	body
-		.header_block
-			.header_columns
-				.column_item one title
-				.column_item two title
-				.column_item three title
+		.outer_block
 
-		.columns_block.swiper-columns
-			.swiper-wrapper
-				.swiper-slide.column_item.one: .column_inner
-					.column_header ED TECH CLUB
-					.column_body
-						.column_title how it works
-						.column_desc
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			.header_block: .header_inner
+				span следующая встреча - 25 февраля, 19:00
+				span следующая встреча - 25 февраля, 19:00
 
-				.swiper-slide.column_item.two: .column_inner
-					.column_header Orci in est, aliquet quis pretium mirhoncus, ipsum consectetur. Orcipharetra massa laoreet fames.
-					.column_body
-						.column_title we together
-						.column_desc
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			.content_block
 
+				.main_block
+					.main_title edtech club
+					.main_desc
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
+					.main_footer
+						span email:&nbsp;
+						a(href='mailto:edtechclub@action-media.ru') edtechclub@action-media.ru
 
-				.swiper-slide.column_item.three: .column_inner
-					.column_header
+				.sections_block
+
+					.section_item.active
 						.column
-							div 199 Cook St., Ste. 308 Brooklyn,
-							div NY 11206 U.S.A.
+							.column_title
+								span.num 0
+								span главная
+								a.clear(href='#') очистить
+								a.dl(href='#') скачать
+							.column_body.draw
+
+					.section_item
 						.column
-							div +1 (929) 437-3049
-							div services@funeral.studio
+							.column_title
+								span.num 1
+								span манифест
+							.column_body
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
 
-					.column_body
-						.column_title our support
-						.column_desc
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.column
+							.column_title
+								span.num 2
+								span участники
+							.column_body
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus excepturi a, saepe aliquam quia rem cupiditate sit dicta commodi quos nam necessitatibus, ipsum fugit officia corporis culpa nisi reprehenderit.
 
-			.swiper-pagination.swiper-pagination-black
+
+					.section_item
+						.column
+							.column_title
+								span.num 3
+								span правила
+							.column_body
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+
+						.column
+							.column_title
+								span.num 4
+								span ценности
+							.column_body
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+
+
+					.section_item
+						.column
+							.column_title
+								span.num 5
+								span учредитель
+							.column_body
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
+
+						.column.none
+
+
+					.section_item
+						.column
+							.column_title
+								span.num 6
+								span фотографии
+							.column_body
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ab et asperiores rerum quae recusandae cumque debitis est numquam excepturi, tempora voluptate, alias dicta qui. Iusto modi vel, fugiat cupiditate.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod, ex, neque cum rem autem veniam reprehenderit, dolores nihil voluptate porro. Delectus recusandae, labore provident rem minima quam mollitia at.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum accusamus, beatae quas nulla eum minima recusandae rerum soluta dolorem corporis tenetur saepe qui nemo impedit placeat. Maxime voluptate ut consectetur.
 
