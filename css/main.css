@@ -9,6 +9,8 @@ html {
   height: 100%;
   color: #ee3831;
   font-family: 'ABCFavoritPro-Light';
+  font-size: 12pt;
+  line-height: 14pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,8 +43,6 @@ html p {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-size: 12pt;
-  line-height: 14pt;
 }
 .outer_block .header_block {
   position: relative;
@@ -55,8 +55,8 @@ html p {
 }
 .outer_block .header_block .header_inner {
   white-space: nowrap;
-  display: block;
-  width: 200%;
+  display: flex;
+  min-width: 200%;
   height: 30px;
   position: absolute;
   overflow: hidden;
@@ -64,7 +64,7 @@ html p {
           animation: marquee 15s linear infinite;
 }
 .outer_block .header_block .header_inner .header_marquee {
-  float: left;
+  display: flex;
   width: 50%;
 }
 .outer_block .header_block .header_inner .header_marquee span:after {
