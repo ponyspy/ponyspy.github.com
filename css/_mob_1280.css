@@ -4,6 +4,7 @@
 .sections_block {
   overflow: scroll !important;
   justify-content: flex-start !important;
+  -webkit-overflow-scrolling: touch;
 }
 .sections_block .section_item {
   border-top: none !important;
@@ -24,12 +25,12 @@
 .sections_block .section_item .column.none {
   display: none !important;
 }
-.sections_block .section_item .column a.dl,
-.sections_block .section_item .column a.clear {
-  display: inline !important;
-}
 .sections_block .section_item .column .column_title {
   cursor: auto !important;
+}
+.sections_block .section_item .column .column_title a.dl,
+.sections_block .section_item .column .column_title a.clear {
+  display: inline !important;
 }
 .sections_block .section_item .column .column_body {
   display: block !important;
