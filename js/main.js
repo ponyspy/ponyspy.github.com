@@ -1,8 +1,8 @@
 $(function() {
 
-	var column_scroll = OverlayScrollbars($('.column_body').not('.draw').toArray(), {
-		scrollbars : { autoHideDelay: 300, autoHide: 'scroll' }
-	});
+	// var column_scroll = OverlayScrollbars($('.column_body').not('.draw').toArray(), {
+	// 	scrollbars : { autoHideDelay: 300, autoHide: 'scroll' }
+	// });
 
 	var draw_el = $('.draw')[0];
 	var pad = new Sketchpad(draw_el);

@@ -4,17 +4,17 @@ html(lang='ru')
 	head
 		title= 'edtech club'
 		meta(name='description', content='edtech club')
-		meta(property='og:image' content='http://example.com/img/og.png')
+		meta(property='og:image' content='https://edtech-club.com/img/share.png')
 		meta(charset='utf-8')
-		link(rel='icon' href='http://example.com/img/favicon.svg' type='image/svg+xml')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-		link(rel='stylesheet', type='text/css', href='css/swiper-bundle.min.css')
-		link(rel='stylesheet', type='text/css', href='css/OverlayScrollbars.min.css')
+		link(rel='icon' href='https://edtech-club.com/img/favicon.svg' type='image/svg+xml')
+		link(rel='stylesheet', type='text/css', href='css/libs/swiper-bundle.min.css')
+		link(rel='stylesheet', type='text/css', href='css/libs/OverlayScrollbars.min.css')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
-		script(type='text/javascript', src='js/jquery-3.5.1.min.js')
-		script(type='text/javascript', src='js/OverlayScrollbars.min.js')
-		script(type='text/javascript', src='js/swiper-bundle.min.js')
-		script(type='text/javascript', src='js/sketchpad.js')
+		script(type='text/javascript', src='js/libs/jquery-3.5.1.min.js')
+		script(type='text/javascript', src='js/libs/OverlayScrollbars.min.js')
+		script(type='text/javascript', src='js/libs/swiper-bundle.min.js')
+		script(type='text/javascript', src='js/libs/sketchpad.js')
 		script(type='text/javascript', src='js/main.js')
 		include _counters.pug
 	body
@@ -36,7 +36,6 @@ html(lang='ru')
 						p Пространство коллабораций и партнерств, развивающих рынок.
 
 					.main_footer
-						span email:&nbsp;
 						a(href='mailto:edtechclub@action-media.ru') edtechclub@action-media.ru
 
 				.sections_block
@@ -99,10 +98,10 @@ html(lang='ru')
 								span.num 05
 								span учредитель
 							.column_body
+								img(src='img/logo/action.svg', style='display: block; width: 100%; max-width: 280px;')
+								br
 								p Медиагруппа «Актион-МЦФЭР» создала и развивает более 150 продуктов, которыми пользуются более 700 тысяч специалистов в России и СНГ ― бухгалтеров, юристов, кадровиков, финансистов, управленцев, сотрудников образовательных, медицинских и государственных учреждений.
 								p На онлайн-курсах ежегодно обучаются больше 120 тысяч специалистов.
-								br
-								img(src='img/logo/action.svg', style='width: 100%; max-width: 280px;')
 
 						.column.none
 

@@ -3,6 +3,14 @@
 	src: url('../fonts/ABCFavoritPro-Light-Trial.woff2');
 }
 
+@media screen and (max-width: 1280px) {
+	@import '_mob_1280.styl'
+}
+
+@media screen and (max-width: 800px) {
+	@import '_mob_800.styl'
+}
+
 @keyframes marquee {
 	0% { left: 0; }
 	100% { left: -100%; }
@@ -59,7 +67,7 @@ html
 			height 30px
 			position absolute
 			overflow hidden
-			animation marquee 15s linear infinite
+			// animation marquee 15s linear infinite
 			.header_marquee
 				display flex
 				width 50%
@@ -164,12 +172,12 @@ html
 						cursor auto
 					.column_title
 						cursor auto
-					.column_body
-						display block
-						flex-grow 1
-						overflow auto
-						min-height 0
-					a.dl
-					a.clear
-						display inline!important
+				// 	.column_body
+				// 		display block
+				// 		flex-grow 1
+				// 		overflow auto
+				// 		min-height 0
+				// 	a.dl
+				// 	a.clear
+				// 		display inline!important
 
