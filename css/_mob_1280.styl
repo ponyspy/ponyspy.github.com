@@ -8,6 +8,8 @@
 	.section_item
 		border-top none!important
 		flex-direction column!important
+		&:first-child
+			display none!important
 		&:last-child .column:last-child
 			border-bottom none!important
 		.column
@@ -24,7 +26,7 @@
 				cursor auto!important
 				a.dl
 				a.clear
-					display none!important
+					display inline!important
 			.column_body
 				display block!important
 				flex-grow 0!important
@@ -41,4 +43,4 @@
 			// 	// min-height 300px!important
 			a.dl
 			a.clear
-				display none!important
+				display inline!important
